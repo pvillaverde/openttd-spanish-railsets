@@ -1,0 +1,82 @@
+// Spritesets para as liñas do RAVE (Red de Alta Velocidad Española)
+
+#define MAIN_FILE			"src/gfx/RAVE/main.png"
+#define DEPOT_FILE			"src/gfx/RAVE/depot.png"
+#define FENCES_FILE			"src/gfx/RAVE/fences.png"
+#define CROSSINGS_FILE		"src/gfx/RAVE/crossings.png"
+
+spriteset(rave_gui, MAIN_FILE){  rail_gui_template()	}
+spriteset(rave_track_overlay, MAIN_FILE) {  rail_track_overlay_template()	}
+spriteset(rave_underlay, MAIN_FILE) {  rail_underlay_template()	}
+spriteset(rave_tunnels, MAIN_FILE) {  rail_tunnels_template()	}
+spriteset(rave_bridge_surfaces, MAIN_FILE) {  rail_bridge_surfaces_template()	}
+
+spriteset(rave_depot, DEPOT_FILE){  rail_depot_template()	}
+spriteset(rave_depot_snow, DEPOT_FILE){  rail_depot_snow_template()	}
+// Depot Switch
+switch(FEAT_RAILTYPES, SELF, switch_rave_depots,  terrain_type){
+	TILETYPE_SNOW: rave_depot_snow;
+	rave_depot;
+}
+
+
+spriteset(rave_fences, FENCES_FILE)	{	rail_fences_template()	}
+
+spriteset(rave_crossings_empty,	CROSSINGS_FILE)	{	rail_crossings_empty_template()	}
+spriteset(rave_crossings_closed, CROSSINGS_FILE)	{	rail_crossings_closed_template()	}
+spriteset(rave_crossings_opened, CROSSINGS_FILE)	{	rail_crossings_opened_template()	}
+
+// Level crossing switches
+
+switch(FEAT_RAILTYPES, SELF, switch_rave_crossings, level_crossing_status){
+	LEVEL_CROSSING_CLOSED : rave_crossings_closed ;
+	rave_crossings_opened ;
+}
+#undef MAIN_FILE
+#undef DEPOT_FILE
+#undef FENCES_FILE
+#undef CROSSINGS_FILE
+
+item (FEAT_RAILTYPES, RAVE)
+{
+	if (param_replace_maglev == 1) {
+		property {label:"MGLV";}
+	}else{
+		property {label:"RAVE";}
+	}
+	property
+	{
+		introduction_date: 				date(1992, 4, 21); // Inauguración AVE Madrid-Sevilla
+		name: 							string(STR_RAVE_NAME);
+		toolbar_caption: 				string(STR_RAVE_TOOLBAR);
+		menu_text: 						string(STR_RAVE_MENU);
+		build_window_caption: 			string(STR_RAVE_BUILD_CAPTION);
+		autoreplace_text: 				string(STR_RAVE_AUTOREPLACE);
+		new_engine_text: 				string(STR_RAVE_NEW_ENGINE);
+		compatible_railtype_list: 		["MGLV","RAVE"];
+		powered_railtype_list: 			["MGLV","RAVE"];
+		curve_speed_multiplier: 		100;
+		station_graphics: 				RAILTYPE_STATION_NORMAL;
+		construction_cost: 				RAVE_BASE_COST + RAVE_BASE_COST * param_rave_cost;
+		maintenance_cost: 				RAVE_BASE_COST + RAVE_BASE_COST * param_rave_cost;
+		speed_limit: 					500 km/h;      
+		acceleration_model: 			ACC_MODEL_RAIL;
+		map_colour: 					19;
+		sort_order: 					254;
+		alternative_railtype_list:		["RAVE","MGLV"];
+		railtype_flags:					bitmask(RAILTYPE_FLAG_CATENARY);
+    }
+    graphics
+    {
+		gui: 				rave_gui;
+		track_overlay: 		rave_track_overlay;
+		underlay:			rave_underlay;
+		tunnels: 			rave_tunnels;
+	//	tunnel_overlay: 	rave_tunnels; 
+		bridge_surfaces: 	rave_bridge_surfaces;
+		fences:				rave_fences;
+		level_crossings: 	switch_rave_crossings;
+		depots: 			switch_rave_depots;
+	//	signals: 			switch_signals_type;
+    }
+}

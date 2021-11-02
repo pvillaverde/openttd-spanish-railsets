@@ -1,0 +1,38 @@
+##grflangid 0x00
+##plural 0
+# This is the English language file
+
+# GRF name and description
+STR_GRF_NAME        :Spanish Railsets {VERSION}
+STR_GRF_DESCRIPTION :{TITLE} - Inspired by NG600mm,U&ReRMM2 and Spanish Trainset. Adds both narrow gauge and high speed rail.{} Compatible with Bridges NewGRFs.{}{COPYRIGHT}2021 andythenorth, McZapkie (graphics), pvillaverde (NML)
+
+STR_PARAM_NAME_REPLACE_MONORAIL	:Replace monorail with FEVE?
+STR_PARAM_DESC_REPLACE_MONORAIL	:Replaces monorail with FEVE's narrow gauge. Must replace in order to use FEVE's NewGRF.
+
+STR_PARAM_NAME_REPLACE_MAGLEV	:Replace maglev with AVE?
+STR_PARAM_DESC_REPLACE_MAGLEV	:Replaces MagLev with AVE high speed rails. Must replace in order to use Spain trainset that includes its trains.
+
+STR_PARAM_NAME_FEVE_COST     :FEVE's build & maintenance cost
+STR_PARAM_DESC_FEVE_COST     :Set FEVE's build & maintenance rails cost. {LTBLUE}(Normal is half regular railways)
+
+STR_PARAM_NAME_RAVE_COST     :AVE's build & maintenance costs
+STR_PARAM_DESC_RAVE_COST     :Set AVE's build & maintenance rails cost. {LTBLUE}(Normal cost 3 times regular railways)
+
+STR_PARAM_COST_H               	: Cheaper
+STR_PARAM_COST_N               	: Normal
+STR_PARAM_COST_D               	: More expensive
+
+STR_FEVE_NAME                 	:Narrow Gauge Railway - {LTBLUE}FEVE
+STR_FEVE_TOOLBAR             	:Narrow Gauge Railway - {LTBLUE}FEVE
+STR_FEVE_MENU            		:Narrow Gauge Railway - {LTBLUE}FEVE
+STR_FEVE_BUILD_CAPTION   		:New narrow gauge railway - {LTBLUE}FEVE
+STR_FEVE_AUTOREPLACE        	:Narrow gauge trains - {LTBLUE}FEVE
+STR_FEVE_NEW_ENGINE           	:Narrow gauge locomotive - {LTBLUE}FEVE
+
+STR_RAVE_NAME                 	:High speed Railway - {LTBLUE}AVE
+STR_RAVE_TOOLBAR             	:High speed Railway - {LTBLUE}AVE
+STR_RAVE_MENU            		:High speed Railway - {LTBLUE}AVE
+STR_RAVE_BUILD_CAPTION   		:New high speed railway - {LTBLUE}AVE
+STR_RAVE_AUTOREPLACE        	:High speed railways - {LTBLUE}AVE
+STR_RAVE_NEW_ENGINE           	:High speed locomotive - {LTBLUE}AVE
+
