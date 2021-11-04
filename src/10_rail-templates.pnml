@@ -80,24 +80,13 @@ template rail_bridge_surfaces_template()
   [  658, 239, 64, 39, -31, -8]
 }
 
-template rail_depot_template()
-{
-  [   42, 85, 24, 25,   9, -2]   
-  [    2, 24, 64, 53,  -9, -37] 
-  [   82, 85, 24, 25, -31, -2] 
-  [   82, 24, 64, 53, -53, -37]
-  [  242, 24, 64, 53, -53, -37]
-  [  162, 24, 64, 53,  -9, -37] 
-}
-
-template rail_depot_snow_template()
-{
-  [   42, 293, 24, 25,   9, -2]   
-  [    2, 232, 64, 53,  -9, -37] 
-  [   82, 293, 24, 25, -31, -2] 
-  [   82, 232, 64, 53, -53, -37]
-  [  242, 232, 64, 53, -53, -37]
-  [  162, 232, 64, 53,  -9, -37] 
+template rail_depot_template (y) {
+    [ 10, y+25, 64, 61, -31, -34]  //SE interior
+    [ 80, y+25, 64, 61,  -9, -45]  //SE Building
+    [150, y+25, 64, 61, -31, -34]  //SE interior
+    [220, y+25, 64, 61, -53, -45]  //SW Building
+    [290, y+25, 64, 61, -53, -45]  //NE Building
+    [360, y+25, 64, 61,  -9, -45]  //NW Building
 }
 
 
@@ -189,4 +178,4 @@ template rail_nofences_template() {
 }
 
 
-spriteset(spriteset_nofences, "src/gfx/misc.png") { rail_nofences_template()}
+spriteset(spriteset_nofences, "src/gfx/nofences.png") { rail_nofences_template()}

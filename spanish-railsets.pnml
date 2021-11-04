@@ -14,8 +14,10 @@
 
 #include "src/02_def_common.pnml" 
 #include "src/10_rail-templates.pnml" 
-#include "src/11_rail-sprite-tracks-FEVE.pnml" 
-#include "src/12_rail-sprite-tracks-RAVE.pnml" 
+#include "src/11_rail-sprite-tracks-RAIL.pnml" 
+#include "src/12_rail-sprite-tracks-ELRL.pnml" 
+#include "src/13_rail-sprite-tracks-FEVE.pnml" 
+#include "src/14_rail-sprite-tracks-RAVE.pnml" 
 
 
 

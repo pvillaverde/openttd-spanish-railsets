@@ -1,0 +1,42 @@
+// Spritesets para as liñas do tren normal
+
+
+item (FEAT_RAILTYPES, RAIL)
+{
+	property
+	{
+		label:							"RAIL";
+		introduction_date: 				date(1829, 9, 23);	// Primeira liña férrea españa
+/* 		name: 							string(STR_FEVE_NAME);
+		toolbar_caption: 				string(STR_FEVE_TOOLBAR);
+		menu_text: 						string(STR_FEVE_MENU);
+		build_window_caption: 			string(STR_FEVE_BUILD_CAPTION);
+		autoreplace_text: 				string(STR_FEVE_AUTOREPLACE);
+		new_engine_text: 				string(STR_FEVE_NEW_ENGINE);
+		compatible_railtype_list: 		["MONO","FEVE"];
+		powered_railtype_list: 			["MONO","FEVE"];
+		curve_speed_multiplier: 		100;
+		station_graphics: 				RAILTYPE_STATION_NORMAL;
+		construction_cost: 				FEVE_BASE_COST + FEVE_BASE_COST * param_feve_cost;
+		maintenance_cost: 				FEVE_BASE_COST + FEVE_BASE_COST * param_feve_cost; */
+		speed_limit: 					200 km/h;      
+/* 		acceleration_model: 			ACC_MODEL_RAIL;
+		map_colour: 					19;
+		sort_order: 					10;
+		alternative_railtype_list:		["FEVE"];
+		railtype_flags:					bitmask(RAILTYPE_FLAG_CATENARY); */
+    }
+    /*graphics
+    {
+ 		gui: 				feve_gui;
+		track_overlay: 		feve_track_overlay;
+		underlay:			feve_underlay;
+		tunnels: 			feve_tunnels;
+	//	tunnel_overlay: 	feve_tunnels; 
+		bridge_surfaces: 	feve_bridge_surfaces;
+		fences:				spriteset_nofences;
+		level_crossings: 	switch_feve_crossings;
+		depots: 			switch_feve_depots;
+	//	signals: 			switch_signals_type;
+    } */
+}

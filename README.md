@@ -69,9 +69,9 @@ If you want to add any missing feature or report a bug, you [can request ir or r
 
 ## Authors
 
-Pablo Villaverde Castro - [@clankirfed](https://twitter.com/clankirfed)
-andythenorth, Mczapkie, TadeuszD - Narrow Gauge graphics & sprites.
-Ubify U&ReRMM2 - High Speed graphics
+- Pablo Villaverde Castro - [@clankirfed](https://twitter.com/clankirfed)
+- andythenorth, Mczapkie, TadeuszD - Narrow Gauge graphics & sprites.
+- Ubify U&ReRMM2 - High Speed graphics
 
 
 <!-- ACKNOWLEDGEMENTS -->
@@ -99,4 +99,4 @@ Distributed under the GNU GPL-v3 License. See [LICENSE][license-url] on for more
 [license-url]: https://github.com/pvillaverde/openttd-spanish-railsets/blob/main/LICENSE
 [project-url]: https://github.com/pvillaverde/openttd-spanish-railsets
 [issues-url]: https://github.com/pvillaverde/openttd-spanish-railsets/issues
-<!-- [bananas-url]: https://bananas.openttd.org/package/newgrf/4b463031 -->
+[bananas-url]: https://bananas.openttd.org/package/newgrf/4b463031

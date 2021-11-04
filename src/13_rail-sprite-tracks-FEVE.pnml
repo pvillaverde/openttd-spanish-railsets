@@ -11,8 +11,8 @@ spriteset(feve_underlay, MAIN_FILE) {  rail_underlay_template()	}
 spriteset(feve_tunnels, MAIN_FILE) {  rail_tunnels_template()	}
 spriteset(feve_bridge_surfaces, MAIN_FILE) {  rail_bridge_surfaces_template()	}
 
-spriteset(feve_depot, DEPOT_FILE){  rail_depot_template()	}
-spriteset(feve_depot_snow, DEPOT_FILE){  rail_depot_snow_template()	}
+spriteset(feve_depot, DEPOT_FILE){  rail_depot_template(0)	}
+spriteset(feve_depot_snow, DEPOT_FILE){  rail_depot_template(86)	}
 // Depot Switch
 switch(FEAT_RAILTYPES, SELF, switch_feve_depots,  terrain_type){
 	TILETYPE_SNOW: feve_depot_snow;
@@ -61,7 +61,7 @@ item (FEAT_RAILTYPES, FEVE)
 		speed_limit: 					100 km/h;      
 		acceleration_model: 			ACC_MODEL_RAIL;
 		map_colour: 					19;
-		sort_order: 					254;
+		sort_order: 					10;
 		alternative_railtype_list:		["FEVE"];
 		railtype_flags:					bitmask(RAILTYPE_FLAG_CATENARY);
     }
