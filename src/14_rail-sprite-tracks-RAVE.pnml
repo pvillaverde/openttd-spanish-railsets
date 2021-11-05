@@ -1,13 +1,69 @@
 // Spritesets para as liñas do RAVE (Red de Alta Velocidad Española)
+#define GUI_FILE			"src/gfx/RAVE/01_gui.png"
+#define OVERLAY_FILE		"src/gfx/RAVE/02_overlay.png"
+#define UNDERLAY_FILE		"src/gfx/RAVE/03_underlay.png"
+#define BRIDGES_FILE		"src/gfx/RAVE/04_bridges.png"
+#define TUNNELS_FILE		"src/gfx/RAVE/05_tunnels.png"
 
 #define MAIN_FILE			"src/gfx/RAVE/main.png"
 #define DEPOT_FILE			"src/gfx/RAVE/depot.png"
 #define FENCES_FILE			"src/gfx/RAVE/fences.png"
 #define CROSSINGS_FILE		"src/gfx/RAVE/crossings.png"
 
-spriteset(rave_gui, MAIN_FILE){  rail_gui_template()	}
-spriteset(rave_track_overlay, MAIN_FILE) {  rail_track_overlay_template()	}
-spriteset(rave_underlay, MAIN_FILE) {  rail_underlay_template()	}
+
+// ########################################### GUI: Interface, botóns e cursores
+spriteset(rave_gui_opengfx_spriteset, GUI_FILE){  rail_gui_gfx_template()	}
+spriteset(rave_gui_ttd_spriteset, GUI_FILE){  rail_gui_ttd_template()	}
+switch (FEAT_RAILTYPES, SELF, rave_gui_switch, param_gui) {
+    1: rave_gui_opengfx_spriteset;
+    rave_gui_ttd_spriteset;
+}
+// ########################################### OVERLAY
+
+spriteset(rave_overlay_spriteset, OVERLAY_FILE) {  rail_overlay_template(20)	}
+spriteset(rave_overlay_snow_spriteset, OVERLAY_FILE) {  rail_overlay_template(75)	}
+switch(FEAT_RAILTYPES, SELF, rave_overlay_switch,  terrain_type){
+	TILETYPE_SNOW: rave_overlay_snow_spriteset;
+	rave_overlay_spriteset;
+}
+// ########################################### UNDERLAY
+
+spriteset(rave_underlay_spriteset, UNDERLAY_FILE) {  rail_underlay_template_new(20)	}
+spriteset(rave_underlay_snow_spriteset, UNDERLAY_FILE) {  rail_underlay_template_new(160)	}
+switch(FEAT_RAILTYPES, SELF, rave_underlay_switch,  terrain_type){
+	TILETYPE_SNOW: rave_underlay_snow_spriteset;
+	rave_underlay_spriteset;
+}
+// ########################################### BRIDGE SURFACES
+
+spriteset(rave_bridges_spriteset, BRIDGES_FILE) {  rail_bridges_template(20)	}
+spriteset(rave_bridges_snow_spriteset, BRIDGES_FILE) {  rail_bridges_template(75)	}
+switch(FEAT_RAILTYPES, SELF, rave_bridges_switch,  terrain_type){
+	TILETYPE_SNOW: rave_bridges_snow_spriteset;
+	rave_bridges_spriteset;
+}
+// ########################################### TUNNELS (Tunnel track)
+spriteset(rave_tunnels_spriteset, TUNNELS_FILE) {  rail_tunnels_template_new(20)	}
+spriteset(rave_tunnels_snow_spriteset, TUNNELS_FILE) {  rail_tunnels_template_new(90)	}
+switch(FEAT_RAILTYPES, SELF, rave_tunnels_switch,  terrain_type){
+	TILETYPE_SNOW: rave_tunnels_snow_spriteset;
+	rave_tunnels_spriteset;
+}
+// ########################################### TUNNEL OVERLAY (Tunnel structure)
+spriteset(rave_tunnels_overlay_spriteset, TUNNELS_FILE) {  rail_tunnels_overlay_template(160)	}
+spriteset(rave_tunnels_overlay_snow_spriteset, TUNNELS_FILE) {  rail_tunnels_overlay_template(230)	}
+switch(FEAT_RAILTYPES, SELF, rave_tunnels_overlay_switch,  terrain_type){
+	TILETYPE_SNOW: rave_tunnels_overlay_snow_spriteset;
+	rave_tunnels_overlay_spriteset;
+}
+// ########################################### DEPOTS
+// ########################################### FENCES
+// ########################################### CATENARY WIRE
+// ########################################### CATENARY PILONS
+// ########################################### CROSSINGS
+// ########################################### SIGNALS
+// ########################################### PRECOMBINED
+
 spriteset(rave_tunnels, MAIN_FILE) {  rail_tunnels_template()	}
 spriteset(rave_bridge_surfaces, MAIN_FILE) {  rail_bridge_surfaces_template()	}
 
@@ -32,6 +88,12 @@ switch(FEAT_RAILTYPES, SELF, switch_rave_crossings, level_crossing_status){
 	LEVEL_CROSSING_CLOSED : rave_crossings_closed ;
 	rave_crossings_opened ;
 }
+#undef GUI_FILE
+#undef OVERLAY_FILE
+#undef UNDERLAY_FILE
+#undef BRIDGES_FILE
+#undef TUNNELS_FILE
+
 #undef MAIN_FILE
 #undef DEPOT_FILE
 #undef FENCES_FILE
@@ -68,12 +130,12 @@ item (FEAT_RAILTYPES, RAVE)
     }
     graphics
     {
-		gui: 				rave_gui;
-		track_overlay: 		rave_track_overlay;
-		underlay:			rave_underlay;
-		tunnels: 			rave_tunnels;
-	//	tunnel_overlay: 	rave_tunnels; 
-		bridge_surfaces: 	rave_bridge_surfaces;
+		gui: 				rave_gui_switch;
+		track_overlay: 		rave_overlay_switch;
+		underlay:			rave_underlay_switch;
+		bridge_surfaces: 	rave_bridges_switch;
+		tunnels: 			rave_tunnels_switch;
+		tunnel_overlay: 	rave_tunnels_overlay_switch; 
 		fences:				rave_fences;
 		level_crossings: 	switch_rave_crossings;
 		depots: 			switch_rave_depots;

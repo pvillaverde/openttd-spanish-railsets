@@ -6,6 +6,11 @@
 STR_GRF_NAME        :Ferrocarrís de España {VERSION}
 STR_GRF_DESCRIPTION :{TITLE} - Inspirado por NG600mm,U&ReRMM2 e Spanish Trainset. Engade unha vía estreita e outra de Alta Velocidade.{} Compatible con NewGRFs de Pontes.{}{COPYRIGHT}2021 andythenorth, McZapkie (graphics), pvillaverde (NML)
 
+STR_PARAM_GUI_NAME              :Estilo da interface
+STR_PARAM_GUI_DESC              :Selecciona o estilo dos botóns e cursores deste set
+STR_PARAM_OPENGFX               :OpenGFX
+STR_PARAM_TTD                   :TTD
+
 STR_PARAM_NAME_REPLACE_MONORAIL	:Sustituír o monoraíl polo FEVE?
 STR_PARAM_DESC_REPLACE_MONORAIL	:Sustitúe o monorail polas vías estreitas do FEVE. Indispensable pra usar o NewGRF do FEVE.
 

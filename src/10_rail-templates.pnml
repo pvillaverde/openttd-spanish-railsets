@@ -1,10 +1,151 @@
- // railsprite templates
+/*
+#    OpenTTD Spanish railsets -  Copyright (C) 2021  Pablo Villaverde Castro
+#    This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+#    This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+#	 You should have received a copy of the GNU General Public License along with this program.  If not, see <https://github.com/pvillaverde/openttd-spanish-railsets/blob/main/LICENSE>.
+*/
+// ########################################### GUI: Interface, botóns e cursores
+template gui_icon_template(x) { [x, 20, 20, 20, 0, 0] }
+template gui_cursor_template(x,y) { [x, y, 32, 32, 0, 0] }
+// OpenGFX: Yellow arrows
+template rail_gui_gfx_template() {
+	// Icons
+	gui_icon_template(0)
+	gui_icon_template(25)
+	gui_icon_template(50)
+	gui_icon_template(75)
+	gui_icon_template(100)
+	gui_icon_template(125)
+	gui_icon_template(150)
+	gui_icon_template(175)
+	// Cursors
+	gui_cursor_template(0,60)
+	gui_cursor_template(50,60)
+	gui_cursor_template(100,60)
+	gui_cursor_template(150,60)
+	gui_cursor_template(200,60)
+	gui_cursor_template(250,60)
+	gui_cursor_template(300,60)
+	gui_cursor_template(350,60)
+}
+// TTD: Grey Arrows
+template rail_gui_ttd_template() {
+	// Icons
+	gui_icon_template(0)
+	gui_icon_template(25)
+	gui_icon_template(50)
+	gui_icon_template(75)
+	gui_icon_template(100)
+	gui_icon_template(125)
+	gui_icon_template(150)
+	gui_icon_template(175)
+	// Cursors: Relative coordinates from UPPER-LEFT coordinates to Arrowhead 
+    [    0,  120,   38,   30,    -4,  -15]
+	[   50,  120,   72,   44,   -16,   -8]
+	[  130,  120,   44,   34,   -21,   -2]
+	[  190,  120,   72,   44,   -16,  -36]
+	[  275,  120,   56,   43,    0,    0]
+	gui_cursor_template(350,120)
+	gui_cursor_template(400,120)
+	gui_cursor_template(450,120)
+}
+// ########################################### OVERLAYS
+template rail_overlay_template(y)
+{
+	// Straight
+	[    0, y, 64, 31, -31,  0]
+	[   65, y, 64, 31, -31,  0]
+	// Diagonals
+	[  130, y, 64, 31, -31,  0]
+	[  195, y, 64, 31, -31,  0]
+	[  260, y, 64, 31, -31,  0]
+	[  325, y, 64, 31, -31,  0]
+	// Slopes
+	[  390, y, 64, 39, -31, -8]
+	[  455, y, 64, 23, -31,  0]
+	[  520, y, 64, 23, -31,  0]
+	[  585, y, 64, 39, -31, -8]
+}  
+// ########################################### UNDERLAYS
+template rail_underlay_template_new(y) // TODO-RENAME
+{
+	// Straight
+	[    0, y, 64, 31, -31,  0]
+	[   65, y, 64, 31, -31,  0]
+	// Diagonals
+	[  130, y, 64, 31, -31, 0]
+	[  195, y, 64, 31, -31, 0]
+	[  260, y, 64, 31, -31, 0]
+	[  325, y, 64, 31, -31, 0]
+	// Slopes
+	[  390, y, 64, 39, -31, -8]
+	[  455, y, 64, 23, -31,  0]
+	[  520, y, 64, 23, -31,  0]
+	[  585, y, 64, 39, -31, -8]
+	// Crossing WITH track
+	[    0, y+40, 64, 31, -31,  0]
+	// Crossings WITHOUT track
+	[   65, y+40, 64, 31, -31,  0]
+	[  130, y+40, 64, 31, -31,  0]
+	[  195, y+40, 64, 31, -31,  0]
+	[  260, y+40, 64, 31, -31,  0]
+	[  325, y+40, 64, 31, -31,  0]
+}
+// ########################################### BRIDGES
+template rail_bridges_template(y)
+{
+	// Straight
+	[    0, y, 64, 31, -31,  0]
+	[   65, y, 64, 31, -31,  0]
+	// Slopes
+	[  130, y, 64, 39, -31, -8]
+	[  195, y, 64, 23, -31,  0]
+	[  260, y, 64, 23, -31,  0]
+	[  325, y, 64, 39, -31, -8]
+}
+// ########################################### TUNNELS
 
+// Tunnels (Tracks)
+template rail_tunnels_template_new(y) { //TODO-RENAME
+	// y=20 normal, y=90 snow
+	[  0, y, 64, 50, -31, -19]
+	[ 80, y, 64, 50, -31, -19]
+	[160, y, 64, 50, -31, -19]
+	[240, y, 64, 50, -31, -19]
+}
 
+// Tunnel Overlays (structure above tracks)
+template rail_tunnels_overlay_template(y) {
+	// y=160 normal, y=230 snow
+	[  0, y, 64, 50, -31, -49]
+	[ 80, y, 64, 50, -31, -49]
+	[160, y, 64, 50, -31, -49]
+	[240, y, 64, 50, -31, -49]
+}
+
+// OLD
 // icons templates
 
 template rail_gui_template()
 {
+	// Icons
+	/* [ 0, 0, 20, 20, 0, 0]
+	[ 25, 0, 20, 20, 0, 0]
+	[ 50, 0, 20, 20, 0, 0]
+	[ 75, 0, 20, 20, 0, 0]
+	[100, 0, 20, 20, 0, 0]
+	[125, 0, 20, 20, 0, 0]
+	[150, 0, 20, 20, 0, 0]
+	[175, 0, 20, 20, 0, 0] */
+	// Cursors
+	/* [200, 0, 32, 32, 0, 0]
+	[250, 0, 32, 32, 0, 0]
+	[300, 0, 32, 32, 0, 0]
+	[350, 0, 32, 32, 0, 0]
+	[400, 0, 32, 32, 0, 0]
+	[450, 0, 32, 32, 0, 0]
+	[500, 0, 32, 32, 0, 0]
+	[550, 0, 32, 32, 0, 0] */
   // icons
   [    2, 22, 20, 20, 0, 0]
   [   34, 22, 20, 20, 0, 0]
@@ -25,6 +166,7 @@ template rail_gui_template()
   [  374, 64, 32, 32, 0, 0]
   [  422, 64, 32, 32, 0, 0]
 }
+// Overlays
 
 template rail_track_overlay_template()
 {

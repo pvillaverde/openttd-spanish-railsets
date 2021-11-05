@@ -6,6 +6,11 @@
 STR_GRF_NAME        :Spanish Railsets {VERSION}
 STR_GRF_DESCRIPTION :{TITLE} - Inspired by NG600mm,U&ReRMM2 and Spanish Trainset. Adds both narrow gauge and high speed rail.{} Compatible with Bridges NewGRFs.{}{COPYRIGHT}2021 andythenorth, McZapkie (graphics), pvillaverde (NML)
 
+STR_PARAM_GUI_NAME              :Interface style
+STR_PARAM_GUI_DESC              :Select style of the buttons and cursors provided by this set.
+STR_PARAM_OPENGFX               :OpenGFX
+STR_PARAM_TTD                   :TTD
+
 STR_PARAM_NAME_REPLACE_MONORAIL	:Replace monorail with FEVE?
 STR_PARAM_DESC_REPLACE_MONORAIL	:Replaces monorail with FEVE's narrow gauge. Must replace in order to use FEVE's NewGRF.
 

@@ -12,6 +12,20 @@ grf {
 	version: 					1;
 	min_compatible_version:		1;
     param {
+        param_gui {
+            type:   int;
+            name:   string(STR_PARAM_GUI_NAME);
+            desc:   string(STR_PARAM_GUI_DESC);
+            min_value:  0;
+            max_value:  1;
+            def_value:  0;
+            names:  {
+						0: string(STR_PARAM_OPENGFX);
+						1: string(STR_PARAM_TTD);
+			};
+        }
+	}
+    param {
         param_replace_monorail {
             type: bool;
             name: string(STR_PARAM_NAME_REPLACE_MONORAIL);
