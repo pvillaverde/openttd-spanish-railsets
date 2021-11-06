@@ -4,12 +4,10 @@
 #define UNDERLAY_FILE		"src/gfx/RAVE/03_underlay.png"
 #define BRIDGES_FILE		"src/gfx/RAVE/04_bridges.png"
 #define TUNNELS_FILE		"src/gfx/RAVE/05_tunnels.png"
-
-#define MAIN_FILE			"src/gfx/RAVE/main.png"
-#define DEPOT_FILE			"src/gfx/RAVE/depot.png"
-#define FENCES_FILE			"src/gfx/RAVE/fences.png"
-#define CROSSINGS_FILE		"src/gfx/RAVE/crossings.png"
-
+#define DEPOT_FILE			"src/gfx/RAVE/06_depot.png"
+#define FENCES_FILE			"src/gfx/RAVE/07_fences.png"
+#define CROSSINGS_FILE		"src/gfx/RAVE/08_crossings.png"
+#define PRECOMBINED_FILE	"src/gfx/RAVE/09_precombined.png"
 
 // ########################################### GUI: Interface, botóns e cursores
 spriteset(rave_gui_opengfx_spriteset, GUI_FILE){  rail_gui_gfx_template()	}
@@ -57,47 +55,70 @@ switch(FEAT_RAILTYPES, SELF, rave_tunnels_overlay_switch,  terrain_type){
 	rave_tunnels_overlay_spriteset;
 }
 // ########################################### DEPOTS
-// ########################################### FENCES
-// ########################################### CATENARY WIRE
-// ########################################### CATENARY PILONS
-// ########################################### CROSSINGS
-// ########################################### SIGNALS
-// ########################################### PRECOMBINED
-
-spriteset(rave_tunnels, MAIN_FILE) {  rail_tunnels_template()	}
-spriteset(rave_bridge_surfaces, MAIN_FILE) {  rail_bridge_surfaces_template()	}
-
 spriteset(rave_depot, DEPOT_FILE){  rail_depot_template(0)	}
 spriteset(rave_depot_snow, DEPOT_FILE){  rail_depot_template(86)	}
-// Depot Switch
-switch(FEAT_RAILTYPES, SELF, switch_rave_depots,  terrain_type){
+switch(FEAT_RAILTYPES, SELF, rave_depots_switch,  terrain_type){
 	TILETYPE_SNOW: rave_depot_snow;
 	rave_depot;
 }
+// ########################################### FENCES
+spriteset(rave_fences, FENCES_FILE)	{	rail_fences_new_template()	}
+// ########################################### CROSSINGS
+// x (NORMAL=0,SNOW=130), y (OLD-CLOSED=60,OLD-OPEN=190,NEW-CLOSED=320,NEW-OPENED=450)
+spriteset(rave_crossings_closed_old, CROSSINGS_FILE)	{	rail_crossings_template(0,60)	}
+spriteset(rave_crossings_closed_old_snow, CROSSINGS_FILE)	{	rail_crossings_template(130,60)	}
+spriteset(rave_crossings_opened_old, CROSSINGS_FILE)	{	rail_crossings_template(0,190)	}
+spriteset(rave_crossings_opened_old_snow, CROSSINGS_FILE)	{	rail_crossings_template(130,190)	}
 
-
-spriteset(rave_fences, FENCES_FILE)	{	rail_fences_template()	}
-
-spriteset(rave_crossings_empty,	CROSSINGS_FILE)	{	rail_crossings_empty_template()	}
-spriteset(rave_crossings_closed, CROSSINGS_FILE)	{	rail_crossings_closed_template()	}
-spriteset(rave_crossings_opened, CROSSINGS_FILE)	{	rail_crossings_opened_template()	}
-
+spriteset(rave_crossings_closed_modern, CROSSINGS_FILE)	{	rail_crossings_template(0,320)	}
+spriteset(rave_crossings_closed_modern_snow, CROSSINGS_FILE)	{	rail_crossings_template(130,320)	}
+spriteset(rave_crossings_opened_modern, CROSSINGS_FILE)	{	rail_crossings_template(0,450)	}
+spriteset(rave_crossings_opened_modern_snow, CROSSINGS_FILE)	{	rail_crossings_template(130,450)	}
+// Level Crossing snow switches
+switch(FEAT_RAILTYPES, SELF, rave_crossings_closed_old_switch,  terrain_type){	TILETYPE_SNOW: rave_crossings_closed_old_snow;	rave_crossings_closed_old;}
+switch(FEAT_RAILTYPES, SELF, rave_crossings_opened_old_switch,  terrain_type){	TILETYPE_SNOW: rave_crossings_opened_old_snow;	rave_crossings_opened_old;}
+switch(FEAT_RAILTYPES, SELF, rave_crossings_closed_modern_switch,  terrain_type){	TILETYPE_SNOW: rave_crossings_closed_modern_snow;	rave_crossings_closed_modern;}
+switch(FEAT_RAILTYPES, SELF, rave_crossings_opened_modern_switch,  terrain_type){	TILETYPE_SNOW: rave_crossings_opened_modern_snow;	rave_crossings_opened_modern;}
 // Level crossing switches
 
-switch(FEAT_RAILTYPES, SELF, switch_rave_crossings, level_crossing_status){
-	LEVEL_CROSSING_CLOSED : rave_crossings_closed ;
-	rave_crossings_opened ;
+switch(FEAT_RAILTYPES,	SELF,	rave_crossings_closed_switch, current_year){ 
+	0 .. 1970 - 1	: rave_crossings_closed_old_switch ;
+	rave_crossings_closed_modern_switch;
 }
+
+switch(FEAT_RAILTYPES,	SELF,	rave_crossings_opened_switch, current_year){ 
+	0 .. 1970 - 1	: rave_crossings_opened_old_switch ;
+	rave_crossings_opened_modern_switch;
+}
+
+switch(FEAT_RAILTYPES, SELF, rave_crossings_switch, level_crossing_status){
+	LEVEL_CROSSING_CLOSED : rave_crossings_closed_switch ;
+	rave_crossings_opened_switch ;
+}
+// ########################################### PRECOMBINED
+spriteset(rave_precombined, PRECOMBINED_FILE){  rail_precombined(20)	}
+spriteset(rave_precombined_snow, PRECOMBINED_FILE){  rail_precombined(360)	}
+switch(FEAT_RAILTYPES, SELF, rave_precombined_switch,  terrain_type){
+	TILETYPE_SNOW: rave_precombined_snow;
+	rave_precombined;
+}
+// ########################################### CATENARY WIRE
+// ########################################### CATENARY PILONS
+// ########################################### SIGNALS
+
+
+
+
+
 #undef GUI_FILE
 #undef OVERLAY_FILE
 #undef UNDERLAY_FILE
 #undef BRIDGES_FILE
 #undef TUNNELS_FILE
-
-#undef MAIN_FILE
 #undef DEPOT_FILE
 #undef FENCES_FILE
 #undef CROSSINGS_FILE
+#undef PRECOMBINED_FILE
 
 item (FEAT_RAILTYPES, RAVE)
 {
@@ -126,7 +147,7 @@ item (FEAT_RAILTYPES, RAVE)
 	//	map_colour: 					19;
 		sort_order: 					40;
 		alternative_railtype_list:		["RAVE","MGLV"];
-		railtype_flags:					bitmask(RAILTYPE_FLAG_CATENARY, RAILTYPE_FLAG_NO_LEVEL_CROSSING, RAILTYPE_FLAG_DISALLOW_90DEG);
+		railtype_flags:					bitmask(RAILTYPE_FLAG_PRECOMBINED, RAILTYPE_FLAG_CATENARY, RAILTYPE_FLAG_NO_LEVEL_CROSSING, RAILTYPE_FLAG_DISALLOW_90DEG);
     }
     graphics
     {
@@ -136,9 +157,10 @@ item (FEAT_RAILTYPES, RAVE)
 		bridge_surfaces: 	rave_bridges_switch;
 		tunnels: 			rave_tunnels_switch;
 		tunnel_overlay: 	rave_tunnels_overlay_switch; 
+		depots: 			rave_depots_switch;
 		fences:				rave_fences;
-		level_crossings: 	switch_rave_crossings;
-		depots: 			switch_rave_depots;
+		level_crossings: 	rave_crossings_switch;
+		precombined:		rave_precombined_switch;
 	//	signals: 			switch_signals_type;
     }
 }

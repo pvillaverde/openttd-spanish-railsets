@@ -122,6 +122,224 @@ template rail_tunnels_overlay_template(y) {
 	[160, y, 64, 50, -31, -49]
 	[240, y, 64, 50, -31, -49]
 }
+// ########################################### DEPOTS
+
+template rail_depot_template (y) {
+    [ 10, y+25, 64, 61, -31, -34]  //SE interior
+    [ 80, y+25, 64, 61,  -9, -45]  //SE Building
+    [150, y+25, 64, 61, -31, -34]  //SE interior
+    [220, y+25, 64, 61, -53, -45]  //SW Building
+    [290, y+25, 64, 61, -53, -45]  //NE Building
+    [360, y+25, 64, 61,  -9, -45]  //NW Building
+}
+
+// ########################################### FENCES
+
+
+template rail_fences_new_template() { // TODO-RENAME
+	//left_x, upper_y, width, height, offset_x, offset_y
+	[  0, 20, 33, 26,  -33,  -12] //Back of Track
+	[ 40, 20, 33, 26,    3,  -11] //Back of Track
+	[ 80, 20,  2, 38,    0,  -22] //Right of Track
+	[ 90, 20, 65, 10,  -31,  -10] //Bottom of Track
+	[160, 20, 33, 19,  -33,  -13] //Back of Track (slope)
+	[200, 20, 33, 19,    3,  -12] //Back of Track (slope)
+	[240, 20, 33, 35,  -33,  -21] //Back of Track (slope)
+	[280, 20, 33, 35,    3,  -20] //Back of Track (slope)
+	[  0, 80, 33, 26,  -29,  -10] //Front of Track
+	[ 40, 80, 33, 26,   -1,  -9] //Front of Track
+	[ 80, 80,  2, 38,    1,  -22] //Left of Track
+	[ 90, 80, 65, 10,  -31,  -10] //Top of Track
+	[160, 80, 33, 19,  -29,  -11] //Front of Track (slope)
+	[200, 80, 33, 19,   -1,  -10] //Front of Track (slope)
+	[240, 80, 33, 35,  -29,  -19] //Front of Track (slope)
+	[280, 80, 33, 35,   -1,  -18] //Front of Track (slope)
+
+}
+//No Fences
+template rail_nofences_template() {
+	//left_x, upper_y, width, height, offset_x, offset_y
+	[  0,0,1,1,0,0]
+	[  0,0,1,1,0,0]
+	[  0,0,1,1,0,0]
+	[  0,0,1,1,0,0]
+	[  0,0,1,1,0,0]
+	[  0,0,1,1,0,0]
+	[  0,0,1,1,0,0]
+	[  0,0,1,1,0,0]
+	[  0,0,1,1,0,0]
+	[  0,0,1,1,0,0]
+	[  0,0,1,1,0,0]
+	[  0,0,1,1,0,0]
+	[  0,0,1,1,0,0]
+	[  0,0,1,1,0,0]
+	[  0,0,1,1,0,0]
+	[  0,0,1,1,0,0]
+}
+spriteset(spriteset_nofences, "src/gfx/nofences.png") { rail_nofences_template()}
+
+// ########################################### LEVEL CROSSINGS
+
+// x (NORMAL=0,SNOW=130), y (OLD-CLOSED=60,OLD-OPEN=190,NEW-CLOSED=320,NEW-OPENED=450)
+template rail_crossings_template(x,y) {
+	//left_x, upper_y, width, height, offset_x, offset_y
+	[   x,    20,       64,    31,       -31,          0,	ANIM]	// TRACK CROSSING SW-NE
+	[65+x,    20,       64,    31,       -31,          0,	ANIM]	// TRACK CROSSING NW-SE
+	[   0,  65+y,       64,    50,       -31,        -19,	ANIM]	
+	[  65,  65+y,       64,    50,       -31,        -19,	ANIM]
+	[   0,     y,       64,    50,       -57,        -32,	ANIM]
+	[ 195,  65+y,       64,    50,       -57,        -32,	ANIM]
+	[ 130,  65+y,       64,    50,        -5,        -32,	ANIM]
+	[  65,     y,       64,    50,        -5,        -32,	ANIM]
+	[ 130,     y,       64,    50,       -31,        -45,	ANIM]
+	[ 195,     y,       64,    50,       -31,        -45,	ANIM]
+}
+
+/* ############################
+/* Rail Level Crossings
+/* ############################ */
+
+template level_crossings_railway_template_old()
+{
+  [    2, 349, 64, 31, -31,  0]
+  [   82, 349, 64, 31, -31,  0]
+}
+
+template rail_crossings_empty_template() {
+  [  1, 1, 64, 31, -31, 0]
+  [ 66, 1, 64, 31, -31, 0]
+}
+
+//Level Crossings (Closed)
+template rail_crossings_closed_template() {
+	//left_x, upper_y, width, height, offset_x, offset_y
+	[  1,     1,       64,    31,       -31,          0,	ANIM]
+	[ 66,     1,       64,    31,       -31,          0,	ANIM]
+	[  1,   115,       64,    50,       -31,        -19,	ANIM]	
+	[ 66,   115,       64,    50,       -31,        -19,	ANIM]
+	[  1,    50,       64,    50,       -57,        -32,	ANIM]
+	[196,   115,       64,    50,       -57,        -32,	ANIM]
+	[131,   115,       64,    50,        -5,        -32,	ANIM]
+	[ 66,    50,       64,    50,        -5,        -32,	ANIM]
+	[131,    50,       64,    50,       -31,        -45,	ANIM]
+	[196,    50,       64,    50,       -31,        -45,	ANIM]
+}
+
+//Level Crossings (Open)
+template rail_crossings_opened_template() {
+	//left_x, upper_y, width, height, offset_x, offset_y
+	[  1,     1,       64,    31,       -31,          0,	ANIM]
+	[ 66,     1,       64,    31,       -31,          0,	ANIM]
+	[  1,   245,       64,    50,       -31,        -19,	ANIM]	
+	[ 66,   245,       64,    50,       -31,        -19,	ANIM]
+	[  1,   180,       64,    50,       -57,        -32,	ANIM]
+	[196,   245,       64,    50,       -57,        -32,	ANIM]
+	[131,   245,       64,    50,        -5,        -32,	ANIM]
+	[ 66,   180,       64,    50,        -5,        -32,	ANIM]
+	[131,   180,       64,    50,       -31,        -45,	ANIM]
+	[196,   180,       64,    50,       -31,        -45,	ANIM]
+}
+
+
+template rail_fences_template() {
+	//left_x, upper_y, width, height, offset_x, offset_y
+	[  2,  1, 33, 26,  -33,  -12] //Back of Track
+	[ 50,  1, 33, 26,    3,  -11] //Back of Track
+	[ 98,  5,  2, 38,    0, -22] //Right of Track
+	[114,  1, 65,  10,  -31,  -10] //Bottom of Track
+	[194,  1, 33, 19,  -33,  -13] //Back of Track (slope)
+	[242,  1, 33, 19,    3,  -12] //Back of Track (slope)
+	[290,  1, 33, 35,  -33, -21] //Back of Track (slope)
+	[338,  1, 33, 35,    3, -20] //Back of Track (slope)
+	[  2, 46, 33, 26,  -29,  -10] //Front of Track
+	[ 50, 46, 33, 26,   -1,  -9] //Front of Track
+	[ 98, 50,  2, 38,    1, -22] //Left of Track
+	[114, 46, 65,  10,  -31,  -10] //Top of Track
+	[194, 46, 33, 19,  -29,  -11] //Front of Track (slope)
+	[242, 46, 33, 19,   -1,  -10] //Front of Track (slope)
+	[290, 46, 33, 35,  -29, -19] //Front of Track (slope)
+	[338, 46, 33, 35,   -1, -18] //Front of Track (slope)
+
+}
+
+// ########################################### PRECOMBINED
+
+
+template precombined_tile(x, y) { [x, y, 64, 31, -31, 0] }
+template rail_precombined(y) {
+	precombined_tile(  0, y)
+	precombined_tile( 80, y)
+	precombined_tile(160, y)
+	precombined_tile(240, y)
+	precombined_tile(320, y)
+	precombined_tile(400, y)
+	precombined_tile(480, y)
+	precombined_tile(560, y)
+	precombined_tile(640, y)
+	precombined_tile(720, y)
+	precombined_tile(  0, y+48*1)
+	precombined_tile( 80, y+48*1)
+	precombined_tile(160, y+48*1)
+	precombined_tile(240, y+48*1)
+	precombined_tile(320, y+48*1)
+	precombined_tile(400, y+48*1)
+	precombined_tile(480, y+48*1)
+	precombined_tile(560, y+48*1)
+	precombined_tile(640, y+48*1)
+	precombined_tile(720, y+48*1)
+	precombined_tile(  0, y+48*2)
+	precombined_tile( 80, y+48*2)
+	precombined_tile(160, y+48*2)
+	precombined_tile(240, y+48*2)
+	precombined_tile(320, y+48*2)
+	precombined_tile(400, y+48*2)
+	precombined_tile(480, y+48*2)
+	precombined_tile(560, y+48*2)
+	precombined_tile(640, y+48*2)
+	precombined_tile(720, y+48*2)
+	precombined_tile(  0, y+48*3)
+	precombined_tile( 80, y+48*3)
+	precombined_tile(160, y+48*3)
+	precombined_tile(240, y+48*3)
+	precombined_tile(320, y+48*3)
+	precombined_tile(400, y+48*3)
+	precombined_tile(480, y+48*3)
+	precombined_tile(560, y+48*3)
+	precombined_tile(640, y+48*3)
+	precombined_tile(720, y+48*3)
+	precombined_tile(  0, y+48*4)
+	precombined_tile( 80, y+48*4)
+	precombined_tile(160, y+48*4)
+	precombined_tile(240, y+48*4)
+	precombined_tile(320, y+48*4)
+	precombined_tile(400, y+48*4)
+	precombined_tile(480, y+48*4)
+	precombined_tile(560, y+48*4)
+	precombined_tile(640, y+48*4)
+	precombined_tile(720, y+48*4)
+	precombined_tile(  0, y+48*5)
+	precombined_tile( 80, y+48*5)
+	precombined_tile(160, y+48*5)
+	precombined_tile(240, y+48*5)
+	precombined_tile(320, y+48*5)
+	precombined_tile(400, y+48*5)
+	precombined_tile(480, y+48*5)
+	precombined_tile(560, y+48*5)
+	precombined_tile(640, y+48*5)
+	precombined_tile(720, y+48*5)
+	precombined_tile(  0, y+48*6)
+	precombined_tile( 80, y+48*6)
+	precombined_tile(160, y+48*6)
+}
+
+
+
+
+
+
+
+
+
 
 // OLD
 // icons templates
@@ -221,103 +439,3 @@ template rail_bridge_surfaces_template()
   [  578, 239, 64, 23, -31,  0]
   [  658, 239, 64, 39, -31, -8]
 }
-
-template rail_depot_template (y) {
-    [ 10, y+25, 64, 61, -31, -34]  //SE interior
-    [ 80, y+25, 64, 61,  -9, -45]  //SE Building
-    [150, y+25, 64, 61, -31, -34]  //SE interior
-    [220, y+25, 64, 61, -53, -45]  //SW Building
-    [290, y+25, 64, 61, -53, -45]  //NE Building
-    [360, y+25, 64, 61,  -9, -45]  //NW Building
-}
-
-
-/* ############################
-/* Rail Level Crossings
-/* ############################ */
-
-template level_crossings_railway_template_old()
-{
-  [    2, 349, 64, 31, -31,  0]
-  [   82, 349, 64, 31, -31,  0]
-}
-
-template rail_crossings_empty_template() {
-  [  1, 1, 64, 31, -31, 0]
-  [ 66, 1, 64, 31, -31, 0]
-}
-
-//Level Crossings (Closed)
-template rail_crossings_closed_template() {
-	//left_x, upper_y, width, height, offset_x, offset_y
-	[  1,     1,       64,    31,       -31,          0,	ANIM]
-	[ 66,     1,       64,    31,       -31,          0,	ANIM]
-	[  1,   115,       64,    50,       -31,        -19,	ANIM]	
-	[ 66,   115,       64,    50,       -31,        -19,	ANIM]
-	[  1,    50,       64,    50,       -57,        -32,	ANIM]
-	[196,   115,       64,    50,       -57,        -32,	ANIM]
-	[131,   115,       64,    50,        -5,        -32,	ANIM]
-	[ 66,    50,       64,    50,        -5,        -32,	ANIM]
-	[131,    50,       64,    50,       -31,        -45,	ANIM]
-	[196,    50,       64,    50,       -31,        -45,	ANIM]
-}
-
-//Level Crossings (Open)
-template rail_crossings_opened_template() {
-	//left_x, upper_y, width, height, offset_x, offset_y
-	[  1,     1,       64,    31,       -31,          0,	ANIM]
-	[ 66,     1,       64,    31,       -31,          0,	ANIM]
-	[  1,   245,       64,    50,       -31,        -19,	ANIM]	
-	[ 66,   245,       64,    50,       -31,        -19,	ANIM]
-	[  1,   180,       64,    50,       -57,        -32,	ANIM]
-	[196,   245,       64,    50,       -57,        -32,	ANIM]
-	[131,   245,       64,    50,        -5,        -32,	ANIM]
-	[ 66,   180,       64,    50,        -5,        -32,	ANIM]
-	[131,   180,       64,    50,       -31,        -45,	ANIM]
-	[196,   180,       64,    50,       -31,        -45,	ANIM]
-}
-
-
-template rail_fences_template() {
-	//left_x, upper_y, width, height, offset_x, offset_y
-	[  2,  1, 33, 26,  -33,  -12] //Back of Track
-	[ 50,  1, 33, 26,    3,  -11] //Back of Track
-	[ 98,  5,  2, 38,    0, -22] //Right of Track
-	[114,  1, 65,  10,  -31,  -10] //Bottom of Track
-	[194,  1, 33, 19,  -33,  -13] //Back of Track (slope)
-	[242,  1, 33, 19,    3,  -12] //Back of Track (slope)
-	[290,  1, 33, 35,  -33, -21] //Back of Track (slope)
-	[338,  1, 33, 35,    3, -20] //Back of Track (slope)
-	[  2, 46, 33, 26,  -29,  -10] //Front of Track
-	[ 50, 46, 33, 26,   -1,  -9] //Front of Track
-	[ 98, 50,  2, 38,    1, -22] //Left of Track
-	[114, 46, 65,  10,  -31,  -10] //Top of Track
-	[194, 46, 33, 19,  -29,  -11] //Front of Track (slope)
-	[242, 46, 33, 19,   -1,  -10] //Front of Track (slope)
-	[290, 46, 33, 35,  -29, -19] //Front of Track (slope)
-	[338, 46, 33, 35,   -1, -18] //Front of Track (slope)
-
-}
-//No Fences
-template rail_nofences_template() {
-	//left_x, upper_y, width, height, offset_x, offset_y
-	[  0,0,1,1,0,0]
-	[  0,0,1,1,0,0]
-	[  0,0,1,1,0,0]
-	[  0,0,1,1,0,0]
-	[  0,0,1,1,0,0]
-	[  0,0,1,1,0,0]
-	[  0,0,1,1,0,0]
-	[  0,0,1,1,0,0]
-	[  0,0,1,1,0,0]
-	[  0,0,1,1,0,0]
-	[  0,0,1,1,0,0]
-	[  0,0,1,1,0,0]
-	[  0,0,1,1,0,0]
-	[  0,0,1,1,0,0]
-	[  0,0,1,1,0,0]
-	[  0,0,1,1,0,0]
-}
-
-
-spriteset(spriteset_nofences, "src/gfx/nofences.png") { rail_nofences_template()}
