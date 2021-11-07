@@ -23,7 +23,7 @@ REPO_NAME           ?= My NewGRF
 BASE_FILENAME       ?= mynewgrf
 
 # Documentation files
-DOC_FILES ?= docs/readme.txt docs/license.txt docs/changelog.txt
+DOC_FILES ?= dist/readme.txt dist/license.txt dist/changelog.txt
 
 # Directory structure
 SCRIPT_DIR          ?= scripts
@@ -43,8 +43,8 @@ SCRIPT_DIR          ?= scripts
 ##################################################################
 
 # Define the filenames of the grf and nml file. They must be in the main directoy
-GRF_FILE            ?= $(BASE_FILENAME).grf
-NML_FILE            ?= $(BASE_FILENAME).nml
+GRF_FILE            ?= dist/$(BASE_FILENAME).grf
+NML_FILE            ?= dist/$(BASE_FILENAME).nml
 # uncomment MAIN_SRC_FILE if you do not want any preprocessing to happen to your source file
 MAIN_SRC_FILE       ?= $(BASE_FILENAME).pnml
 
@@ -297,8 +297,17 @@ maintainer-clean::
 # Documentation targets
 # target 'doc' which builds the docs
 ################################################################
+dist/changelog.txt:
+	$(_E) "[DOC] $@"
+	$(_V) pandoc --from markdown --to plain -o dist/changelog.txt CHANGELOG.md
+dist/readme.txt:
+	$(_E) "[DOC] $@"
+	$(_V) pandoc --from markdown --to plain -o dist/readme.txt README.md
+dist/license.txt:
+	$(_E) "[DOC] $@"
+	$(_V) cp -a LICENSE dist/license.txt
 
-%.txt: %.ptxt
+%.txt:
 	$(_E) "[DOC] $@"
 	$(_V) cat $< \
 		| sed -e "s/$(REPLACE_TITLE)/$(REPO_TITLE)/" \
@@ -354,7 +363,7 @@ GRFID_FLAGS    ?= -m
 
 # Common to all filenames
 FILE_VERSION_STRING ?= $(shell [ -n "$(REPO_TAGS)" ] && echo "$(REPO_TAGS)$(REPO_MODIFIED)" || echo "$(REPO_BRANCH_STRING)$(NEWGRF_VERSION)$(REPO_MODIFIED)")
-DIR_NAME           := $(shell [ -n "$(REPO_TAGS)" ] && echo $(BASE_FILENAME)-$(FILE_VERSION_STRING) || echo $(BASE_FILENAME))
+DIR_NAME           := $(shell [ -n "$(REPO_TAGS)" ] && echo $(BASE_FILENAME)-$(FILE_VERSION_STRING) || echo "dist/$(BASE_FILENAME)")
 VERSIONED_FILENAME := $(BASE_FILENAME)-$(FILE_VERSION_STRING)
 DIR_NAME_SRC       := $(VERSIONED_FILENAME)-source
 
