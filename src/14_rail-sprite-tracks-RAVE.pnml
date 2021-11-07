@@ -1,3 +1,9 @@
+/*
+#    OpenTTD Spanish railsets -  Copyright (C) 2021  Pablo Villaverde Castro
+#    This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+#    This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+#	 You should have received a copy of the GNU General Public License along with this program.  If not, see <https://github.com/pvillaverde/openttd-spanish-railsets/blob/main/LICENSE>.
+*/
 // Spritesets para as liñas do RAVE (Red de Alta Velocidad Española)
 #define GUI_FILE			"src/gfx/RAVE/01_gui.png"
 #define OVERLAY_FILE		"src/gfx/RAVE/02_overlay.png"
@@ -113,131 +119,6 @@ spriteset(rave_catenary_wires, CATENARY_FILE) {	rail_catenary_wires_template()	}
 // ########################################### SIGNALS
 
 
-/**********************************************
-//* ELSA Signals
- **********************************************/
-/**********************************************
-//ELSA Semaphores
- **********************************************/
-
-spriteset (spriteset_semaphore_block_green_ELSA, "src/gfx/ELSA/Semaphores_block_ELSA.png") {
-    template_semaphore_signals(0)
-}
-spriteset (spriteset_semaphore_block_red_ELSA, "src/gfx/ELSA/Semaphores_block_ELSA.png") {
-    template_semaphore_signals(40)
-}
-spriteset (spriteset_semaphore_block_combo_green_ELSA, "src/gfx/ELSA/Semaphores_block_combo_ELSA.png") {
-    template_semaphore_signals(0)
-}
-spriteset (spriteset_semaphore_block_combo_red_ELSA, "src/gfx/ELSA/Semaphores_block_combo_ELSA.png") {
-    template_semaphore_signals(40)
-}
-spriteset (spriteset_semaphore_block_entry_green_ELSA, "src/gfx/ELSA/Semaphores_block_entry_ELSA.png") {
-    template_semaphore_signals(0)
-}
-spriteset (spriteset_semaphore_block_entry_red_ELSA, "src/gfx/ELSA/Semaphores_block_entry_ELSA.png") {
-    template_semaphore_signals(40)
-}
-spriteset (spriteset_semaphore_block_exit_green_ELSA, "src/gfx/ELSA/Semaphores_block_exit_ELSA.png") {
-    template_semaphore_signals(0)
-}
-spriteset (spriteset_semaphore_block_exit_red_ELSA, "src/gfx/ELSA/Semaphores_block_exit_ELSA.png") {
-    template_semaphore_signals(40)
-}
-spriteset (spriteset_semaphore_path_oneway_green_ELSA, "src/gfx/ELSA/Semaphores_path_oneway_ELSA.png") {
-    template_semaphore_signals(0)
-}
-spriteset (spriteset_semaphore_path_oneway_red_ELSA, "src/gfx/ELSA/Semaphores_path_oneway_ELSA.png") {
-    template_semaphore_signals(40)
-}
-spriteset (spriteset_semaphore_path_twoway_green_ELSA, "src/gfx/ELSA/Semaphores_path_twoway_ELSA.png") {
-    template_semaphore_signals(0)
-}
-spriteset (spriteset_semaphore_path_twoway_red_ELSA, "src/gfx/ELSA/Semaphores_path_twoway_ELSA.png") {
-    template_semaphore_signals(40)
-}
-
-/**********************************************
-// ELSA Light Signals
- **********************************************/
-
-spriteset (spriteset_signals_block_green_ELSA, "src/gfx/ELSA/Signals_block_ELSA.png") {
-    template_light_signals(0)
-}
-spriteset (spriteset_signals_block_red_ELSA, "src/gfx/ELSA/Signals_block_ELSA.png") {
-    template_light_signals(40)
-}
-spriteset (spriteset_signals_block_combo_green_ELSA, "src/gfx/ELSA/Signals_block_combo_ELSA.png") {
-    template_light_signals(0)
-}
-spriteset (spriteset_signals_block_combo_red_ELSA, "src/gfx/ELSA/Signals_block_combo_ELSA.png") {
-    template_light_signals(40)
-}
-spriteset (spriteset_signals_block_entry_green_ELSA, "src/gfx/ELSA/Signals_block_entry_ELSA.png") {
-    template_light_signals(0)
-}
-spriteset (spriteset_signals_block_entry_red_ELSA, "src/gfx/ELSA/Signals_block_entry_ELSA.png") {
-    template_light_signals(40)
-}
-spriteset (spriteset_signals_block_exit_green_ELSA, "src/gfx/ELSA/Signals_block_exit_ELSA.png") {
-    template_light_signals(0)
-}
-spriteset (spriteset_signals_block_exit_red_ELSA, "src/gfx/ELSA/Signals_block_exit_ELSA.png") {
-    template_light_signals(40)
-}
-spriteset (spriteset_signals_path_oneway_green_ELSA, "src/gfx/ELSA/Signals_path_oneway_ELSA.png") {
-    template_light_signals(0)
-}
-spriteset (spriteset_signals_path_oneway_red_ELSA, "src/gfx/ELSA/Signals_path_oneway_ELSA.png") {
-    template_light_signals(40)
-}
-spriteset (spriteset_signals_path_twoway_green_ELSA, "src/gfx/ELSA/Signals_path_twoway_ELSA.png") {
-    template_light_signals(0)
-}
-spriteset (spriteset_signals_path_twoway_red_ELSA, "src/gfx/ELSA/Signals_path_twoway_ELSA.png") {
-    template_light_signals(40)
-}
-
-switch (FEAT_RAILTYPES, SELF, switch_signals_custom_type_ELSA, extra_callback_info2 & 0x00FFFFFF) {
-    //light signals
-    //TT         VV        SS
-    (0 << 16) | (0 << 8) | 0 :   spriteset_signals_block_red_ELSA;
-    (0 << 16) | (0 << 8) | 1 : spriteset_signals_block_green_ELSA;
-    (1 << 16) | (0 << 8) | 0 : spriteset_signals_block_entry_red_ELSA;
-    (1 << 16) | (0 << 8) | 1 : spriteset_signals_block_entry_green_ELSA;
-    (2 << 16) | (0 << 8) | 0 : spriteset_signals_block_exit_red_ELSA;
-    (2 << 16) | (0 << 8) | 1 : spriteset_signals_block_exit_green_ELSA;
-    (3 << 16) | (0 << 8) | 0 : spriteset_signals_block_combo_red_ELSA;
-    (3 << 16) | (0 << 8) | 1 : spriteset_signals_block_combo_green_ELSA;
-    (4 << 16) | (0 << 8) | 0 : spriteset_signals_path_twoway_red_ELSA;
-    (4 << 16) | (0 << 8) | 1 : spriteset_signals_path_twoway_green_ELSA;
-    (5 << 16) | (0 << 8) | 0 : spriteset_signals_path_oneway_red_ELSA;
-    (5 << 16) | (0 << 8) | 1 : spriteset_signals_path_oneway_green_ELSA;
-    //Semaphores
-    //TT         VV        SS
-    (0 << 16) | (1 << 8) | 0 : spriteset_semaphore_block_red_ELSA;
-    (0 << 16) | (1 << 8) | 1 : spriteset_semaphore_block_green_ELSA;
-    (1 << 16) | (1 << 8) | 0 : spriteset_semaphore_block_entry_red_ELSA;
-    (1 << 16) | (1 << 8) | 1 : spriteset_semaphore_block_entry_green_ELSA;
-    (2 << 16) | (1 << 8) | 0 : spriteset_semaphore_block_exit_red_ELSA;
-    (2 << 16) | (1 << 8) | 1 : spriteset_semaphore_block_exit_green_ELSA;
-    (3 << 16) | (1 << 8) | 0 : spriteset_semaphore_block_combo_red_ELSA;
-    (3 << 16) | (1 << 8) | 1 : spriteset_semaphore_block_combo_green_ELSA;
-    (4 << 16) | (1 << 8) | 0 : spriteset_semaphore_path_twoway_red_ELSA;
-    (4 << 16) | (1 << 8) | 1 : spriteset_semaphore_path_twoway_green_ELSA;
-    (5 << 16) | (1 << 8) | 0 : spriteset_semaphore_path_oneway_red_ELSA;
-    (5 << 16) | (1 << 8) | 1 : spriteset_semaphore_path_oneway_green_ELSA;
-
-    CB_FAILED;
-}
-/* 
-switch (FEAT_RAILTYPES, SELF, switch_ELSA_signals_type, param_original_signals) {
-0 : return switch_signals_custom_type_ELSA;
-return CB_FAILED;
-} */
-
-
-
 
 #undef GUI_FILE
 #undef OVERLAY_FILE
@@ -293,6 +174,6 @@ item (FEAT_RAILTYPES, RAVE)
 		precombined:		rave_precombined_switch;
 		catenary_pylons: 	rave_catenary_pylons_switch;
 		catenary_wire: 		rave_catenary_wires;
-		signals: 			switch_signals_custom_type_ELSA;
+	//	signals: 			switch_signals_custom_type_ELSA;
     }
 }

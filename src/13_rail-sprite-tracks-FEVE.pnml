@@ -1,3 +1,9 @@
+/*
+#    OpenTTD Spanish railsets -  Copyright (C) 2021  Pablo Villaverde Castro
+#    This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+#    This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+#	 You should have received a copy of the GNU General Public License along with this program.  If not, see <https://github.com/pvillaverde/openttd-spanish-railsets/blob/main/LICENSE>.
+*/
 // Spritesets para as liñas do FEVE (Ferrocarril de Vía Estreita)
 #define GUI_FILE			"src/gfx/FEVE/01_gui.png"
 #define OVERLAY_FILE		"src/gfx/FEVE/02_overlay.png"
@@ -126,7 +132,7 @@ item (FEAT_RAILTYPES, FEVE)
 	}
 	property
 	{
-		introduction_date: 				date(1951, 1, 1);
+		introduction_date: 				date(1870, 1, 1);
 		name: 							string(STR_FEVE_NAME);
 		toolbar_caption: 				string(STR_FEVE_TOOLBAR);
 		menu_text: 						string(STR_FEVE_MENU);
