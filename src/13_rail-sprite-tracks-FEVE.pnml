@@ -1,40 +1,121 @@
-// Spritesets para as liñas do FEVE
+// Spritesets para as liñas do FEVE (Ferrocarril de Vía Estreita)
+#define GUI_FILE			"src/gfx/FEVE/01_gui.png"
+#define OVERLAY_FILE		"src/gfx/FEVE/02_overlay.png"
+#define UNDERLAY_FILE		"src/gfx/FEVE/03_underlay.png"
+#define BRIDGES_FILE		"src/gfx/FEVE/04_bridges.png"
+#define TUNNELS_FILE		"src/gfx/FEVE/05_tunnels.png"
+#define DEPOT_FILE			"src/gfx/FEVE/06_depot.png"
+#define FENCES_FILE			"src/gfx/FEVE/07_fences.png"
+#define CROSSINGS_FILE		"src/gfx/FEVE/08_crossings.png"
+#define CATENARY_FILE		"src/gfx/FEVE/10_catenary.png"
 
-#define MAIN_FILE			"src/gfx/FEVE/main.png"
-#define DEPOT_FILE			"src/gfx/FEVE/depot.png"
-#define FENCES_FILE			"src/gfx/FEVE/fences.png"
-#define CROSSINGS_FILE		"src/gfx/FEVE/crossings.png"
+// ########################################### GUI: Interface, botóns e cursores
+spriteset(feve_gui_opengfx_spriteset, GUI_FILE){  rail_gui_gfx_template()	}
+spriteset(feve_gui_ttd_spriteset, GUI_FILE){  rail_gui_ttd_template()	}
+switch (FEAT_RAILTYPES, SELF, feve_gui_switch, param_gui) {
+    1: feve_gui_opengfx_spriteset;
+    feve_gui_ttd_spriteset;
+}
+// ########################################### OVERLAY
 
-spriteset(feve_gui, MAIN_FILE){  rail_gui_template()	}
-spriteset(feve_track_overlay, MAIN_FILE) {  rail_track_overlay_template()	}
-spriteset(feve_underlay, MAIN_FILE) {  rail_underlay_template()	}
-spriteset(feve_tunnels, MAIN_FILE) {  rail_tunnels_template()	}
-spriteset(feve_bridge_surfaces, MAIN_FILE) {  rail_bridge_surfaces_template()	}
+spriteset(feve_overlay_spriteset, OVERLAY_FILE) {  rail_overlay_template(20)	}
+spriteset(feve_overlay_snow_spriteset, OVERLAY_FILE) {  rail_overlay_template(75)	}
+switch(FEAT_RAILTYPES, SELF, feve_overlay_switch,  terrain_type){
+	TILETYPE_SNOW: feve_overlay_snow_spriteset;
+	feve_overlay_spriteset;
+}
+// ########################################### UNDERLAY
 
+spriteset(feve_underlay_spriteset, UNDERLAY_FILE) {  rail_underlay_template_new(20)	}
+spriteset(feve_underlay_snow_spriteset, UNDERLAY_FILE) {  rail_underlay_template_new(160)	}
+switch(FEAT_RAILTYPES, SELF, feve_underlay_switch,  terrain_type){
+	TILETYPE_SNOW: feve_underlay_snow_spriteset;
+	feve_underlay_spriteset;
+}
+// ########################################### BRIDGE SURFACES
+
+spriteset(feve_bridges_spriteset, BRIDGES_FILE) {  rail_bridges_template(20)	}
+spriteset(feve_bridges_snow_spriteset, BRIDGES_FILE) {  rail_bridges_template(75)	}
+switch(FEAT_RAILTYPES, SELF, feve_bridges_switch,  terrain_type){
+	TILETYPE_SNOW: feve_bridges_snow_spriteset;
+	feve_bridges_spriteset;
+}
+// ########################################### TUNNELS (Tunnel track)
+spriteset(feve_tunnels_spriteset, TUNNELS_FILE) {  rail_tunnels_template_new(20)	}
+spriteset(feve_tunnels_snow_spriteset, TUNNELS_FILE) {  rail_tunnels_template_new(90)	}
+switch(FEAT_RAILTYPES, SELF, feve_tunnels_switch,  terrain_type){
+	TILETYPE_SNOW: feve_tunnels_snow_spriteset;
+	feve_tunnels_spriteset;
+}
+// ########################################### TUNNEL OVERLAY (Tunnel structure)
+spriteset(feve_tunnels_overlay_spriteset, TUNNELS_FILE) {  rail_tunnels_overlay_template(160)	}
+spriteset(feve_tunnels_overlay_snow_spriteset, TUNNELS_FILE) {  rail_tunnels_overlay_template(230)	}
+switch(FEAT_RAILTYPES, SELF, feve_tunnels_overlay_switch,  terrain_type){
+	TILETYPE_SNOW: feve_tunnels_overlay_snow_spriteset;
+	feve_tunnels_overlay_spriteset;
+}
+// ########################################### DEPOTS
 spriteset(feve_depot, DEPOT_FILE){  rail_depot_template(0)	}
 spriteset(feve_depot_snow, DEPOT_FILE){  rail_depot_template(86)	}
-// Depot Switch
-switch(FEAT_RAILTYPES, SELF, switch_feve_depots,  terrain_type){
+switch(FEAT_RAILTYPES, SELF, feve_depots_switch,  terrain_type){
 	TILETYPE_SNOW: feve_depot_snow;
 	feve_depot;
 }
+// ########################################### FENCES
+// ########################################### CROSSINGS
+// x (NORMAL=0,SNOW=130), y (OLD-CLOSED=60,OLD-OPEN=190,NEW-CLOSED=320,NEW-OPENED=450)
+spriteset(feve_crossings_closed_old, CROSSINGS_FILE)	{	rail_crossings_template(0,60)	}
+spriteset(feve_crossings_closed_old_snow, CROSSINGS_FILE)	{	rail_crossings_template(130,60)	}
+spriteset(feve_crossings_opened_old, CROSSINGS_FILE)	{	rail_crossings_template(0,190)	}
+spriteset(feve_crossings_opened_old_snow, CROSSINGS_FILE)	{	rail_crossings_template(130,190)	}
 
-spriteset(feve_fences, FENCES_FILE)	{	rail_fences_template()	}
-
-spriteset(feve_crossings_empty,	CROSSINGS_FILE)	{	rail_crossings_empty_template()	}
-spriteset(feve_crossings_closed, CROSSINGS_FILE)	{	rail_crossings_closed_template()	}
-spriteset(feve_crossings_opened, CROSSINGS_FILE)	{	rail_crossings_opened_template()	}
-
+spriteset(feve_crossings_closed_modern, CROSSINGS_FILE)	{	rail_crossings_template(0,320)	}
+spriteset(feve_crossings_closed_modern_snow, CROSSINGS_FILE)	{	rail_crossings_template(130,320)	}
+spriteset(feve_crossings_opened_modern, CROSSINGS_FILE)	{	rail_crossings_template(0,450)	}
+spriteset(feve_crossings_opened_modern_snow, CROSSINGS_FILE)	{	rail_crossings_template(130,450)	}
+// Level Crossing snow switches
+switch(FEAT_RAILTYPES, SELF, feve_crossings_closed_old_switch,  terrain_type){	TILETYPE_SNOW: feve_crossings_closed_old_snow;	feve_crossings_closed_old;}
+switch(FEAT_RAILTYPES, SELF, feve_crossings_opened_old_switch,  terrain_type){	TILETYPE_SNOW: feve_crossings_opened_old_snow;	feve_crossings_opened_old;}
+switch(FEAT_RAILTYPES, SELF, feve_crossings_closed_modern_switch,  terrain_type){	TILETYPE_SNOW: feve_crossings_closed_modern_snow;	feve_crossings_closed_modern;}
+switch(FEAT_RAILTYPES, SELF, feve_crossings_opened_modern_switch,  terrain_type){	TILETYPE_SNOW: feve_crossings_opened_modern_snow;	feve_crossings_opened_modern;}
 // Level crossing switches
 
-switch(FEAT_RAILTYPES, SELF, switch_feve_crossings, level_crossing_status){
-	LEVEL_CROSSING_CLOSED : feve_crossings_closed ;
-	feve_crossings_opened ;
+switch(FEAT_RAILTYPES,	SELF,	feve_crossings_closed_switch, current_year){ 
+	0 .. 1970 - 1	: feve_crossings_closed_old_switch ;
+	feve_crossings_closed_modern_switch;
 }
-#undef MAIN_FILE
+
+switch(FEAT_RAILTYPES,	SELF,	feve_crossings_opened_switch, current_year){ 
+	0 .. 1970 - 1	: feve_crossings_opened_old_switch ;
+	feve_crossings_opened_modern_switch;
+}
+
+switch(FEAT_RAILTYPES, SELF, feve_crossings_switch, level_crossing_status){
+	LEVEL_CROSSING_CLOSED : feve_crossings_closed_switch ;
+	feve_crossings_opened_switch ;
+}
+// ########################################### CATENARY PYLONS & WIRES
+
+spriteset(feve_catenary_pylons, CATENARY_FILE) {	rail_catenary_pylons_template(20)	}
+spriteset(feve_catenary_pylons_2, CATENARY_FILE) {	rail_catenary_pylons_template(60)	}
+random_switch (FEAT_RAILTYPES, SELF, feve_catenary_pylons_switch) {    3: feve_catenary_pylons;    1: feve_catenary_pylons_2;}
+spriteset(feve_catenary_wires, CATENARY_FILE) {	rail_catenary_wires_template()	}
+
+// ########################################### SIGNALS
+
+
+
+#undef GUI_FILE
+#undef OVERLAY_FILE
+#undef UNDERLAY_FILE
+#undef BRIDGES_FILE
+#undef TUNNELS_FILE
 #undef DEPOT_FILE
 #undef FENCES_FILE
 #undef CROSSINGS_FILE
+#undef PRECOMBINED_FILE
+#undef CATENARY_FILE
+
 
 item (FEAT_RAILTYPES, FEVE)
 {
@@ -60,22 +141,26 @@ item (FEAT_RAILTYPES, FEVE)
 		maintenance_cost: 				FEVE_BASE_COST + FEVE_BASE_COST * param_feve_cost;
 		speed_limit: 					100 km/h;      
 		acceleration_model: 			ACC_MODEL_RAIL;
-		map_colour: 					19;
-		sort_order: 					10;
+		sort_order: 					30;
+		map_colour: 					30;
 		alternative_railtype_list:		["FEVE"];
 		railtype_flags:					bitmask(RAILTYPE_FLAG_CATENARY);
     }
     graphics
     {
-		gui: 				feve_gui;
-		track_overlay: 		feve_track_overlay;
-		underlay:			feve_underlay;
-		tunnels: 			feve_tunnels;
-	//	tunnel_overlay: 	feve_tunnels; 
-		bridge_surfaces: 	feve_bridge_surfaces;
+		gui: 				feve_gui_switch;
+		track_overlay: 		feve_overlay_switch;
+		underlay:			feve_underlay_switch;
+		bridge_surfaces: 	feve_bridges_switch;
+		tunnels: 			feve_tunnels_switch;
+		tunnel_overlay: 	feve_tunnels_overlay_switch; 
+		depots: 			feve_depots_switch;
 		fences:				spriteset_nofences;
-		level_crossings: 	switch_feve_crossings;
-		depots: 			switch_feve_depots;
+		level_crossings: 	feve_crossings_switch;
+	//	precombined:		feve_precombined_switch;
+		catenary_pylons: 	feve_catenary_pylons_switch;
+		catenary_wire: 		feve_catenary_wires;
 	//	signals: 			switch_signals_type;
+
     }
 }

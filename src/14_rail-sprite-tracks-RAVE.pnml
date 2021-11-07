@@ -8,6 +8,7 @@
 #define FENCES_FILE			"src/gfx/RAVE/07_fences.png"
 #define CROSSINGS_FILE		"src/gfx/RAVE/08_crossings.png"
 #define PRECOMBINED_FILE	"src/gfx/RAVE/09_precombined.png"
+#define CATENARY_FILE		"src/gfx/RAVE/10_catenary.png"
 
 // ########################################### GUI: Interface, botóns e cursores
 spriteset(rave_gui_opengfx_spriteset, GUI_FILE){  rail_gui_gfx_template()	}
@@ -96,16 +97,144 @@ switch(FEAT_RAILTYPES, SELF, rave_crossings_switch, level_crossing_status){
 	rave_crossings_opened_switch ;
 }
 // ########################################### PRECOMBINED
-spriteset(rave_precombined, PRECOMBINED_FILE){  rail_precombined(20)	}
-spriteset(rave_precombined_snow, PRECOMBINED_FILE){  rail_precombined(360)	}
+spriteset(rave_precombined, PRECOMBINED_FILE){  rail_precombined_template(20)	}
+spriteset(rave_precombined_snow, PRECOMBINED_FILE){  rail_precombined_template(360)	}
 switch(FEAT_RAILTYPES, SELF, rave_precombined_switch,  terrain_type){
 	TILETYPE_SNOW: rave_precombined_snow;
 	rave_precombined;
 }
-// ########################################### CATENARY WIRE
-// ########################################### CATENARY PILONS
+// ########################################### CATENARY PYLONS & WIRES
+
+spriteset(rave_catenary_pylons, CATENARY_FILE) {	rail_catenary_pylons_template(20)	}
+spriteset(rave_catenary_pylons_2, CATENARY_FILE) {	rail_catenary_pylons_template(60)	}
+random_switch (FEAT_RAILTYPES, SELF, rave_catenary_pylons_switch) {    3: rave_catenary_pylons;    1: rave_catenary_pylons_2;}
+spriteset(rave_catenary_wires, CATENARY_FILE) {	rail_catenary_wires_template()	}
+
 // ########################################### SIGNALS
 
+
+/**********************************************
+//* ELSA Signals
+ **********************************************/
+/**********************************************
+//ELSA Semaphores
+ **********************************************/
+
+spriteset (spriteset_semaphore_block_green_ELSA, "src/gfx/ELSA/Semaphores_block_ELSA.png") {
+    template_semaphore_signals(0)
+}
+spriteset (spriteset_semaphore_block_red_ELSA, "src/gfx/ELSA/Semaphores_block_ELSA.png") {
+    template_semaphore_signals(40)
+}
+spriteset (spriteset_semaphore_block_combo_green_ELSA, "src/gfx/ELSA/Semaphores_block_combo_ELSA.png") {
+    template_semaphore_signals(0)
+}
+spriteset (spriteset_semaphore_block_combo_red_ELSA, "src/gfx/ELSA/Semaphores_block_combo_ELSA.png") {
+    template_semaphore_signals(40)
+}
+spriteset (spriteset_semaphore_block_entry_green_ELSA, "src/gfx/ELSA/Semaphores_block_entry_ELSA.png") {
+    template_semaphore_signals(0)
+}
+spriteset (spriteset_semaphore_block_entry_red_ELSA, "src/gfx/ELSA/Semaphores_block_entry_ELSA.png") {
+    template_semaphore_signals(40)
+}
+spriteset (spriteset_semaphore_block_exit_green_ELSA, "src/gfx/ELSA/Semaphores_block_exit_ELSA.png") {
+    template_semaphore_signals(0)
+}
+spriteset (spriteset_semaphore_block_exit_red_ELSA, "src/gfx/ELSA/Semaphores_block_exit_ELSA.png") {
+    template_semaphore_signals(40)
+}
+spriteset (spriteset_semaphore_path_oneway_green_ELSA, "src/gfx/ELSA/Semaphores_path_oneway_ELSA.png") {
+    template_semaphore_signals(0)
+}
+spriteset (spriteset_semaphore_path_oneway_red_ELSA, "src/gfx/ELSA/Semaphores_path_oneway_ELSA.png") {
+    template_semaphore_signals(40)
+}
+spriteset (spriteset_semaphore_path_twoway_green_ELSA, "src/gfx/ELSA/Semaphores_path_twoway_ELSA.png") {
+    template_semaphore_signals(0)
+}
+spriteset (spriteset_semaphore_path_twoway_red_ELSA, "src/gfx/ELSA/Semaphores_path_twoway_ELSA.png") {
+    template_semaphore_signals(40)
+}
+
+/**********************************************
+// ELSA Light Signals
+ **********************************************/
+
+spriteset (spriteset_signals_block_green_ELSA, "src/gfx/ELSA/Signals_block_ELSA.png") {
+    template_light_signals(0)
+}
+spriteset (spriteset_signals_block_red_ELSA, "src/gfx/ELSA/Signals_block_ELSA.png") {
+    template_light_signals(40)
+}
+spriteset (spriteset_signals_block_combo_green_ELSA, "src/gfx/ELSA/Signals_block_combo_ELSA.png") {
+    template_light_signals(0)
+}
+spriteset (spriteset_signals_block_combo_red_ELSA, "src/gfx/ELSA/Signals_block_combo_ELSA.png") {
+    template_light_signals(40)
+}
+spriteset (spriteset_signals_block_entry_green_ELSA, "src/gfx/ELSA/Signals_block_entry_ELSA.png") {
+    template_light_signals(0)
+}
+spriteset (spriteset_signals_block_entry_red_ELSA, "src/gfx/ELSA/Signals_block_entry_ELSA.png") {
+    template_light_signals(40)
+}
+spriteset (spriteset_signals_block_exit_green_ELSA, "src/gfx/ELSA/Signals_block_exit_ELSA.png") {
+    template_light_signals(0)
+}
+spriteset (spriteset_signals_block_exit_red_ELSA, "src/gfx/ELSA/Signals_block_exit_ELSA.png") {
+    template_light_signals(40)
+}
+spriteset (spriteset_signals_path_oneway_green_ELSA, "src/gfx/ELSA/Signals_path_oneway_ELSA.png") {
+    template_light_signals(0)
+}
+spriteset (spriteset_signals_path_oneway_red_ELSA, "src/gfx/ELSA/Signals_path_oneway_ELSA.png") {
+    template_light_signals(40)
+}
+spriteset (spriteset_signals_path_twoway_green_ELSA, "src/gfx/ELSA/Signals_path_twoway_ELSA.png") {
+    template_light_signals(0)
+}
+spriteset (spriteset_signals_path_twoway_red_ELSA, "src/gfx/ELSA/Signals_path_twoway_ELSA.png") {
+    template_light_signals(40)
+}
+
+switch (FEAT_RAILTYPES, SELF, switch_signals_custom_type_ELSA, extra_callback_info2 & 0x00FFFFFF) {
+    //light signals
+    //TT         VV        SS
+    (0 << 16) | (0 << 8) | 0 :   spriteset_signals_block_red_ELSA;
+    (0 << 16) | (0 << 8) | 1 : spriteset_signals_block_green_ELSA;
+    (1 << 16) | (0 << 8) | 0 : spriteset_signals_block_entry_red_ELSA;
+    (1 << 16) | (0 << 8) | 1 : spriteset_signals_block_entry_green_ELSA;
+    (2 << 16) | (0 << 8) | 0 : spriteset_signals_block_exit_red_ELSA;
+    (2 << 16) | (0 << 8) | 1 : spriteset_signals_block_exit_green_ELSA;
+    (3 << 16) | (0 << 8) | 0 : spriteset_signals_block_combo_red_ELSA;
+    (3 << 16) | (0 << 8) | 1 : spriteset_signals_block_combo_green_ELSA;
+    (4 << 16) | (0 << 8) | 0 : spriteset_signals_path_twoway_red_ELSA;
+    (4 << 16) | (0 << 8) | 1 : spriteset_signals_path_twoway_green_ELSA;
+    (5 << 16) | (0 << 8) | 0 : spriteset_signals_path_oneway_red_ELSA;
+    (5 << 16) | (0 << 8) | 1 : spriteset_signals_path_oneway_green_ELSA;
+    //Semaphores
+    //TT         VV        SS
+    (0 << 16) | (1 << 8) | 0 : spriteset_semaphore_block_red_ELSA;
+    (0 << 16) | (1 << 8) | 1 : spriteset_semaphore_block_green_ELSA;
+    (1 << 16) | (1 << 8) | 0 : spriteset_semaphore_block_entry_red_ELSA;
+    (1 << 16) | (1 << 8) | 1 : spriteset_semaphore_block_entry_green_ELSA;
+    (2 << 16) | (1 << 8) | 0 : spriteset_semaphore_block_exit_red_ELSA;
+    (2 << 16) | (1 << 8) | 1 : spriteset_semaphore_block_exit_green_ELSA;
+    (3 << 16) | (1 << 8) | 0 : spriteset_semaphore_block_combo_red_ELSA;
+    (3 << 16) | (1 << 8) | 1 : spriteset_semaphore_block_combo_green_ELSA;
+    (4 << 16) | (1 << 8) | 0 : spriteset_semaphore_path_twoway_red_ELSA;
+    (4 << 16) | (1 << 8) | 1 : spriteset_semaphore_path_twoway_green_ELSA;
+    (5 << 16) | (1 << 8) | 0 : spriteset_semaphore_path_oneway_red_ELSA;
+    (5 << 16) | (1 << 8) | 1 : spriteset_semaphore_path_oneway_green_ELSA;
+
+    CB_FAILED;
+}
+/* 
+switch (FEAT_RAILTYPES, SELF, switch_ELSA_signals_type, param_original_signals) {
+0 : return switch_signals_custom_type_ELSA;
+return CB_FAILED;
+} */
 
 
 
@@ -119,6 +248,7 @@ switch(FEAT_RAILTYPES, SELF, rave_precombined_switch,  terrain_type){
 #undef FENCES_FILE
 #undef CROSSINGS_FILE
 #undef PRECOMBINED_FILE
+#undef CATENARY_FILE
 
 item (FEAT_RAILTYPES, RAVE)
 {
@@ -144,8 +274,8 @@ item (FEAT_RAILTYPES, RAVE)
 		maintenance_cost: 				RAVE_BASE_COST + RAVE_BASE_COST * param_rave_cost;
 		speed_limit: 					500 km/h;      
 		acceleration_model: 			ACC_MODEL_RAIL;
-	//	map_colour: 					19;
 		sort_order: 					40;
+		map_colour: 					40;
 		alternative_railtype_list:		["RAVE","MGLV"];
 		railtype_flags:					bitmask(RAILTYPE_FLAG_PRECOMBINED, RAILTYPE_FLAG_CATENARY, RAILTYPE_FLAG_NO_LEVEL_CROSSING, RAILTYPE_FLAG_DISALLOW_90DEG);
     }
@@ -161,6 +291,8 @@ item (FEAT_RAILTYPES, RAVE)
 		fences:				rave_fences;
 		level_crossings: 	rave_crossings_switch;
 		precombined:		rave_precombined_switch;
-	//	signals: 			switch_signals_type;
+		catenary_pylons: 	rave_catenary_pylons_switch;
+		catenary_wire: 		rave_catenary_wires;
+		signals: 			switch_signals_custom_type_ELSA;
     }
 }
