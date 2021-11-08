@@ -19,3 +19,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added FEVE's Narrow gauge based in NG600mm. 
 - Added parameter in order to replace Monorail or set as a separate railway.
 - Added parameter to set build & maintenance cost.
+- Added RAVE's High Speed track based in Ubify's U&ReRMM 2
+- Added RAIL and ELRL sprites based in Ubify's U&ReRMM 2

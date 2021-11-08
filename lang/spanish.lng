@@ -1,0 +1,42 @@
+##grflangid 0x04
+##plural 0
+# This is the Spanish language file
+
+# GRF name and description
+STR_GRF_NAME        :Ferrocarrilees de España {VERSION}
+STR_GRF_DESCRIPTION :{TITLE} - Inspirado por NG600mm,U&ReRMM2 e Spanish Trainset. Añade una vía estrecha(FEVE) y Alta Velocidad (AVE).{} Compatible con NewGRFs de Pontes.{}{COPYRIGHT}2021 andythenorth, McZapkie, Ubify (graphics), pvillaverde (NML)
+
+STR_PARAM_GUI_NAME              :Estilo de interfaz
+STR_PARAM_GUI_DESC              :Selecciona el estilo de los botones y cursores de este set
+STR_PARAM_OPENGFX               :OpenGFX
+STR_PARAM_TTD                   :TTD
+
+STR_PARAM_NAME_REPLACE_MONORAIL	:Sustituír el monoraíl por el FEVE?
+STR_PARAM_DESC_REPLACE_MONORAIL	:Sustituye el monoraíl por las vías estrechas del FEVE. Indispensable para utilizar el NewGRF del FEVE.
+
+STR_PARAM_NAME_REPLACE_MAGLEV	:Sustituír el MagLev por el AVE?
+STR_PARAM_DESC_REPLACE_MAGLEV	:Sustituye ele MagLev por las vías de Alta Velocidad. Indispensable para utilizar el NewGRF que incluye los trenes del AVE.
+
+STR_PARAM_NAME_FEVE_COST     :Coste y mantenimiento de las vías del FEVE 
+STR_PARAM_DESC_FEVE_COST     :Ajusta el coste y mantenimiento de las vías del FEVE. {LTBLUE}(Normal es la mitad que las líneas normales de tren)
+
+STR_PARAM_NAME_RAVE_COST     :Coste y mantenimiento de las vías del AVE
+STR_PARAM_DESC_RAVE_COST     :Ajusta el coste y mantenimiento de las vías del AVE. {LTBLUE}(Normal es tres veces las líneas normales de tren)
+
+STR_PARAM_COST_H               	: Más barata
+STR_PARAM_COST_N               	: Normal
+STR_PARAM_COST_D               	: Más cara
+
+STR_FEVE_NAME                 	:Ferrocarril de vía Estrecha - {LTBLUE}FEVE
+STR_FEVE_TOOLBAR             	:Ferrocarril de vía Estrecha - {LTBLUE}FEVE
+STR_FEVE_MENU            		:Ferrocarril de vía Estrecha - {LTBLUE}FEVE
+STR_FEVE_BUILD_CAPTION   		:Nueva vía estrecha - {LTBLUE}FEVE
+STR_FEVE_AUTOREPLACE        	:Trenes de vía estrecha - {LTBLUE}FEVE
+STR_FEVE_NEW_ENGINE           	:Locomotora de vía estrecha - {LTBLUE}FEVE
+
+STR_RAVE_NAME                 	:Ferrocarril de alta velocidad - {LTBLUE}AVE
+STR_RAVE_TOOLBAR             	:Ferrocarril de alta velocidad - {LTBLUE}AVE
+STR_RAVE_MENU            		:Ferrocarril de alta velocidad - {LTBLUE}AVE
+STR_RAVE_BUILD_CAPTION   		:Nueva alta velocidad - {LTBLUE}AVE
+STR_RAVE_AUTOREPLACE        	:Trenes de alta velocidad - {LTBLUE}AVE
+STR_RAVE_NEW_ENGINE           	:Locomotora de alta velocidad - {LTBLUE}AVE

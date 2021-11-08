@@ -1,9 +1,8 @@
 # Spanish Railsets
 [![GitHub license][license-shield]][license-url] [![BaNaNaS URL][bananas-shield]][bananas-url]
-<!--
-![Spanish railsets]()
-IMAXE PENDENTE
--->
+
+![Spanish railsets](https://i.imgur.com/hh4OoUU.png)
+
 <!-- TABLE OF CONTENTS, generated with gh-md-toc README.md (see #acknowledgements) -->
 
 Table of Contents
@@ -44,17 +43,17 @@ Customizes OpenTTD railway sets with the spanish railways: FEVE (Narrow Gauge), 
 
 - [Install NML with its requirements](http://newgrf-specs.tt-wiki.net/wiki/NML:Getting_started)
 - Download last version from this repository <https://github.com/pvillaverde/openttd-spanish-railsets>
-- In order to compile the NewGRF you only need to execute this command:
-  -  `nmlc -c --grf galician-town-name.grf galician-town-names.nml`
+- "pandoc" command is used to generate txt docs from github docs (LICENSE, CHANGELOG & README)
+- In order to compile the NewGRF you only need to execute `make` command.
+- You can install it directly on the game customizing `INSTALL_DIR` on `Makefile.config` and running `make install`.
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-PENDENTE
-<!-- 
-- Once installed, start a new game choosing "Galician" town names.
-![Choose Language](https://i.imgur.com/GgnOMbZ.png)
- -->
+- Once installed, start a new game and you'll have the available tracks on the railways section
+
+![Available Tracks](https://i.imgur.com/JyuMzEy.png)
+
 <!-- CONTRIBUTING -->
 
 ## Support & Contributing
@@ -70,7 +69,7 @@ If you want to add any missing feature or report a bug, you [can request ir or r
 ## Authors
 
 - Pablo Villaverde Castro - [@clankirfed](https://twitter.com/clankirfed)
-- andythenorth, Mczapkie, TadeuszD - Narrow Gauge graphics & sprites.
+- andythenorth, Mczapkie, TadeuszD - FEVE Narrow Gauge sprites.
 - Ubify U&ReRMM2 - High Speed graphics
 
 
@@ -80,8 +79,9 @@ If you want to add any missing feature or report a bug, you [can request ir or r
 * [NML Tutorial](https://newgrf-specs.tt-wiki.net/wiki/NML:Main)
 * [NML Town Names Docs](https://newgrf-specs.tt-wiki.net/wiki/NML:Town_names)
 * [TOC Generator](https://github.com/ekalinin/github-markdown-toc)
-* [Narrow Gauge 600mm](https://github.com/Limyx826/Narrow-gauge-600mm) - Inspiration on code & graphics
-* [Ufiby U&ReRMM2](https://www.tt-forums.net/viewtopic.php?f=67&t=84591) -Inspiration on code & High speed graphics
+* [MakeFile Tutorial](https://makefiletutorial.com/)
+* [Narrow Gauge 600mm](https://github.com/Limyx826/Narrow-gauge-600mm) - Inspiration on code & sprites
+* [Ufiby U&ReRMM2](https://www.tt-forums.net/viewtopic.php?f=67&t=84591) -Inspiration on code & sprites
 
 
 ## License
@@ -89,7 +89,7 @@ If you want to add any missing feature or report a bug, you [can request ir or r
 
 [![GitHub license][license-shield]][license-url]
 
-Distributed under the GNU GPL-v3 License. See [LICENSE][license-url] on for more information. 
+Distributed under the GNU GPL-v3 License. See [LICENSE][license-url] on for more information. Exception are the RAIL, ELRL & RAVE sprites from Ubify, which are licensed under [CC BY-NC-SA 3.0.](https://creativecommons.org/licenses/by-nc-sa/3.0/).
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
