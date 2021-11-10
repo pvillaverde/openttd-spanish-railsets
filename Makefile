@@ -165,6 +165,7 @@ pnml:
 
 nml: $(GENERATE_PNML)
 	$(_E) "[CPP] $(NML_FILE)"
+	$(_V) mkdir -p dist
 	$(_V) $(CC) -D REPO_REVISION=$(NEWGRF_VERSION) -D NEWGRF_VERSION=$(NEWGRF_VERSION) $(CC_USER_FLAGS) $(CC_FLAGS) -o $(NML_FILE) $(MAIN_SRC_FILE)
 
 clean::
