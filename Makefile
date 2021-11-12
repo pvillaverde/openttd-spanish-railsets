@@ -364,7 +364,8 @@ GRFID_FLAGS    ?= -m
 
 # Common to all filenames
 FILE_VERSION_STRING ?= $(shell [ -n "$(REPO_TAGS)" ] && echo "$(REPO_TAGS)$(REPO_MODIFIED)" || echo "$(REPO_BRANCH_STRING)$(NEWGRF_VERSION)$(REPO_MODIFIED)")
-DIR_NAME           := $(shell [ -n "$(REPO_TAGS)" ] && echo $(BASE_FILENAME)-$(FILE_VERSION_STRING) || echo "dist/$(BASE_FILENAME)")
+#DIR_NAME           := $(shell [ -n "$(REPO_TAGS)" ] && echo $(BASE_FILENAME)-$(FILE_VERSION_STRING) || echo "dist/$(BASE_FILENAME)")
+DIR_NAME           := $(shell echo "dist/$(BASE_FILENAME)")
 VERSIONED_FILENAME := $(BASE_FILENAME)-$(FILE_VERSION_STRING)
 DIR_NAME_SRC       := $(VERSIONED_FILENAME)-source
 
