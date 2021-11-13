@@ -147,7 +147,7 @@ item (FEAT_RAILTYPES, FEVE)
 		maintenance_cost: 				FEVE_BASE_COST + FEVE_BASE_COST * param_feve_cost;
 		speed_limit: 					100 km/h;      
 		acceleration_model: 			ACC_MODEL_RAIL;
-		sort_order: 					30;
+		sort_order: 					10;
 		map_colour: 					30;
 		alternative_railtype_list:		["FEVE"];
 		railtype_flags:					bitmask(RAILTYPE_FLAG_CATENARY);

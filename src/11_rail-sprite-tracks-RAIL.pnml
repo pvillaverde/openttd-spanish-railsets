@@ -130,7 +130,7 @@ item (FEAT_RAILTYPES, RAIL)
 	property
 	{
 		label:							"RAIL";
-		introduction_date: 				date(1829, 9, 23);	// Primeira liña férrea españa
+		introduction_date: 				date(1881, 9, 23);
 /* 		name: 							string(STR_FEVE_NAME);
 		toolbar_caption: 				string(STR_FEVE_TOOLBAR);
 		menu_text: 						string(STR_FEVE_MENU);
@@ -144,7 +144,7 @@ item (FEAT_RAILTYPES, RAIL)
 		construction_cost: 				FEVE_BASE_COST + FEVE_BASE_COST * param_feve_cost;
 		maintenance_cost: 				FEVE_BASE_COST + FEVE_BASE_COST * param_feve_cost; */
 		speed_limit: 					200 km/h;       
-		sort_order: 					10;
+		sort_order: 					20;
 		map_colour: 					10;
 /* 		acceleration_model: 			ACC_MODEL_RAIL;
 		map_colour: 					19;

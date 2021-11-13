@@ -27,16 +27,16 @@ STR_PARAM_COST_H               	: Máis barata
 STR_PARAM_COST_N               	: Normal
 STR_PARAM_COST_D               	: Máis cara
 
-STR_FEVE_NAME                 	:Ferrocarril de vía Estreita - {LTBLUE}FEVE
-STR_FEVE_TOOLBAR             	:Ferrocarril de vía Estreita - {LTBLUE}FEVE
-STR_FEVE_MENU            		:Ferrocarril de vía Estreita - {LTBLUE}FEVE
+STR_FEVE_NAME                 	:Construción de ferrocarrís de vía Estreita - {LTBLUE}FEVE
+STR_FEVE_TOOLBAR             	:Construción de ferrocarrís de vía Estreita - {LTBLUE}FEVE
+STR_FEVE_MENU            		:Construción de ferrocarrís de vía Estreita - {LTBLUE}FEVE
 STR_FEVE_BUILD_CAPTION   		:Nova vía estreita - {LTBLUE}FEVE
 STR_FEVE_AUTOREPLACE        	:Trens de vía Estreita - {LTBLUE}FEVE
 STR_FEVE_NEW_ENGINE           	:Locomotora de vía Estreita - {LTBLUE}FEVE
 
-STR_RAVE_NAME                 	:Ferrocarril de alta velocidade - {LTBLUE}AVE
-STR_RAVE_TOOLBAR             	:Ferrocarril de alta velocidade - {LTBLUE}AVE
-STR_RAVE_MENU            		:Ferrocarril de alta velocidade - {LTBLUE}AVE
+STR_RAVE_NAME                 	:Construción de ferrocarrís de alta velocidade - {LTBLUE}AVE
+STR_RAVE_TOOLBAR             	:Construción de ferrocarrís de alta velocidade - {LTBLUE}AVE
+STR_RAVE_MENU            		:Construción de ferrocarrís de alta velocidade - {LTBLUE}AVE
 STR_RAVE_BUILD_CAPTION   		:Nova alta velocidade - {LTBLUE}AVE
 STR_RAVE_AUTOREPLACE        	:Trens de alta velocidade - {LTBLUE}AVE
 STR_RAVE_NEW_ENGINE           	:Locomotora de alta velocidade - {LTBLUE}AVE

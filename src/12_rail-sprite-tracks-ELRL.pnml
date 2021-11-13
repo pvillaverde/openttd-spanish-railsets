@@ -154,7 +154,7 @@ item (FEAT_RAILTYPES, ELRL)
 		construction_cost: 				FEVE_BASE_COST + FEVE_BASE_COST * param_feve_cost;
 		maintenance_cost: 				FEVE_BASE_COST + FEVE_BASE_COST * param_feve_cost; */
 		speed_limit: 					250 km/h;      
-		sort_order: 					20;
+		sort_order: 					30;
 		map_colour: 					20;
 /* 		acceleration_model: 			ACC_MODEL_RAIL;
 		alternative_railtype_list:		["FEVE"];*/
