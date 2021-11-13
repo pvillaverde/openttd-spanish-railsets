@@ -149,8 +149,8 @@ item (FEAT_RAILTYPES, RAIL)
 /* 		acceleration_model: 			ACC_MODEL_RAIL;
 		map_colour: 					19;
 		sort_order: 					10;
-		alternative_railtype_list:		["FEVE"];
-		railtype_flags:					bitmask(RAILTYPE_FLAG_CATENARY); */
+		alternative_railtype_list:		["FEVE"];*/
+		railtype_flags:					bitmask(RAILTYPE_FLAG_PRECOMBINED, RAILTYPE_FLAG_NO_LEVEL_CROSSING);
     }
     graphics
     {
