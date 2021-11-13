@@ -143,7 +143,7 @@ REPO_MODIFIED  ?= $(shell echo ${VERSION_INFO} | cut -f3)
 REPO_TAGS      ?= $(shell echo ${VERSION_INFO} | cut -f4)
 
 # The shown version is either a tag, or in the absence of a tag the revision.
-REPO_VERSION_STRING ?= $(shell echo ${VERSION_INFO} | cut -f5)
+REPO_VERSION_STRING ?= $(shell echo ${VERSION_INFO} | cut -f2)
 
 # The title consists of name and version
 REPO_TITLE     ?= $(REPO_NAME) $(REPO_VERSION_STRING)

@@ -66,7 +66,7 @@ elif [ -d "$ROOT_DIR/.git" ] || [ -f "$ROOT_DIR/.git" ]; then
 	SHORTHASH=`echo ${HASH} | cut -c1-10`
 	ISODATE=`LC_ALL=C git show -s --pretty='format:%ci' HEAD | "$AWK" '{ gsub("-", "", $1); print $1 }'`
 	BRANCH="`git symbolic-ref -q HEAD 2>/dev/null | sed 's@.*/@@'`"
-	TAG="`git name-rev --name-only --tags --no-undefined HEAD 2>/dev/null | sed 's@\^0$@@'`"
+	TAG="`git describe --tags --abbrev=0`"
 
 	if [ "$MODIFIED" -eq "0" ]; then
 		hashprefix="-g"
@@ -102,4 +102,4 @@ else
 	ISSTABLETAG="0"
 fi
 
-echo "$VERSION	$ISODATE	$MODIFIED	$HASH	$ISTAG	$ISSTABLETAG"
+echo "$HASH	$VERSION	$MODIFIED	$TAG"
