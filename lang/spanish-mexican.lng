@@ -27,16 +27,24 @@ STR_PARAM_COST_H               	: Más barata
 STR_PARAM_COST_N               	: Normal
 STR_PARAM_COST_D               	: Más cara
 
-STR_FEVE_NAME                 	:Ferrocarril de vía Estrecha - {LTBLUE}FEVE
-STR_FEVE_TOOLBAR             	:Ferrocarril de vía Estrecha - {LTBLUE}FEVE
-STR_FEVE_MENU            		:Ferrocarril de vía Estrecha - {LTBLUE}FEVE
-STR_FEVE_BUILD_CAPTION   		:Nueva vía estrecha - {LTBLUE}FEVE
-STR_FEVE_AUTOREPLACE        	:Trenes de vía estrecha - {LTBLUE}FEVE
-STR_FEVE_NEW_ENGINE           	:Locomotora de vía estrecha - {LTBLUE}FEVE
+STR_RAIL_NAME                 	:Construír ferrocarril{LTBLUE}
+STR_RAIL_TOOLBAR             	:Construír ferrocarril{LTBLUE}
+STR_RAIL_MENU            		:Construír ferrocarril{LTBLUE}
 
-STR_RAVE_NAME                 	:Ferrocarril de alta velocidad - {LTBLUE}AVE
-STR_RAVE_TOOLBAR             	:Ferrocarril de alta velocidad - {LTBLUE}AVE
-STR_RAVE_MENU            		:Ferrocarril de alta velocidad - {LTBLUE}AVE
-STR_RAVE_BUILD_CAPTION   		:Nueva alta velocidad - {LTBLUE}AVE
-STR_RAVE_AUTOREPLACE        	:Trenes de alta velocidad - {LTBLUE}AVE
-STR_RAVE_NEW_ENGINE           	:Locomotora de alta velocidad - {LTBLUE}AVE
+STR_ELRL_NAME                 	:Construír ferrocarril electrificado{LTBLUE}
+STR_ELRL_TOOLBAR             	:Construír ferrocarril electrificado{LTBLUE}
+STR_ELRL_MENU            		:Construír ferrocarril electrificado{LTBLUE}
+
+STR_FEVE_NAME                 	:Construír ferrocarril de vía estrecha{LTBLUE}
+STR_FEVE_TOOLBAR             	:Construír ferrocarril de vía estrecha{LTBLUE}
+STR_FEVE_MENU            		:Construír ferrocarril de vía estrecha{LTBLUE}
+STR_FEVE_BUILD_CAPTION   		:Nueva vía estrecha{LTBLUE}
+STR_FEVE_AUTOREPLACE        	:Trenes de vía estrecha{LTBLUE}
+STR_FEVE_NEW_ENGINE           	:Locomotora de vía estrecha{LTBLUE}
+
+STR_RAVE_NAME                 	:Construír ferrocarril de alta velocidad{LTBLUE}
+STR_RAVE_TOOLBAR             	:Construír ferrocarril de alta velocidad{LTBLUE}
+STR_RAVE_MENU            		:Construír ferrocarril de alta velocidad{LTBLUE}
+STR_RAVE_BUILD_CAPTION   		:Nueva alta velocidad{LTBLUE}
+STR_RAVE_AUTOREPLACE        	:Trenes de alta velocidad{LTBLUE}
+STR_RAVE_NEW_ENGINE           	:Locomotora de alta velocidad{LTBLUE}
