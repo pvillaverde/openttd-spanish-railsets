@@ -140,7 +140,7 @@ item (FEAT_RAILTYPES, ELRL)
 	property
 	{
 		label:							"ELRL";
-		introduction_date: 				date(1829, 9, 23);	// Primeira liña férrea españa
+		introduction_date: 				date(1911, 9, 23);	// Primeira liña férrea españa
  		name: 							string(STR_ELRL_NAME);
 		toolbar_caption: 				string(STR_ELRL_TOOLBAR);
 		menu_text: 						string(STR_ELRL_MENU);

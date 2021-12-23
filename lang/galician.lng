@@ -31,9 +31,9 @@ STR_RAIL_NAME                 	:Construír ferrocarrís{LTBLUE}
 STR_RAIL_TOOLBAR             	:Construír ferrocarrís{LTBLUE}
 STR_RAIL_MENU            		:Construír ferrocarrís{LTBLUE}
 
-STR_ELRL_NAME                 	:Construír ferrocarrís eléctricos{LTBLUE}
-STR_ELRL_TOOLBAR             	:Construír ferrocarrís eléctricos{LTBLUE}
-STR_ELRL_MENU            		:Construír ferrocarrís eléctricos{LTBLUE}
+STR_ELRL_NAME                 	:Construír ferrocarrís electrificados{LTBLUE}
+STR_ELRL_TOOLBAR             	:Construír ferrocarrís electrificados{LTBLUE}
+STR_ELRL_MENU            		:Construír ferrocarrís electrificados{LTBLUE}
 
 STR_FEVE_NAME                 	:Construír ferrocarrís de vía estreita{LTBLUE}
 STR_FEVE_TOOLBAR             	:Construír ferrocarrís de vía estreita{LTBLUE}
