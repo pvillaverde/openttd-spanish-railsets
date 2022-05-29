@@ -5,15 +5,15 @@
 #	 You should have received a copy of the GNU General Public License along with this program.  If not, see <https://github.com/pvillaverde/openttd-spanish-railsets/blob/main/LICENSE>.
 */
 // Spritesets para as liñas do FEVE (Ferrocarril de Vía Estreita)
-#define GUI_FILE			"src/gfx/FEVE/01_gui.png"
-#define OVERLAY_FILE		"src/gfx/FEVE/02_overlay.png"
-#define UNDERLAY_FILE		"src/gfx/FEVE/03_underlay.png"
-#define BRIDGES_FILE		"src/gfx/FEVE/04_bridges.png"
-#define TUNNELS_FILE		"src/gfx/FEVE/05_tunnels.png"
-#define DEPOT_FILE			"src/gfx/FEVE/06_depot.png"
-#define FENCES_FILE			"src/gfx/FEVE/07_fences.png"
-#define CROSSINGS_FILE		"src/gfx/FEVE/08_crossings.png"
-#define CATENARY_FILE		"src/gfx/FEVE/10_catenary.png"
+#define GUI_FILE			"src/gfx/FEVE/01_gui.gimp.png"
+#define OVERLAY_FILE		"src/gfx/FEVE/02_overlay.gimp.png"
+#define UNDERLAY_FILE		"src/gfx/FEVE/03_underlay.gimp.png"
+#define BRIDGES_FILE		"src/gfx/FEVE/04_bridges.gimp.png"
+#define TUNNELS_FILE		"src/gfx/FEVE/05_tunnels.gimp.png"
+#define DEPOT_FILE			"src/gfx/FEVE/06_depot.gimp.png"
+#define FENCES_FILE			"src/gfx/FEVE/07_fences.gimp.png"
+#define CROSSINGS_FILE		"src/gfx/FEVE/08_crossings.gimp.png"
+#define CATENARY_FILE		"src/gfx/FEVE/10_catenary.gimp.png"
 
 // ########################################### GUI: Interface, botóns e cursores
 spriteset(feve_gui_opengfx_spriteset, GUI_FILE){  rail_gui_gfx_template()	}
@@ -139,8 +139,13 @@ item (FEAT_RAILTYPES, FEVE)
 		build_window_caption: 			string(STR_FEVE_BUILD_CAPTION);
 		autoreplace_text: 				string(STR_FEVE_AUTOREPLACE);
 		new_engine_text: 				string(STR_FEVE_NEW_ENGINE);
-		compatible_railtype_list: 		["MONO","FEVE"];
-		powered_railtype_list: 			["MONO","FEVE"];
+		/* compatible_railtype_list:   	["FEVE","MONO","nAAN", "NAAN", "NBAN", "NCAN", "nAAE", "NAAE", "NBAE", "NCAE", "NDAE", "NUAE", "dAAN", "dBAN", "dBAE"];
+		powered_railtype_list:      	["FEVE","MONO","nAAN", "NAAN", "NBAN", "NCAN", "nAAE", "NAAE", "NBAE", "NCAE", "NDAE", "NUAE", "dAAN", "dBAN", "dBAE"];
+		alternative_railtype_list:		["FEVE","MONO","nAAN", "NAAN", "NBAN", "NCAN"]; */
+
+		compatible_railtype_list:   	["FEVE","MONO","nAAE", "NAAN", "NBAN", "NCAN", "NAAE", "NBAE", "NCAE", "NDAE", "NUAE", "dAAN", "dBAN", "dBAE"];
+		powered_railtype_list:      	["FEVE","MONO","nAAE", "NAAE", "NBAE", "NCAE", "NDAE", "NUAE", "NABE", "dBAE"];
+		alternative_railtype_list:		["FEVE","MONO","nAAE", "NAAE", "NBAE", "NCAE", "NDAE", "NUAE", "NABE"];
 		curve_speed_multiplier: 		100;
 		station_graphics: 				RAILTYPE_STATION_NORMAL;
 		construction_cost: 				FEVE_BASE_COST + FEVE_BASE_COST * param_feve_cost;
@@ -149,7 +154,6 @@ item (FEAT_RAILTYPES, FEVE)
 		acceleration_model: 			ACC_MODEL_RAIL;
 		sort_order: 					10;
 		map_colour: 					30;
-		alternative_railtype_list:		["FEVE"];
 		railtype_flags:					bitmask(RAILTYPE_FLAG_CATENARY);
     }
     graphics

@@ -23,6 +23,9 @@ STR_PARAM_DESC_FEVE_COST     :Set FEVE's build & maintenance rails cost. {LTBLUE
 STR_PARAM_NAME_RAVE_COST     :AVE's build & maintenance costs
 STR_PARAM_DESC_RAVE_COST     :Set AVE's build & maintenance rails cost. {LTBLUE}(Normal cost 3 times regular railways)
 
+STR_PARAM_NAME_MTRO_COST     :Metro's build & maintenance costs
+STR_PARAM_DESC_MTRO_COST     :Set Metro's build & maintenance rails cost. {LTBLUE}(Normal cost 2 times regular railways)
+
 STR_PARAM_COST_H               	: Cheaper
 STR_PARAM_COST_N               	: Normal
 STR_PARAM_COST_D               	: More expensive
@@ -43,10 +46,17 @@ STR_FEVE_BUILD_CAPTION   		:New narrow gauge railway{LTBLUE}
 STR_FEVE_AUTOREPLACE        	:Narrow gauge trains{LTBLUE}
 STR_FEVE_NEW_ENGINE           	:Narrow gauge locomotive{LTBLUE}
 
-STR_RAVE_NAME                 	:High Speed Railway Construction{LTBLUE}
+STR_RAVE_NAME                 	:Metro Construction{LTBLUE}
 STR_RAVE_TOOLBAR             	:High Speed Railway Construction{LTBLUE}
 STR_RAVE_MENU            		:High Speed Railway Construction{LTBLUE}
 STR_RAVE_BUILD_CAPTION   		:New high Speed railway{LTBLUE}
 STR_RAVE_AUTOREPLACE        	:High Speed railways{LTBLUE}
 STR_RAVE_NEW_ENGINE           	:High Speed locomotive{LTBLUE}
+
+STR_MTRO_NAME                 	:Metro Construction{LTBLUE}
+STR_MTRO_TOOLBAR             	:Metro Construction{LTBLUE}
+STR_MTRO_MENU            		:Metro Construction{LTBLUE}
+STR_MTRO_BUILD_CAPTION   		:New Metro{LTBLUE}
+STR_MTRO_AUTOREPLACE        	:Metros{LTBLUE}
+STR_MTRO_NEW_ENGINE           	:Metro locomotive{LTBLUE}
 

@@ -4,7 +4,7 @@
 
 # GRF name and description
 STR_GRF_NAME        :Ferrocarrilees de España {VERSION}
-STR_GRF_DESCRIPTION :{TITLE} - Inspirado por NG600mm,U&ReRMM2 e Spanish Trainset. Añade una vía estrecha(FEVE) y Alta Velocidad (AVE).{} Compatible con NewGRFs de Pontes.{}{COPYRIGHT}2021 andythenorth, McZapkie, Ubify (graphics), pvillaverde (NML)
+STR_GRF_DESCRIPTION :{TITLE} - Inspirado por NG600mm,U&ReRMM2 e Spanish Trainset. Añade una vía estrecha(FEVE) y Alta Velocidad (AVE).{} Compatible con NewGRFs de Pontes.{}{COPYRIGHT}2021 andythenorth, McZapkie, Ufiby (graphics), pvillaverde (NML)
 
 STR_PARAM_GUI_NAME              :Estilo de interfaz
 STR_PARAM_GUI_DESC              :Selecciona el estilo de los botones y cursores de este set

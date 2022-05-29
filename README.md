@@ -1,14 +1,14 @@
-# Spanish Railsets
+# Galician Railways
 [![GitHub license][license-shield]][license-url] [![BaNaNaS URL][bananas-shield]][bananas-url]
 
-![Spanish railsets](https://i.imgur.com/hh4OoUU.png)
+![Galician Railways](https://i.imgur.com/hh4OoUU.png)
 
 <!-- TABLE OF CONTENTS, generated with gh-md-toc README.md (see #acknowledgements) -->
 
 Table of Contents
 =================
 
-* [Spanish Railsets](#spanish-railsets)
+* [Galician Railways](#spanish-railsets)
 * [Table of Contents](#table-of-contents)
    * [About The Project](#about-the-project)
    * [Getting Started](#getting-started)
@@ -70,7 +70,7 @@ If you want to add any missing feature or report a bug, you [can request ir or r
 
 - Pablo Villaverde Castro - [@clankirfed](https://twitter.com/clankirfed)
 - andythenorth, Mczapkie, TadeuszD - FEVE Narrow Gauge sprites.
-- Ubify U&ReRMM2 - High Speed graphics
+- Ufiby U&ReRMM2 - High Speed graphics
 
 
 <!-- ACKNOWLEDGEMENTS -->
@@ -89,7 +89,7 @@ If you want to add any missing feature or report a bug, you [can request ir or r
 
 [![GitHub license][license-shield]][license-url]
 
-Distributed under the GNU GPL-v3 License. See [LICENSE][license-url] on for more information. Exception are the RAIL, ELRL & RAVE sprites from Ubify, which are licensed under [CC BY-NC-SA 3.0.](https://creativecommons.org/licenses/by-nc-sa/3.0/).
+Distributed under the GNU GPL-v3 License. See [LICENSE][license-url] on for more information. Exception are the RAIL, ELRL & RAVE sprites from Ufiby, which are licensed under [CC BY-NC-SA 3.0.](https://creativecommons.org/licenses/by-nc-sa/3.0/).
 
 
 <!-- MARKDOWN LINKS & IMAGES -->

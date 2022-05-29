@@ -5,16 +5,16 @@
 #	 You should have received a copy of the GNU General Public License along with this program.  If not, see <https://github.com/pvillaverde/openttd-spanish-railsets/blob/main/LICENSE>.
 */
 // Spritesets para as liñas do RAVE (Red de Alta Velocidad Española)
-#define GUI_FILE			"src/gfx/RAVE/01_gui.png"
-#define OVERLAY_FILE		"src/gfx/RAVE/02_overlay.png"
-#define UNDERLAY_FILE		"src/gfx/RAVE/03_underlay.png"
-#define BRIDGES_FILE		"src/gfx/RAVE/04_bridges.png"
-#define TUNNELS_FILE		"src/gfx/RAVE/05_tunnels.png"
-#define DEPOT_FILE			"src/gfx/RAVE/06_depot.png"
-#define FENCES_FILE			"src/gfx/RAVE/07_fences.png"
-#define CROSSINGS_FILE		"src/gfx/RAVE/08_crossings.png"
-#define PRECOMBINED_FILE	"src/gfx/RAVE/09_precombined.png"
-#define CATENARY_FILE		"src/gfx/RAVE/10_catenary.png"
+#define GUI_FILE			"src/gfx/RAVE/01_gui.gimp.png"
+#define OVERLAY_FILE		"src/gfx/RAVE/02_overlay.gimp.png"
+#define UNDERLAY_FILE		"src/gfx/RAVE/03_underlay.gimp.png"
+#define BRIDGES_FILE		"src/gfx/RAVE/04_bridges.gimp.png"
+#define TUNNELS_FILE		"src/gfx/RAVE/05_tunnels.gimp.png"
+#define DEPOT_FILE			"src/gfx/RAVE/06_depot.gimp.png"
+#define FENCES_FILE			"src/gfx/RAVE/07_fences.gimp.png"
+#define CROSSINGS_FILE		"src/gfx/RAVE/08_crossings.gimp.png"
+#define PRECOMBINED_FILE	"src/gfx/RAVE/09_precombined.gimp.png"
+#define CATENARY_FILE		"src/gfx/RAVE/10_catenary.gimp.png"
 
 // ########################################### GUI: Interface, botóns e cursores
 spriteset(rave_gui_opengfx_spriteset, GUI_FILE){  rail_gui_gfx_template()	}
@@ -147,8 +147,34 @@ item (FEAT_RAILTYPES, RAVE)
 		build_window_caption: 			string(STR_RAVE_BUILD_CAPTION);
 		autoreplace_text: 				string(STR_RAVE_AUTOREPLACE);
 		new_engine_text: 				string(STR_RAVE_NEW_ENGINE);
-		compatible_railtype_list: 		["MGLV","RAVE"];
-		powered_railtype_list: 			["MGLV","RAVE"];
+			compatible_railtype_list:   	["MGLV","RAVE","RAIL", "ELRL",
+												"SAAN", "SBAN", "SCAN", "SDAN",	
+												"SABN", "SACN", "SADN", "SAEN",
+						                        "SBAE", "SCAE", "SDAE", "SEAE", "SFAE", "SUAE",
+                                                "SAAE", "SABE", "SACE", "SADE", "SAEE",
+                                                "SAAD", "SABD", "SACD", "SADD", "SAED",
+                                                "SAAd", "SABd", "SACd", "SADd", "SAEd",
+                                                "SAAA", "SABA", "SACA", "SADA", "SAEA",
+                                                "SAAa", "SABa", "SACa", "SADa", "SAEa",
+												"dAAN", "dBAN", "dBAE",
+												"SAA3", "SBA3", "SUA3",
+												"SAAZ", "SBAZ", "SUAZ"];
+			powered_railtype_list:   		["MGLV","RAVE","ELRL",
+						                        "SBAE", "SCAE", "SDAE", "SEAE", "SFAE", "SUAE",
+                                                "SAAE", "SABE", "SACE", "SADE", "SAEE",
+                                                "SAAD", "SABD", "SACD", "SADD", "SAED",
+                                                "SAAd", "SABd", "SACd", "SADd", "SAEd",
+                                                "SAAA", "SABA", "SACA", "SADA", "SAEA",
+                                                "SAAa", "SABa", "SACa", "SADa", "SAEa",
+												"dBAE",
+												"SAAZ", "SBAZ", "SUAZ"];
+			alternative_railtype_list:		["MGLV","RAVE","ELRL",
+						                        "SBAE", "SCAE", "SDAE", "SEAE", "SFAE", "SUAE",						//Speed limit class [*X**]
+			                                	"SAAE", "SABE", "SACE", "SADE", "SAEE",								//Axle load class [**X*]
+                                                "SAAD", "SABD", "SACD", "SADD", "SAED",								//Energy source type class [***X]
+                                                "SAAd", "SABd", "SACd", "SADd", "SAEd",
+                                                "SAAA", "SABA", "SACA", "SADA", "SAEA",
+                                                "SAAa", "SABa", "SACa", "SADa", "SAEa"];
 		curve_speed_multiplier: 		100;
 		station_graphics: 				RAILTYPE_STATION_NORMAL;
 		construction_cost: 				RAVE_BASE_COST + RAVE_BASE_COST * param_rave_cost;

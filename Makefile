@@ -131,7 +131,7 @@ VERSION_INFO ?= "$(shell ./findversion.sh)"
 USED_VCS ?= $(shell [ -d .hg ] && echo "HG"; [ -d .git ] && echo "GIT")
 
 # Hash
-REPO_HASH            ?= $(shell echo ${VERSION_INFO} | cut -f1)
+REPO_HASH            ?= $(shell echo ${VERSION_INFO} | cut -f4)
 
 # The version reported to OpenTTD. Usually days since 2000 + branch offset
 NEWGRF_VERSION ?= $(shell echo ${VERSION_INFO} | cut -f2)
@@ -142,11 +142,13 @@ REPO_MODIFIED  ?= $(shell echo ${VERSION_INFO} | cut -f3)
 # Any tag which is not 'tip'
 REPO_TAGS      ?= $(shell echo ${VERSION_INFO} | cut -f4)
 
-# The shown version is either a tag, or in the absence of a tag the revision.
-REPO_VERSION_STRING ?= $(shell echo ${VERSION_INFO} | cut -f2)
+# The short version is either a tag, or in the absence of a tag the revision.
+REPO_VERSION ?= $(shell echo ${VERSION_INFO} | cut -f1)
+# Long version with date and tag / revision
+REPO_VERSION_STRING ?= $(shell echo ${VERSION_INFO} | cut -f7)
 
 # The title consists of name and version
-REPO_TITLE     ?= $(REPO_NAME) $(REPO_VERSION_STRING)
+REPO_TITLE     ?= $(REPO_NAME)
 
 # Remove the @ when you want a more verbose output.
 _V ?= @
@@ -245,12 +247,13 @@ lng: custom_tags.txt
 
 custom_tags.txt: $(GENERATE_NML)
 	$(_E) "[LNG] $@"
-	$(_V) echo "VERSION        :$(REPO_VERSION_STRING)" > $@
+	$(_V) echo "VERSION        :$(REPO_VERSION)" > $@
 	$(_V) echo "VERSION_STRING :$(REPO_VERSION_STRING)" >> $@
 	$(_V) echo "TITLE          :$(REPO_TITLE)" >> $@
 	$(_V) echo "FILENAME       :$(GRF_FILE)" >> $@
 	$(_V) echo "REPO_HASH      :$(REPO_HASH)" >> $@
 	$(_V) echo "NEWGRF_VERSION :$(NEWGRF_VERSION)" >> $@
+	$(_V) echo "AUTHORS        :$(AUTHORS)" >> $@
 
 clean::
 	$(_E) "[CLEAN LNG]"

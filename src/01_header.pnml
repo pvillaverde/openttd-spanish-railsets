@@ -71,4 +71,19 @@ grf {
             };
         }
     }
+    param {
+        param_mtro_cost {
+            type:   int;
+            min_value: 0;
+            def_value: 1;
+            max_value: 2;
+            name:   string(STR_PARAM_NAME_MTRO_COST);
+            desc:   string(STR_PARAM_DESC_MTRO_COST);
+            names: {
+                        0: string(STR_PARAM_COST_H);
+                        1: string(STR_PARAM_COST_N);
+                        2: string(STR_PARAM_COST_D);
+            };
+        }
+    }
 }

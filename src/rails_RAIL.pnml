@@ -5,15 +5,15 @@
 #	 You should have received a copy of the GNU General Public License along with this program.  If not, see <https://github.com/pvillaverde/openttd-spanish-railsets/blob/main/LICENSE>.
 */
 // Spritesets para as liñas do tren normal
-#define GUI_FILE			"src/gfx/RAIL/01_gui.png"
-#define OVERLAY_FILE		"src/gfx/RAIL/02_overlay.png"
-#define UNDERLAY_FILE		"src/gfx/RAIL/03_underlay.png"
-#define BRIDGES_FILE		"src/gfx/RAIL/04_bridges.png"
-#define TUNNELS_FILE		"src/gfx/RAIL/05_tunnels.png"
-#define DEPOT_FILE			"src/gfx/RAIL/06_depot.png"
-#define FENCES_FILE			"src/gfx/RAIL/07_fences.png"
-#define CROSSINGS_FILE		"src/gfx/RAIL/08_crossings.png"
-#define PRECOMBINED_FILE	"src/gfx/RAIL/09_precombined.png"
+#define GUI_FILE			"src/gfx/RAIL/01_gui.gimp.png"
+#define OVERLAY_FILE		"src/gfx/RAIL/02_overlay.gimp.png"
+#define UNDERLAY_FILE		"src/gfx/RAIL/03_underlay.gimp.png"
+#define BRIDGES_FILE		"src/gfx/RAIL/04_bridges.gimp.png"
+#define TUNNELS_FILE		"src/gfx/RAIL/05_tunnels.gimp.png"
+#define DEPOT_FILE			"src/gfx/RAIL/06_depot.gimp.png"
+#define FENCES_FILE			"src/gfx/RAIL/07_fences.gimp.png"
+#define CROSSINGS_FILE		"src/gfx/RAIL/08_crossings.gimp.png"
+#define PRECOMBINED_FILE	"src/gfx/RAIL/09_precombined.gimp.png"
 
 // ########################################### GUI: Interface, botóns e cursores
 spriteset(rail_gui_opengfx_spriteset, GUI_FILE){  rail_gui_gfx_template()	}
@@ -150,7 +150,9 @@ item (FEAT_RAILTYPES, RAIL)
 		map_colour: 					19;
 		sort_order: 					10;
 		alternative_railtype_list:		["FEVE"];*/
-		railtype_flags:					bitmask(RAILTYPE_FLAG_PRECOMBINED, RAILTYPE_FLAG_NO_LEVEL_CROSSING);
+		powered_railtype_list: 			["MGLV", "RAVE"];
+		alternative_railtype_list:		["MGLV", "RAVE"];
+		railtype_flags:					bitmask(RAILTYPE_FLAG_PRECOMBINED);
     }
     graphics
     {

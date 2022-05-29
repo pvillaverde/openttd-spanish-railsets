@@ -8,8 +8,9 @@
 
 // Definir a táboa de ferrocarrís que imos usar. Neste caso  manteremonolo no básico, KISS.
 railtypetable {
-  RAIL, ELRL, MONO, MGLV, FEVE, RAVE
+  RAIL, ELRL, MONO, MGLV, FEVE, RAVE, MTRO
 }
 
 #define FEVE_BASE_COST       2
 #define RAVE_BASE_COST       12
+#define MTRO_BASE_COST       10
