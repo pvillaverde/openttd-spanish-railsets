@@ -1,0 +1,181 @@
+/*
+#    OpenTTD Galician Railways -  Copyright (C) 2021  Pablo Villaverde Castro
+#    This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+#    This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+#	 You should have received a copy of the GNU General Public License along with this program.  If not, see <https://github.com/pvillaverde/openttd-spanish-railsets/blob/main/LICENSE>.
+*/
+// Spritesets para as liñas do ELFE (Ferrocarril de Vía Estreita)
+#define GUI_FILE			"src/gfx/ELFE/01_gui.gimp.png"
+#define OVERLAY_FILE		"src/gfx/ELFE/02_overlay.gimp.png"
+#define UNDERLAY_FILE		"src/gfx/ELFE/03_underlay.gimp.png"
+#define BRIDGES_FILE		"src/gfx/ELFE/04_bridges.gimp.png"
+#define TUNNELS_FILE		"src/gfx/ELFE/05_tunnels.gimp.png"
+#define DEPOT_FILE			"src/gfx/ELFE/06_depot.gimp.png"
+#define FENCES_FILE			"src/gfx/ELFE/07_fences.gimp.png"
+#define CROSSINGS_FILE		"src/gfx/ELFE/08_crossings.gimp.png"
+#define PRECOMBINED_FILE	"src/gfx/ELFE/09_precombined.gimp.png"
+#define CATENARY_FILE		"src/gfx/ELFE/10_catenary.gimp.png"
+
+// ########################################### GUI: Interface, botóns e cursores
+spriteset(elfe_gui_opengfx_spriteset, GUI_FILE){  rail_gui_gfx_template()	}
+spriteset(elfe_gui_ttd_spriteset, GUI_FILE){  rail_gui_ttd_template()	}
+switch (FEAT_RAILTYPES, SELF, elfe_gui_switch, param_gui) {
+    1: elfe_gui_opengfx_spriteset;
+    elfe_gui_ttd_spriteset;
+}
+// ########################################### OVERLAY
+
+spriteset(elfe_overlay_spriteset, OVERLAY_FILE) {  rail_overlay_template(20)	}
+spriteset(elfe_overlay_snow_spriteset, OVERLAY_FILE) {  rail_overlay_template(75)	}
+switch(FEAT_RAILTYPES, SELF, elfe_overlay_switch,  terrain_type){
+	TILETYPE_SNOW: elfe_overlay_snow_spriteset;
+	elfe_overlay_spriteset;
+}
+// ########################################### UNDERLAY
+
+spriteset(elfe_underlay_spriteset, UNDERLAY_FILE) {  rail_underlay_template_new(20)	}
+spriteset(elfe_underlay_snow_spriteset, UNDERLAY_FILE) {  rail_underlay_template_new(160)	}
+switch(FEAT_RAILTYPES, SELF, elfe_underlay_switch,  terrain_type){
+	TILETYPE_SNOW: elfe_underlay_snow_spriteset;
+	elfe_underlay_spriteset;
+}
+// ########################################### BRIDGE SURFACES
+
+spriteset(elfe_bridges_spriteset, BRIDGES_FILE) {  rail_bridges_template(20)	}
+spriteset(elfe_bridges_snow_spriteset, BRIDGES_FILE) {  rail_bridges_template(75)	}
+switch(FEAT_RAILTYPES, SELF, elfe_bridges_switch,  terrain_type){
+	TILETYPE_SNOW: elfe_bridges_snow_spriteset;
+	elfe_bridges_spriteset;
+}
+// ########################################### TUNNELS (Tunnel track)
+spriteset(elfe_tunnels_spriteset, TUNNELS_FILE) {  rail_tunnels_template_new(20)	}
+spriteset(elfe_tunnels_snow_spriteset, TUNNELS_FILE) {  rail_tunnels_template_new(90)	}
+switch(FEAT_RAILTYPES, SELF, elfe_tunnels_switch,  terrain_type){
+	TILETYPE_SNOW: elfe_tunnels_snow_spriteset;
+	elfe_tunnels_spriteset;
+}
+// ########################################### TUNNEL OVERLAY (Tunnel structure)
+spriteset(elfe_tunnels_overlay_spriteset, TUNNELS_FILE) {  rail_tunnels_overlay_template(160)	}
+spriteset(elfe_tunnels_overlay_snow_spriteset, TUNNELS_FILE) {  rail_tunnels_overlay_template(230)	}
+switch(FEAT_RAILTYPES, SELF, elfe_tunnels_overlay_switch,  terrain_type){
+	TILETYPE_SNOW: elfe_tunnels_overlay_snow_spriteset;
+	elfe_tunnels_overlay_spriteset;
+}
+// ########################################### DEPOTS
+spriteset(elfe_depot, DEPOT_FILE){  rail_depot_template(0)	}
+spriteset(elfe_depot_snow, DEPOT_FILE){  rail_depot_template(86)	}
+switch(FEAT_RAILTYPES, SELF, elfe_depots_switch,  terrain_type){
+	TILETYPE_SNOW: elfe_depot_snow;
+	elfe_depot;
+}
+// ########################################### FENCES
+spriteset(elfe_fences, FENCES_FILE)	{	rail_fences_new_template()	}
+// ########################################### CROSSINGS
+// x (NORMAL=0,SNOW=130), y (OLD-CLOSED=60,OLD-OPEN=190,NEW-CLOSED=320,NEW-OPENED=450)
+spriteset(elfe_crossings_closed_old, CROSSINGS_FILE)	{	rail_crossings_template(0,60)	}
+spriteset(elfe_crossings_closed_old_snow, CROSSINGS_FILE)	{	rail_crossings_template(130,60)	}
+spriteset(elfe_crossings_opened_old, CROSSINGS_FILE)	{	rail_crossings_template(0,190)	}
+spriteset(elfe_crossings_opened_old_snow, CROSSINGS_FILE)	{	rail_crossings_template(130,190)	}
+
+spriteset(elfe_crossings_closed_modern, CROSSINGS_FILE)	{	rail_crossings_template(0,320)	}
+spriteset(elfe_crossings_closed_modern_snow, CROSSINGS_FILE)	{	rail_crossings_template(130,320)	}
+spriteset(elfe_crossings_opened_modern, CROSSINGS_FILE)	{	rail_crossings_template(0,450)	}
+spriteset(elfe_crossings_opened_modern_snow, CROSSINGS_FILE)	{	rail_crossings_template(130,450)	}
+// Level Crossing snow switches
+switch(FEAT_RAILTYPES, SELF, elfe_crossings_closed_old_switch,  terrain_type){	TILETYPE_SNOW: elfe_crossings_closed_old_snow;	elfe_crossings_closed_old;}
+switch(FEAT_RAILTYPES, SELF, elfe_crossings_opened_old_switch,  terrain_type){	TILETYPE_SNOW: elfe_crossings_opened_old_snow;	elfe_crossings_opened_old;}
+switch(FEAT_RAILTYPES, SELF, elfe_crossings_closed_modern_switch,  terrain_type){	TILETYPE_SNOW: elfe_crossings_closed_modern_snow;	elfe_crossings_closed_modern;}
+switch(FEAT_RAILTYPES, SELF, elfe_crossings_opened_modern_switch,  terrain_type){	TILETYPE_SNOW: elfe_crossings_opened_modern_snow;	elfe_crossings_opened_modern;}
+// Level crossing switches
+
+switch(FEAT_RAILTYPES,	SELF,	elfe_crossings_closed_switch, current_year){ 
+	0 .. 1970 - 1	: elfe_crossings_closed_old_switch ;
+	elfe_crossings_closed_modern_switch;
+}
+
+switch(FEAT_RAILTYPES,	SELF,	elfe_crossings_opened_switch, current_year){ 
+	0 .. 1970 - 1	: elfe_crossings_opened_old_switch ;
+	elfe_crossings_opened_modern_switch;
+}
+
+switch(FEAT_RAILTYPES, SELF, elfe_crossings_switch, level_crossing_status){
+	LEVEL_CROSSING_CLOSED : elfe_crossings_closed_switch ;
+	elfe_crossings_opened_switch ;
+}
+// ########################################### PRECOMBINED
+spriteset(elfe_precombined, PRECOMBINED_FILE){  rail_precombined_template(20)	}
+spriteset(elfe_precombined_snow, PRECOMBINED_FILE){  rail_precombined_template(360)	}
+switch(FEAT_RAILTYPES, SELF, elfe_precombined_switch,  terrain_type){
+	TILETYPE_SNOW: elfe_precombined_snow;
+	elfe_precombined;
+}
+// ########################################### CATENARY PYLONS & WIRES
+
+spriteset(elfe_catenary_pylons, CATENARY_FILE) {	rail_catenary_pylons_template(20)	}
+spriteset(elfe_catenary_pylons_2, CATENARY_FILE) {	rail_catenary_pylons_template(60)	}
+random_switch (FEAT_RAILTYPES, SELF, elfe_catenary_pylons_switch) {    3: elfe_catenary_pylons;    1: elfe_catenary_pylons_2;}
+spriteset(elfe_catenary_wires, CATENARY_FILE) {	rail_catenary_wires_template()	}
+
+// ########################################### SIGNALS
+
+
+
+#undef GUI_FILE
+#undef OVERLAY_FILE
+#undef UNDERLAY_FILE
+#undef BRIDGES_FILE
+#undef TUNNELS_FILE
+#undef DEPOT_FILE
+#undef FENCES_FILE
+#undef CROSSINGS_FILE
+#undef PRECOMBINED_FILE
+#undef CATENARY_FILE
+
+
+item (FEAT_RAILTYPES, ELFE)
+{
+	if (param_replace_monorail == 1) {
+		property {label:"MONO";}
+	}else{
+		property {label:"ELFE";}
+	}
+	property
+	{
+		introduction_date: 				date(1870, 1, 1);
+		name: 							string(STR_ELFE_NAME);
+		toolbar_caption: 				string(STR_ELFE_TOOLBAR);
+		menu_text: 						string(STR_ELFE_MENU);
+		build_window_caption: 			string(STR_FEVE_BUILD_CAPTION);
+		autoreplace_text: 				string(STR_FEVE_AUTOREPLACE);
+		new_engine_text: 				string(STR_FEVE_NEW_ENGINE);
+		curve_speed_multiplier: 		100;
+		station_graphics: 				RAILTYPE_STATION_NORMAL;
+		construction_cost: 				ELFE_BASE_COST ^ param_cost_multiplier;
+		maintenance_cost: 				ELFE_BASE_COST ^ param_cost_multiplier;
+		speed_limit: 					150 km/h;      
+		sort_order: 					05;
+		map_colour: 					05;
+		acceleration_model: 			ACC_MODEL_RAIL;
+		compatible_railtype_list:   	["ELFE","ELDU","NGRL","NLOW","NAAN","NAAd", "NAAE","ENLW","ELNG","ENHI"];
+		powered_railtype_list:      	["ELFE","ELDU","NGRL","NLOW","NAAN","NAAd", "NAAE","ENLW","ELNG","ENHI"];
+		alternative_railtype_list:		["ELFE","ELDU","NGRL","NLOW","NAAN","NAAd", "NAAE","ENLW","ELNG","ENHI"];
+		railtype_flags:					bitmask(RAILTYPE_FLAG_PRECOMBINED, RAILTYPE_FLAG_CATENARY);
+    }
+    graphics
+    {
+		gui: 				elfe_gui_switch;
+		track_overlay: 		elfe_overlay_switch;
+		underlay:			elfe_underlay_switch;
+		bridge_surfaces: 	elfe_bridges_switch;
+		tunnels: 			elfe_tunnels_switch;
+		tunnel_overlay: 	elfe_tunnels_overlay_switch; 
+		depots: 			elfe_depots_switch;
+		fences:				elfe_fences;
+		level_crossings: 	elfe_crossings_switch;
+		precombined:		elfe_precombined_switch;
+		catenary_pylons: 	elfe_catenary_pylons_switch;
+		catenary_wire: 		elfe_catenary_wires;
+	//	signals: 			switch_signals_type;
+
+    }
+}

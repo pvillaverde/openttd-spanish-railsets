@@ -13,7 +13,7 @@
 #define DEPOT_FILE			"src/gfx/FEVE/06_depot.gimp.png"
 #define FENCES_FILE			"src/gfx/FEVE/07_fences.gimp.png"
 #define CROSSINGS_FILE		"src/gfx/FEVE/08_crossings.gimp.png"
-#define CATENARY_FILE		"src/gfx/FEVE/10_catenary.gimp.png"
+#define PRECOMBINED_FILE	"src/gfx/FEVE/09_precombined.gimp.png"
 
 // ########################################### GUI: Interface, botóns e cursores
 spriteset(feve_gui_opengfx_spriteset, GUI_FILE){  rail_gui_gfx_template()	}
@@ -68,6 +68,7 @@ switch(FEAT_RAILTYPES, SELF, feve_depots_switch,  terrain_type){
 	feve_depot;
 }
 // ########################################### FENCES
+spriteset(feve_fences, FENCES_FILE)	{	rail_fences_new_template()	}
 // ########################################### CROSSINGS
 // x (NORMAL=0,SNOW=130), y (OLD-CLOSED=60,OLD-OPEN=190,NEW-CLOSED=320,NEW-OPENED=450)
 spriteset(feve_crossings_closed_old, CROSSINGS_FILE)	{	rail_crossings_template(0,60)	}
@@ -100,12 +101,15 @@ switch(FEAT_RAILTYPES, SELF, feve_crossings_switch, level_crossing_status){
 	LEVEL_CROSSING_CLOSED : feve_crossings_closed_switch ;
 	feve_crossings_opened_switch ;
 }
+// ########################################### PRECOMBINED
+spriteset(feve_precombined, PRECOMBINED_FILE){  rail_precombined_template(20)	}
+spriteset(feve_precombined_snow, PRECOMBINED_FILE){  rail_precombined_template(360)	}
+switch(FEAT_RAILTYPES, SELF, feve_precombined_switch,  terrain_type){
+	TILETYPE_SNOW: feve_precombined_snow;
+	feve_precombined;
+}
 // ########################################### CATENARY PYLONS & WIRES
 
-spriteset(feve_catenary_pylons, CATENARY_FILE) {	rail_catenary_pylons_template(20)	}
-spriteset(feve_catenary_pylons_2, CATENARY_FILE) {	rail_catenary_pylons_template(60)	}
-random_switch (FEAT_RAILTYPES, SELF, feve_catenary_pylons_switch) {    3: feve_catenary_pylons;    1: feve_catenary_pylons_2;}
-spriteset(feve_catenary_wires, CATENARY_FILE) {	rail_catenary_wires_template()	}
 
 // ########################################### SIGNALS
 
@@ -120,41 +124,32 @@ spriteset(feve_catenary_wires, CATENARY_FILE) {	rail_catenary_wires_template()	}
 #undef FENCES_FILE
 #undef CROSSINGS_FILE
 #undef PRECOMBINED_FILE
-#undef CATENARY_FILE
 
 
 item (FEAT_RAILTYPES, FEVE)
 {
-	if (param_replace_monorail == 1) {
-		property {label:"MONO";}
-	}else{
-		property {label:"FEVE";}
-	}
 	property
 	{
-		introduction_date: 				date(1870, 1, 1);
+		label:							"FEVE";
+		introduction_date: 				date(1860, 1, 1);
 		name: 							string(STR_FEVE_NAME);
 		toolbar_caption: 				string(STR_FEVE_TOOLBAR);
 		menu_text: 						string(STR_FEVE_MENU);
 		build_window_caption: 			string(STR_FEVE_BUILD_CAPTION);
 		autoreplace_text: 				string(STR_FEVE_AUTOREPLACE);
 		new_engine_text: 				string(STR_FEVE_NEW_ENGINE);
-		/* compatible_railtype_list:   	["FEVE","MONO","nAAN", "NAAN", "NBAN", "NCAN", "nAAE", "NAAE", "NBAE", "NCAE", "NDAE", "NUAE", "dAAN", "dBAN", "dBAE"];
-		powered_railtype_list:      	["FEVE","MONO","nAAN", "NAAN", "NBAN", "NCAN", "nAAE", "NAAE", "NBAE", "NCAE", "NDAE", "NUAE", "dAAN", "dBAN", "dBAE"];
-		alternative_railtype_list:		["FEVE","MONO","nAAN", "NAAN", "NBAN", "NCAN"]; */
-
-		compatible_railtype_list:   	["FEVE","MONO","nAAE", "NAAN", "NBAN", "NCAN", "NAAE", "NBAE", "NCAE", "NDAE", "NUAE", "dAAN", "dBAN", "dBAE"];
-		powered_railtype_list:      	["FEVE","MONO","nAAE", "NAAE", "NBAE", "NCAE", "NDAE", "NUAE", "NABE", "dBAE"];
-		alternative_railtype_list:		["FEVE","MONO","nAAE", "NAAE", "NBAE", "NCAE", "NDAE", "NUAE", "NABE"];
 		curve_speed_multiplier: 		100;
 		station_graphics: 				RAILTYPE_STATION_NORMAL;
-		construction_cost: 				FEVE_BASE_COST + FEVE_BASE_COST * param_feve_cost;
-		maintenance_cost: 				FEVE_BASE_COST + FEVE_BASE_COST * param_feve_cost;
-		speed_limit: 					100 km/h;      
+		construction_cost: 				FEVE_BASE_COST ^ param_cost_multiplier;
+		maintenance_cost: 				FEVE_BASE_COST ^ param_cost_multiplier;
+		speed_limit: 					80 km/h;      
+		sort_order: 					04;
+		map_colour: 					04;
 		acceleration_model: 			ACC_MODEL_RAIL;
-		sort_order: 					10;
-		map_colour: 					30;
-		railtype_flags:					bitmask(RAILTYPE_FLAG_CATENARY);
+		compatible_railtype_list:   	["FEVE","ELFE","DUAL","ELDU","NGRL","NLOW","NAAN"];
+		powered_railtype_list:      	["FEVE","ELFE","DUAL","ELDU","NGRL","NLOW","NAAN"];
+		alternative_railtype_list:		["FEVE","DUAL","NGRL","NLOW","NAAN"];
+		railtype_flags:					bitmask(RAILTYPE_FLAG_PRECOMBINED);
     }
     graphics
     {
@@ -165,11 +160,9 @@ item (FEAT_RAILTYPES, FEVE)
 		tunnels: 			feve_tunnels_switch;
 		tunnel_overlay: 	feve_tunnels_overlay_switch; 
 		depots: 			feve_depots_switch;
-		fences:				spriteset_nofences;
+		fences:				feve_fences;
 		level_crossings: 	feve_crossings_switch;
-	//	precombined:		feve_precombined_switch;
-		catenary_pylons: 	feve_catenary_pylons_switch;
-		catenary_wire: 		feve_catenary_wires;
+		precombined:		feve_precombined_switch;
 	//	signals: 			switch_signals_type;
 
     }

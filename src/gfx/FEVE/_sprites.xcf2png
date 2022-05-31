@@ -5,5 +5,5 @@ src/gfx/FEVE/04_bridges.gimp.png            src/xcf/04_bridges.xcf            Ba
 src/gfx/FEVE/05_tunnels.gimp.png            src/xcf/05_tunnels.xcf            Background FEVE
 src/gfx/FEVE/06_depot.gimp.png                src/xcf/06_depot.xcf            Background FEVE
 src/gfx/FEVE/07_fences.gimp.png                src/xcf/07_fences.xcf            Background FEVE
+src/gfx/FEVE/09_precombined.gimp.png        src/xcf/09_precombined.xcf        Background FEVE
 src/gfx/FEVE/08_crossings.gimp.png            src/xcf/08_crossings.xcf        Background FEVE
-src/gfx/FEVE/10_catenary.gimp.png            src/xcf/10_catenary.xcf            Background FEVE

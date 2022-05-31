@@ -42,43 +42,13 @@ grf {
         }
     }
     param {
-        param_feve_cost {
+        param_cost_multiplier {
             type:   int;
             min_value: 0;
             def_value: 1;
             max_value: 2;
-            name:   string(STR_PARAM_NAME_FEVE_COST);
-            desc:   string(STR_PARAM_DESC_FEVE_COST);
-            names: {
-                        0: string(STR_PARAM_COST_H);
-                        1: string(STR_PARAM_COST_N);
-                        2: string(STR_PARAM_COST_D);
-            };
-        }
-    }
-    param {
-        param_rave_cost {
-            type:   int;
-            min_value: 0;
-            def_value: 1;
-            max_value: 2;
-            name:   string(STR_PARAM_NAME_RAVE_COST);
-            desc:   string(STR_PARAM_DESC_RAVE_COST);
-            names: {
-                        0: string(STR_PARAM_COST_H);
-                        1: string(STR_PARAM_COST_N);
-                        2: string(STR_PARAM_COST_D);
-            };
-        }
-    }
-    param {
-        param_mtro_cost {
-            type:   int;
-            min_value: 0;
-            def_value: 1;
-            max_value: 2;
-            name:   string(STR_PARAM_NAME_MTRO_COST);
-            desc:   string(STR_PARAM_DESC_MTRO_COST);
+            name:   string(STR_PARAM_NAME_COST);
+            desc:   string(STR_PARAM_DESC_COST);
             names: {
                         0: string(STR_PARAM_COST_H);
                         1: string(STR_PARAM_COST_N);

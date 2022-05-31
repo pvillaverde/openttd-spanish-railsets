@@ -1,0 +1,169 @@
+/*
+#    OpenTTD Galician Railways -  Copyright (C) 2021  Pablo Villaverde Castro
+#    This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+#    This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+#	 You should have received a copy of the GNU General Public License along with this program.  If not, see <https://github.com/pvillaverde/openttd-spanish-railsets/blob/main/LICENSE>.
+*/
+// Spritesets para as liñas do DUAL (Ferrocarril de Vía Estreita)
+#define GUI_FILE			"src/gfx/DUAL/01_gui.gimp.png"
+#define OVERLAY_FILE		"src/gfx/DUAL/02_overlay.gimp.png"
+#define UNDERLAY_FILE		"src/gfx/DUAL/03_underlay.gimp.png"
+#define BRIDGES_FILE		"src/gfx/DUAL/04_bridges.gimp.png"
+#define TUNNELS_FILE		"src/gfx/DUAL/05_tunnels.gimp.png"
+#define DEPOT_FILE			"src/gfx/DUAL/06_depot.gimp.png"
+#define FENCES_FILE			"src/gfx/DUAL/07_fences.gimp.png"
+#define CROSSINGS_FILE		"src/gfx/DUAL/08_crossings.gimp.png"
+#define PRECOMBINED_FILE	"src/gfx/DUAL/09_precombined.gimp.png"
+
+// ########################################### GUI: Interface, botóns e cursores
+spriteset(dual_gui_opengfx_spriteset, GUI_FILE){  rail_gui_gfx_template()	}
+spriteset(dual_gui_ttd_spriteset, GUI_FILE){  rail_gui_ttd_template()	}
+switch (FEAT_RAILTYPES, SELF, dual_gui_switch, param_gui) {
+    1: dual_gui_opengfx_spriteset;
+    dual_gui_ttd_spriteset;
+}
+// ########################################### OVERLAY
+
+spriteset(dual_overlay_spriteset, OVERLAY_FILE) {  rail_overlay_template(20)	}
+spriteset(dual_overlay_snow_spriteset, OVERLAY_FILE) {  rail_overlay_template(75)	}
+switch(FEAT_RAILTYPES, SELF, dual_overlay_switch,  terrain_type){
+	TILETYPE_SNOW: dual_overlay_snow_spriteset;
+	dual_overlay_spriteset;
+}
+// ########################################### UNDERLAY
+
+spriteset(dual_underlay_spriteset, UNDERLAY_FILE) {  rail_underlay_template_new(20)	}
+spriteset(dual_underlay_snow_spriteset, UNDERLAY_FILE) {  rail_underlay_template_new(160)	}
+switch(FEAT_RAILTYPES, SELF, dual_underlay_switch,  terrain_type){
+	TILETYPE_SNOW: dual_underlay_snow_spriteset;
+	dual_underlay_spriteset;
+}
+// ########################################### BRIDGE SURFACES
+
+spriteset(dual_bridges_spriteset, BRIDGES_FILE) {  rail_bridges_template(20)	}
+spriteset(dual_bridges_snow_spriteset, BRIDGES_FILE) {  rail_bridges_template(75)	}
+switch(FEAT_RAILTYPES, SELF, dual_bridges_switch,  terrain_type){
+	TILETYPE_SNOW: dual_bridges_snow_spriteset;
+	dual_bridges_spriteset;
+}
+// ########################################### TUNNELS (Tunnel track)
+spriteset(dual_tunnels_spriteset, TUNNELS_FILE) {  rail_tunnels_template_new(20)	}
+spriteset(dual_tunnels_snow_spriteset, TUNNELS_FILE) {  rail_tunnels_template_new(90)	}
+switch(FEAT_RAILTYPES, SELF, dual_tunnels_switch,  terrain_type){
+	TILETYPE_SNOW: dual_tunnels_snow_spriteset;
+	dual_tunnels_spriteset;
+}
+// ########################################### TUNNEL OVERLAY (Tunnel structure)
+spriteset(dual_tunnels_overlay_spriteset, TUNNELS_FILE) {  rail_tunnels_overlay_template(160)	}
+spriteset(dual_tunnels_overlay_snow_spriteset, TUNNELS_FILE) {  rail_tunnels_overlay_template(230)	}
+switch(FEAT_RAILTYPES, SELF, dual_tunnels_overlay_switch,  terrain_type){
+	TILETYPE_SNOW: dual_tunnels_overlay_snow_spriteset;
+	dual_tunnels_overlay_spriteset;
+}
+// ########################################### DEPOTS
+spriteset(dual_depot, DEPOT_FILE){  rail_depot_template(0)	}
+spriteset(dual_depot_snow, DEPOT_FILE){  rail_depot_template(86)	}
+switch(FEAT_RAILTYPES, SELF, dual_depots_switch,  terrain_type){
+	TILETYPE_SNOW: dual_depot_snow;
+	dual_depot;
+}
+// ########################################### FENCES
+spriteset(dual_fences, FENCES_FILE)	{	rail_fences_new_template()	}
+// ########################################### CROSSINGS
+// x (NORMAL=0,SNOW=130), y (OLD-CLOSED=60,OLD-OPEN=190,NEW-CLOSED=320,NEW-OPENED=450)
+spriteset(dual_crossings_closed_old, CROSSINGS_FILE)	{	rail_crossings_template(0,60)	}
+spriteset(dual_crossings_closed_old_snow, CROSSINGS_FILE)	{	rail_crossings_template(130,60)	}
+spriteset(dual_crossings_opened_old, CROSSINGS_FILE)	{	rail_crossings_template(0,190)	}
+spriteset(dual_crossings_opened_old_snow, CROSSINGS_FILE)	{	rail_crossings_template(130,190)	}
+
+spriteset(dual_crossings_closed_modern, CROSSINGS_FILE)	{	rail_crossings_template(0,320)	}
+spriteset(dual_crossings_closed_modern_snow, CROSSINGS_FILE)	{	rail_crossings_template(130,320)	}
+spriteset(dual_crossings_opened_modern, CROSSINGS_FILE)	{	rail_crossings_template(0,450)	}
+spriteset(dual_crossings_opened_modern_snow, CROSSINGS_FILE)	{	rail_crossings_template(130,450)	}
+// Level Crossing snow switches
+switch(FEAT_RAILTYPES, SELF, dual_crossings_closed_old_switch,  terrain_type){	TILETYPE_SNOW: dual_crossings_closed_old_snow;	dual_crossings_closed_old;}
+switch(FEAT_RAILTYPES, SELF, dual_crossings_opened_old_switch,  terrain_type){	TILETYPE_SNOW: dual_crossings_opened_old_snow;	dual_crossings_opened_old;}
+switch(FEAT_RAILTYPES, SELF, dual_crossings_closed_modern_switch,  terrain_type){	TILETYPE_SNOW: dual_crossings_closed_modern_snow;	dual_crossings_closed_modern;}
+switch(FEAT_RAILTYPES, SELF, dual_crossings_opened_modern_switch,  terrain_type){	TILETYPE_SNOW: dual_crossings_opened_modern_snow;	dual_crossings_opened_modern;}
+// Level crossing switches
+
+switch(FEAT_RAILTYPES,	SELF,	dual_crossings_closed_switch, current_year){ 
+	0 .. 1970 - 1	: dual_crossings_closed_old_switch ;
+	dual_crossings_closed_modern_switch;
+}
+
+switch(FEAT_RAILTYPES,	SELF,	dual_crossings_opened_switch, current_year){ 
+	0 .. 1970 - 1	: dual_crossings_opened_old_switch ;
+	dual_crossings_opened_modern_switch;
+}
+
+switch(FEAT_RAILTYPES, SELF, dual_crossings_switch, level_crossing_status){
+	LEVEL_CROSSING_CLOSED : dual_crossings_closed_switch ;
+	dual_crossings_opened_switch ;
+}
+// ########################################### PRECOMBINED
+spriteset(dual_precombined, PRECOMBINED_FILE){  rail_precombined_template(20)	}
+spriteset(dual_precombined_snow, PRECOMBINED_FILE){  rail_precombined_template(360)	}
+switch(FEAT_RAILTYPES, SELF, dual_precombined_switch,  terrain_type){
+	TILETYPE_SNOW: dual_precombined_snow;
+	dual_precombined;
+}
+// ########################################### CATENARY PYLONS & WIRES
+
+
+// ########################################### SIGNALS
+
+
+
+#undef GUI_FILE
+#undef OVERLAY_FILE
+#undef UNDERLAY_FILE
+#undef BRIDGES_FILE
+#undef TUNNELS_FILE
+#undef DEPOT_FILE
+#undef FENCES_FILE
+#undef CROSSINGS_FILE
+#undef PRECOMBINED_FILE
+
+
+item (FEAT_RAILTYPES, DUAL)
+{
+	property
+	{
+		label:							"DUAL";
+		introduction_date: 				date(1870, 1, 1);
+		name: 							string(STR_DUAL_NAME);
+		toolbar_caption: 				string(STR_DUAL_TOOLBAR);
+		menu_text: 						string(STR_DUAL_MENU);
+		build_window_caption: 			string(STR_RAIL_BUILD_CAPTION);
+		autoreplace_text: 				string(STR_RAIL_AUTOREPLACE);
+		new_engine_text: 				string(STR_RAIL_NEW_ENGINE);
+		curve_speed_multiplier: 		100;
+		station_graphics: 				RAILTYPE_STATION_NORMAL;
+		construction_cost: 				DUAL_BASE_COST ^ param_cost_multiplier;
+		maintenance_cost: 				DUAL_BASE_COST ^ param_cost_multiplier;
+		speed_limit: 					120 km/h;      
+		sort_order: 					06;
+		map_colour: 					06;
+		acceleration_model: 			ACC_MODEL_RAIL;
+		compatible_railtype_list:   	["FEVE","DUAL","NGRL","NLOW","NAAN"];
+		compatible_railtype_list:   	["FEVE","DUAL","NGRL","NLOW","NAAN"];
+		compatible_railtype_list:   	["FEVE","DUAL","NGRL","NLOW","NAAN"];
+		railtype_flags:					bitmask(RAILTYPE_FLAG_PRECOMBINED);
+    }
+    graphics
+    {
+		gui: 				dual_gui_switch;
+		track_overlay: 		dual_overlay_switch;
+		underlay:			dual_underlay_switch;
+		bridge_surfaces: 	dual_bridges_switch;
+		tunnels: 			dual_tunnels_switch;
+		tunnel_overlay: 	dual_tunnels_overlay_switch; 
+		depots: 			dual_depots_switch;
+		fences:				dual_fences;
+		level_crossings: 	dual_crossings_switch;
+		precombined:		dual_precombined_switch;
+	//	signals: 			switch_signals_type;
+
+    }
+}

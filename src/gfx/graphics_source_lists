@@ -1,6 +1,9 @@
 src/gfx/RAIL/_sprites.xcf2png
 src/gfx/ELRL/_sprites.xcf2png
-src/gfx/FEVE/_sprites.xcf2png
-src/gfx/MTRO/_sprites.xcf2png
 src/gfx/RAVE/_sprites.xcf2png
-
+src/gfx/FEVE/_sprites.xcf2png
+src/gfx/ELFE/_sprites.xcf2png
+src/gfx/DUAL/_sprites.xcf2png
+src/gfx/ELDU/_sprites.xcf2png
+src/gfx/MTRO/_sprites.xcf2png
+src/gfx/CITY/_sprites.xcf2png

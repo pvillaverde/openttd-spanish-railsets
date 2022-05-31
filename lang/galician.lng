@@ -17,34 +17,49 @@ STR_PARAM_DESC_REPLACE_MONORAIL	:Sustitúe o monorail polas vías estreitas do F
 STR_PARAM_NAME_REPLACE_MAGLEV	:Sustituír o MagLev polo AVE?
 STR_PARAM_DESC_REPLACE_MAGLEV	:Sustitúe o MagLev polas vías de alta velocidade. Indispensable pra usar o NewGRF que inclúe os trens do AVE.
 
-STR_PARAM_NAME_FEVE_COST     :Coste e mantemento das vías de FEVE 
-STR_PARAM_DESC_FEVE_COST     :Axusta o coste e mantemento das liñas do FEVE. {LTBLUE}(Normal é a metade que as liñas normais de tren)
+STR_PARAM_NAME_COST     		:Costes de construción e operativos dos ferrocarrís
+STR_PARAM_DESC_COST     		:Establece os costes de construción e operativos dos ferrocarrís deste pack
 
-STR_PARAM_NAME_RAVE_COST     :Coste e mantemento das vías de AVE 
-STR_PARAM_DESC_RAVE_COST     :Axusta o coste e mantemento das liñas do AVE. {LTBLUE}(Normal é tres veces as liñas normais de tren)
+STR_PARAM_COST_H               	:Máis baratos
+STR_PARAM_COST_N               	:Normal
+STR_PARAM_COST_D               	:Máis caros
 
-STR_PARAM_COST_H               	: Máis barata
-STR_PARAM_COST_N               	: Normal
-STR_PARAM_COST_D               	: Máis cara
+STR_RAIL_NAME                 	:Construír ferrocarrís{WHITE}
+STR_RAIL_TOOLBAR             	:Construír ferrocarrís{WHITE}
+STR_RAIL_MENU            		:Construír ferrocarrís{WHITE}
+STR_ELRL_NAME                 	:Construír ferrocarrís {LTBLUE}(electrificados){WHITE}
+STR_ELRL_TOOLBAR             	:Construír ferrocarrís {LTBLUE}(electrificados){WHITE}
+STR_ELRL_MENU            		:Construír ferrocarrís {LTBLUE}(electrificados){WHITE}
+STR_RAVE_NAME                 	:Construír ferrocarrís de alta velocidade {LTBLUE}(electrificados){WHITE}
+STR_RAVE_TOOLBAR             	:Construír ferrocarrís de alta velocidade {LTBLUE}(electrificados){WHITE}
+STR_RAVE_MENU            		:Construír ferrocarrís de alta velocidade {LTBLUE}(electrificados){WHITE}
 
-STR_RAIL_NAME                 	:Construír ferrocarrís{LTBLUE}
-STR_RAIL_TOOLBAR             	:Construír ferrocarrís{LTBLUE}
-STR_RAIL_MENU            		:Construír ferrocarrís{LTBLUE}
+STR_RAIL_BUILD_CAPTION   		:Novo vehículo ferroviario{WHITE}
+STR_RAIL_AUTOREPLACE        	:Vehículos ferroviarios{WHITE}
+STR_RAIL_NEW_ENGINE           	:Locomotora{WHITE}
 
-STR_ELRL_NAME                 	:Construír ferrocarrís electrificados{LTBLUE}
-STR_ELRL_TOOLBAR             	:Construír ferrocarrís electrificados{LTBLUE}
-STR_ELRL_MENU            		:Construír ferrocarrís electrificados{LTBLUE}
+STR_FEVE_NAME                 	:Construír ferrocarrís de vía estreita{WHITE}
+STR_FEVE_TOOLBAR             	:Construír ferrocarrís de vía estreita{WHITE}
+STR_FEVE_MENU            		:Construír ferrocarrís de vía estreita{WHITE}
+STR_ELFE_NAME                 	:Construír ferrocarrís de vía estreita {LTBLUE}(electrificados){WHITE}
+STR_ELFE_TOOLBAR             	:Construír ferrocarrís de vía estreita {LTBLUE}(electrificados){WHITE}
+STR_ELFE_MENU            		:Construír ferrocarrís de vía estreita {LTBLUE}(electrificados){WHITE}
 
-STR_FEVE_NAME                 	:Construír ferrocarrís de vía estreita{LTBLUE}
-STR_FEVE_TOOLBAR             	:Construír ferrocarrís de vía estreita{LTBLUE}
-STR_FEVE_MENU            		:Construír ferrocarrís de vía estreita{LTBLUE}
-STR_FEVE_BUILD_CAPTION   		:Nova vía estreita{LTBLUE}
-STR_FEVE_AUTOREPLACE        	:Trens de vía Estreita{LTBLUE}
-STR_FEVE_NEW_ENGINE           	:Locomotora de vía Estreita{LTBLUE}
+STR_FEVE_BUILD_CAPTION   		:Novo tren de vía estreita{WHITE}
+STR_FEVE_AUTOREPLACE        	:Trens de vía Estreita{WHITE}
+STR_FEVE_NEW_ENGINE           	:Locomotora de vía Estreita{WHITE}
 
-STR_RAVE_NAME                 	:Construír ferrocarrís de alta velocidade{LTBLUE}
-STR_RAVE_TOOLBAR             	:Construír ferrocarrís de alta velocidade{LTBLUE}
-STR_RAVE_MENU            		:Construír ferrocarrís de alta velocidade{LTBLUE}
-STR_RAVE_BUILD_CAPTION   		:Nova alta velocidade{LTBLUE}
-STR_RAVE_AUTOREPLACE        	:Trens de alta velocidade{LTBLUE}
-STR_RAVE_NEW_ENGINE           	:Locomotora de alta velocidade{LTBLUE}
+
+STR_DUAL_NAME                 	:Construír ferrocarrís dobre anchura{WHITE}
+STR_DUAL_TOOLBAR             	:Construír ferrocarrís dobre anchura{WHITE}
+STR_DUAL_MENU            		:Construír ferrocarrís dobre anchura{WHITE}
+STR_ELDU_NAME                 	:Construír ferrocarrís dobre anchura {LTBLUE}(electrificados){WHITE}
+STR_ELDU_TOOLBAR             	:Construír ferrocarrís dobre anchura {LTBLUE}(electrificados){WHITE}
+STR_ELDU_MENU            		:Construír ferrocarrís dobre anchura {LTBLUE}(electrificados){WHITE}
+
+STR_MTRO_NAME                 	:Construír liña de metro{GREEN} (terceiro riel) {WHITE}
+STR_MTRO_TOOLBAR             	:Construír liña de metro{GREEN} (terceiro riel) {WHITE}
+STR_MTRO_MENU            		:Construír liña de metro{GREEN} (terceiro riel) {WHITE}
+STR_MTRO_BUILD_CAPTION   		:Novo Metro{WHITE}
+STR_MTRO_AUTOREPLACE        	:Metros{WHITE}
+STR_MTRO_NEW_ENGINE           	:Metro{WHITE}

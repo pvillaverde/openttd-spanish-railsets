@@ -130,28 +130,24 @@ item (FEAT_RAILTYPES, RAIL)
 	property
 	{
 		label:							"RAIL";
-		introduction_date: 				date(1881, 9, 23);
+		introduction_date: 				date(1860, 9, 23);
  		name: 							string(STR_RAIL_NAME);
 		toolbar_caption: 				string(STR_RAIL_TOOLBAR);
 		menu_text: 						string(STR_RAIL_MENU);
-/*		build_window_caption: 			string(STR_RAIL_BUILD_CAPTION);
+		build_window_caption: 			string(STR_RAIL_BUILD_CAPTION);
 		autoreplace_text: 				string(STR_RAIL_AUTOREPLACE);
 		new_engine_text: 				string(STR_RAIL_NEW_ENGINE);
-		compatible_railtype_list: 		["MONO","FEVE"];
-		powered_railtype_list: 			["MONO","FEVE"];
 		curve_speed_multiplier: 		100;
 		station_graphics: 				RAILTYPE_STATION_NORMAL;
-		construction_cost: 				FEVE_BASE_COST + FEVE_BASE_COST * param_feve_cost;
-		maintenance_cost: 				FEVE_BASE_COST + FEVE_BASE_COST * param_feve_cost; */
+		construction_cost: 				RAIL_BASE_COST ^ param_cost_multiplier;
+		maintenance_cost: 				RAIL_BASE_COST ^ param_cost_multiplier;
 		speed_limit: 					200 km/h;       
-		sort_order: 					20;
-		map_colour: 					10;
-/* 		acceleration_model: 			ACC_MODEL_RAIL;
-		map_colour: 					19;
-		sort_order: 					10;
-		alternative_railtype_list:		["FEVE"];*/
-		powered_railtype_list: 			["MGLV", "RAVE"];
-		alternative_railtype_list:		["MGLV", "RAVE"];
+		sort_order: 					01;
+		map_colour: 					01;
+		acceleration_model: 			ACC_MODEL_RAIL;
+		powered_railtype_list: 			["MGLV", "RAVE","DUAL","ELDU"];
+		compatible_railtype_list: 		["MGLV", "RAVE","DUAL","ELDU"];
+		alternative_railtype_list:		["MGLV", "RAVE","DUAL","ELDU"];
 		railtype_flags:					bitmask(RAILTYPE_FLAG_PRECOMBINED);
     }
     graphics

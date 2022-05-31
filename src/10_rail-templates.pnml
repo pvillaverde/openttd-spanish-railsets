@@ -156,28 +156,6 @@ template rail_fences_new_template() { // TODO-RENAME
 	[280, 80, 33, 35,   -1,  -18] //Front of Track (slope)
 
 }
-//No Fences
-template rail_nofences_template() {
-	//left_x, upper_y, width, height, offset_x, offset_y
-	[  0,0,1,1,0,0]
-	[  0,0,1,1,0,0]
-	[  0,0,1,1,0,0]
-	[  0,0,1,1,0,0]
-	[  0,0,1,1,0,0]
-	[  0,0,1,1,0,0]
-	[  0,0,1,1,0,0]
-	[  0,0,1,1,0,0]
-	[  0,0,1,1,0,0]
-	[  0,0,1,1,0,0]
-	[  0,0,1,1,0,0]
-	[  0,0,1,1,0,0]
-	[  0,0,1,1,0,0]
-	[  0,0,1,1,0,0]
-	[  0,0,1,1,0,0]
-	[  0,0,1,1,0,0]
-}
-spriteset(spriteset_nofences, "src/gfx/nofences.png") { rail_nofences_template()}
-
 // ########################################### LEVEL CROSSINGS
 
 // x (NORMAL=0,SNOW=130), y (OLD-CLOSED=60,OLD-OPEN=190,NEW-CLOSED=320,NEW-OPENED=450)

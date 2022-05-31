@@ -1,0 +1,17 @@
+src/gfx/CITY/03_underlay_RAIL.gimp.png          src/xcf/03_underlay.xcf          Background CITY_RAIL
+src/gfx/CITY/04_bridges_RAIL.gimp.png          src/xcf/04_bridges.xcf          Background CITY_RAIL
+src/gfx/CITY/05_tunnels_RAIL.gimp.png          src/xcf/05_tunnels.xcf          Background CITY_RAIL
+src/gfx/CITY/06_depot_RAIL.gimp.png          src/xcf/06_depot.xcf          Background CITY_RAIL
+src/gfx/CITY/09_precombined_RAIL.gimp.png          src/xcf/09_precombined.xcf          Background CITY_RAIL
+
+src/gfx/CITY/03_underlay_FEVE.gimp.png          src/xcf/03_underlay.xcf          Background CITY_FEVE
+src/gfx/CITY/04_bridges_FEVE.gimp.png          src/xcf/04_bridges.xcf          Background CITY_FEVE
+src/gfx/CITY/05_tunnels_FEVE.gimp.png          src/xcf/05_tunnels.xcf          Background CITY_FEVE
+src/gfx/CITY/06_depot_FEVE.gimp.png          src/xcf/06_depot.xcf          Background CITY_FEVE
+src/gfx/CITY/09_precombined_FEVE.gimp.png          src/xcf/09_precombined.xcf          Background CITY_FEVE
+
+src/gfx/CITY/03_underlay_DUAL.gimp.png          src/xcf/03_underlay.xcf          Background CITY_DUAL
+src/gfx/CITY/04_bridges_DUAL.gimp.png          src/xcf/04_bridges.xcf          Background CITY_DUAL
+src/gfx/CITY/05_tunnels_DUAL.gimp.png          src/xcf/05_tunnels.xcf          Background CITY_DUAL
+src/gfx/CITY/06_depot_DUAL.gimp.png          src/xcf/06_depot.xcf          Background CITY_DUAL
+src/gfx/CITY/09_precombined_DUAL.gimp.png          src/xcf/09_precombined.xcf          Background CITY_DUAL

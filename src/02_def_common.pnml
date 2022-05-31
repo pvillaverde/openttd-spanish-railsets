@@ -8,9 +8,22 @@
 
 // Definir a táboa de ferrocarrís que imos usar. Neste caso  manteremonolo no básico, KISS.
 railtypetable {
-  RAIL, ELRL, MONO, MGLV, FEVE, RAVE, MTRO
+  RAIL, 		// Ferrocarril normal
+  ELRL, 		// Ferrocarril (electrificado)
+  MGLV, RAVE, 	// Ferrocarril alta velocidade
+  MONO, FEVE, 	// Ferrocarril vía estreita
+  ELFE, // Ferrocarril vía estreita electrificado
+  DUAL, // Ferrocarril de dobre ancho de vía
+  ELDU, // Ferrocarril de dobre ancho de vía (electrificado)
+  MTRO  // 3 Riel, METRO
 }
+#define RAIL_BASE_COST       4
+#define ELRL_BASE_COST       8
+#define RAVE_BASE_COST       32
 
 #define FEVE_BASE_COST       2
-#define RAVE_BASE_COST       12
-#define MTRO_BASE_COST       10
+#define ELFE_BASE_COST       4
+#define DUAL_BASE_COST       6
+#define ELDU_BASE_COST       12
+
+#define MTRO_BASE_COST       12

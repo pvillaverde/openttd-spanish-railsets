@@ -144,46 +144,20 @@ item (FEAT_RAILTYPES, RAVE)
 		name: 							string(STR_RAVE_NAME);
 		toolbar_caption: 				string(STR_RAVE_TOOLBAR);
 		menu_text: 						string(STR_RAVE_MENU);
-		build_window_caption: 			string(STR_RAVE_BUILD_CAPTION);
-		autoreplace_text: 				string(STR_RAVE_AUTOREPLACE);
-		new_engine_text: 				string(STR_RAVE_NEW_ENGINE);
-			compatible_railtype_list:   	["MGLV","RAVE","RAIL", "ELRL",
-												"SAAN", "SBAN", "SCAN", "SDAN",	
-												"SABN", "SACN", "SADN", "SAEN",
-						                        "SBAE", "SCAE", "SDAE", "SEAE", "SFAE", "SUAE",
-                                                "SAAE", "SABE", "SACE", "SADE", "SAEE",
-                                                "SAAD", "SABD", "SACD", "SADD", "SAED",
-                                                "SAAd", "SABd", "SACd", "SADd", "SAEd",
-                                                "SAAA", "SABA", "SACA", "SADA", "SAEA",
-                                                "SAAa", "SABa", "SACa", "SADa", "SAEa",
-												"dAAN", "dBAN", "dBAE",
-												"SAA3", "SBA3", "SUA3",
-												"SAAZ", "SBAZ", "SUAZ"];
-			powered_railtype_list:   		["MGLV","RAVE","ELRL",
-						                        "SBAE", "SCAE", "SDAE", "SEAE", "SFAE", "SUAE",
-                                                "SAAE", "SABE", "SACE", "SADE", "SAEE",
-                                                "SAAD", "SABD", "SACD", "SADD", "SAED",
-                                                "SAAd", "SABd", "SACd", "SADd", "SAEd",
-                                                "SAAA", "SABA", "SACA", "SADA", "SAEA",
-                                                "SAAa", "SABa", "SACa", "SADa", "SAEa",
-												"dBAE",
-												"SAAZ", "SBAZ", "SUAZ"];
-			alternative_railtype_list:		["MGLV","RAVE","ELRL",
-						                        "SBAE", "SCAE", "SDAE", "SEAE", "SFAE", "SUAE",						//Speed limit class [*X**]
-			                                	"SAAE", "SABE", "SACE", "SADE", "SAEE",								//Axle load class [**X*]
-                                                "SAAD", "SABD", "SACD", "SADD", "SAED",								//Energy source type class [***X]
-                                                "SAAd", "SABd", "SACd", "SADd", "SAEd",
-                                                "SAAA", "SABA", "SACA", "SADA", "SAEA",
-                                                "SAAa", "SABa", "SACa", "SADa", "SAEa"];
+		build_window_caption: 			string(STR_RAIL_BUILD_CAPTION);
+		autoreplace_text: 				string(STR_RAIL_AUTOREPLACE);
+		new_engine_text: 				string(STR_RAIL_NEW_ENGINE);
 		curve_speed_multiplier: 		100;
 		station_graphics: 				RAILTYPE_STATION_NORMAL;
-		construction_cost: 				RAVE_BASE_COST + RAVE_BASE_COST * param_rave_cost;
-		maintenance_cost: 				RAVE_BASE_COST + RAVE_BASE_COST * param_rave_cost;
+		construction_cost: 				RAVE_BASE_COST ^ param_cost_multiplier;
+		maintenance_cost: 				RAVE_BASE_COST ^ param_cost_multiplier;
 		speed_limit: 					500 km/h;      
+		sort_order: 					03;
+		map_colour: 					03;
 		acceleration_model: 			ACC_MODEL_RAIL;
-		sort_order: 					40;
-		map_colour: 					40;
-		alternative_railtype_list:		["RAVE","MGLV"];
+		powered_railtype_list: 			["RAIL","ELRL","MGLV","RAVE","ELDU"];
+		compatible_railtype_list: 		["RAIL","ELRL","MGLV","RAVE","ELDU"];
+		alternative_railtype_list:		["RAIL","ELRL","MGLV","RAVE","ELDU"];
 		railtype_flags:					bitmask(RAILTYPE_FLAG_PRECOMBINED, RAILTYPE_FLAG_CATENARY, RAILTYPE_FLAG_NO_LEVEL_CROSSING, RAILTYPE_FLAG_DISALLOW_90DEG);
     }
     graphics
