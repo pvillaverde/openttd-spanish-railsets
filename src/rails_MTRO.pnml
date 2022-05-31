@@ -137,7 +137,7 @@ item (FEAT_RAILTYPES, MTRO)
 		autoreplace_text: 				string(STR_MTRO_AUTOREPLACE);
 		new_engine_text: 				string(STR_MTRO_NEW_ENGINE);
 		curve_speed_multiplier: 		100;
-		station_graphics: 				RAILTYPE_STATION_NORMAL;
+		station_graphics: 				RAILTYPE_STATION_MONORAIL;
 		construction_cost: 				MTRO_BASE_COST ^ param_cost_multiplier;
 		maintenance_cost: 				MTRO_BASE_COST ^ param_cost_multiplier;
 		speed_limit: 					120 km/h;      

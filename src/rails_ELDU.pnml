@@ -137,7 +137,7 @@ item (FEAT_RAILTYPES, ELDU)
 	property
 	{
 		label:							"ELDU";
-		introduction_date: 				date(1870, 1, 1);
+		introduction_date: 				date(1930, 1, 1);
 		name: 							string(STR_ELDU_NAME);
 		toolbar_caption: 				string(STR_ELDU_TOOLBAR);
 		menu_text: 						string(STR_ELDU_MENU);

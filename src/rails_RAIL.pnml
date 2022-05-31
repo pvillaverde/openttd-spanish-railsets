@@ -130,7 +130,7 @@ item (FEAT_RAILTYPES, RAIL)
 	property
 	{
 		label:							"RAIL";
-		introduction_date: 				date(1860, 9, 23);
+		introduction_date: 				date(1835, 9, 23);
  		name: 							string(STR_RAIL_NAME);
 		toolbar_caption: 				string(STR_RAIL_TOOLBAR);
 		menu_text: 						string(STR_RAIL_MENU);

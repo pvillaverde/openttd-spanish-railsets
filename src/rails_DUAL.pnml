@@ -131,7 +131,7 @@ item (FEAT_RAILTYPES, DUAL)
 	property
 	{
 		label:							"DUAL";
-		introduction_date: 				date(1870, 1, 1);
+		introduction_date: 				date(1900, 1, 1);
 		name: 							string(STR_DUAL_NAME);
 		toolbar_caption: 				string(STR_DUAL_TOOLBAR);
 		menu_text: 						string(STR_DUAL_MENU);

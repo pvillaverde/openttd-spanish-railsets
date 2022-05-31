@@ -141,7 +141,7 @@ item (FEAT_RAILTYPES, ELFE)
 	}
 	property
 	{
-		introduction_date: 				date(1870, 1, 1);
+		introduction_date: 				date(1911, 1, 1);
 		name: 							string(STR_ELFE_NAME);
 		toolbar_caption: 				string(STR_ELFE_TOOLBAR);
 		menu_text: 						string(STR_ELFE_MENU);
