@@ -3,8 +3,8 @@
 # This is the English language file
 
 # GRF name and description
-STR_GRF_NAME        :Spanish Railsets {VERSION}
-STR_GRF_DESCRIPTION :{TITLE} - Inspired by NG600mm,U&ReRMM2 and Spanish Trainset. Adds both narrow gauge and high speed rail.{} Compatible with Bridges NewGRFs.{}{COPYRIGHT}2021 andythenorth, McZapkie (graphics), pvillaverde (NML)
+STR_GRF_NAME        :Galician Railsets {VERSION}
+STR_GRF_DESCRIPTION :{TITLE} - Inspired by NG600mm,U&ReRMM2 and Spanish Trainset. Adds Narrow Gauge, High Speed, Dual & Urban tracks.{} Compatible with Bridges NewGRFs.{}{COPYRIGHT}2021 andythenorth, McZapkie (graphics), pvillaverde (NML)
 
 STR_PARAM_GUI_NAME              :Interface style
 STR_PARAM_GUI_DESC              :Select style of the buttons and cursors provided by this set.
@@ -24,45 +24,45 @@ STR_PARAM_COST_H               	:Cheaper
 STR_PARAM_COST_N               	:Normal
 STR_PARAM_COST_D               	:More expensive
 
-STR_RAIL_NAME                 	:Construír ferrocarrís{WHITE}
-STR_RAIL_TOOLBAR             	:Construír ferrocarrís{WHITE}
-STR_RAIL_MENU            		:Construír ferrocarrís{WHITE}
-STR_ELRL_NAME                 	:Construír ferrocarrís {LTBLUE}(electrificados){WHITE}
-STR_ELRL_TOOLBAR             	:Construír ferrocarrís {LTBLUE}(electrificados){WHITE}
-STR_ELRL_MENU            		:Construír ferrocarrís {LTBLUE}(electrificados){WHITE}
-STR_RAVE_NAME                 	:Construír ferrocarrís de alta velocidade {LTBLUE}(electrificados){WHITE}
-STR_RAVE_TOOLBAR             	:Construír ferrocarrís de alta velocidade {LTBLUE}(electrificados){WHITE}
-STR_RAVE_MENU            		:Construír ferrocarrís de alta velocidade {LTBLUE}(electrificados){WHITE}
+STR_RAIL_NAME                 	:Standard Railway Construction{WHITE}
+STR_RAIL_TOOLBAR             	:Standard Railway Construction{WHITE}
+STR_RAIL_MENU            		:Standard Railway Construction{WHITE}
+STR_ELRL_NAME                 	:Standard Railway Construction {LTBLUE}(electrified){WHITE}
+STR_ELRL_TOOLBAR             	:Standard Railway Construction {LTBLUE}(electrified){WHITE}
+STR_ELRL_MENU            		:Standard Railway Construction {LTBLUE}(electrified){WHITE}
+STR_RAVE_NAME                 	:Highspeed Railway Construction {LTBLUE}(electrified){WHITE}
+STR_RAVE_TOOLBAR             	:Highspeed Railway Construction {LTBLUE}(electrified){WHITE}
+STR_RAVE_MENU            		:Highspeed Railway Construction {LTBLUE}(electrified){WHITE}
 
-STR_RAIL_BUILD_CAPTION   		:Novo vehículo ferroviario{WHITE}
-STR_RAIL_AUTOREPLACE        	:Vehículos ferroviarios{WHITE}
-STR_RAIL_NEW_ENGINE           	:Locomotora{WHITE}
+STR_RAIL_BUILD_CAPTION   		:New train{WHITE}
+STR_RAIL_AUTOREPLACE        	:Trains{WHITE}
+STR_RAIL_NEW_ENGINE           	:Engine{WHITE}
 
-STR_FEVE_NAME                 	:Construír ferrocarrís de vía estreita{WHITE}
-STR_FEVE_TOOLBAR             	:Construír ferrocarrís de vía estreita{WHITE}
-STR_FEVE_MENU            		:Construír ferrocarrís de vía estreita{WHITE}
-STR_ELFE_NAME                 	:Construír ferrocarrís de vía estreita {LTBLUE}(electrificados){WHITE}
-STR_ELFE_TOOLBAR             	:Construír ferrocarrís de vía estreita {LTBLUE}(electrificados){WHITE}
-STR_ELFE_MENU            		:Construír ferrocarrís de vía estreita {LTBLUE}(electrificados){WHITE}
+STR_FEVE_NAME                 	:Narrow Gauge (FEVE) Railway Construction{WHITE}
+STR_FEVE_TOOLBAR             	:Narrow Gauge (FEVE) Railway Construction{WHITE}
+STR_FEVE_MENU            		:Narrow Gauge (FEVE) Railway Construction{WHITE}
+STR_ELFE_NAME                 	:Narrow Gauge (FEVE) Railway Construction {LTBLUE}(electrified){WHITE}
+STR_ELFE_TOOLBAR             	:Narrow Gauge (FEVE) Railway Construction {LTBLUE}(electrified){WHITE}
+STR_ELFE_MENU            		:Narrow Gauge (FEVE) Railway Construction {LTBLUE}(electrified){WHITE}
 
-STR_FEVE_BUILD_CAPTION   		:Novo tren de vía estreita{WHITE}
-STR_FEVE_AUTOREPLACE        	:Trens de vía Estreita{WHITE}
-STR_FEVE_NEW_ENGINE           	:Locomotora de vía Estreita{WHITE}
+STR_FEVE_BUILD_CAPTION   		:New Narrow Gauge Train{WHITE}
+STR_FEVE_AUTOREPLACE        	:Narrow Gauge Trains{WHITE}
+STR_FEVE_NEW_ENGINE           	:Narrow Gauge Engine{WHITE}
 
 
-STR_DUAL_NAME                 	:Construír ferrocarrís de dobre anchura{WHITE}
-STR_DUAL_TOOLBAR             	:Construír ferrocarrís de dobre anchura{WHITE}
-STR_DUAL_MENU            		:Construír ferrocarrís de dobre anchura{WHITE}
-STR_ELDU_NAME                 	:Construír ferrocarrís de dobre anchura {LTBLUE}(electrificados){WHITE}
-STR_ELDU_TOOLBAR             	:Construír ferrocarrís de dobre anchura {LTBLUE}(electrificados){WHITE}
-STR_ELDU_MENU            		:Construír ferrocarrís de dobre anchura {LTBLUE}(electrificados){WHITE}
-STR_CITY_NAME                 	:Construír ferrocarrís urbáns de dobre anchura {LTBLUE}(electrificados){WHITE}
-STR_CITY_TOOLBAR             	:Construír ferrocarrís urbáns de dobre anchura {LTBLUE}(electrificados){WHITE}
-STR_CITY_MENU            		:Construír ferrocarrís urbáns de dobre anchura {LTBLUE}(electrificados){WHITE}
+STR_DUAL_NAME                 	:Dual Gauge Railway Construction{WHITE}
+STR_DUAL_TOOLBAR             	:Dual Gauge Railway Construction{WHITE}
+STR_DUAL_MENU            		:Dual Gauge Railway Construction{WHITE}
+STR_ELDU_NAME                 	:Dual Gauge Railway Construction {LTBLUE}(electrified){WHITE}
+STR_ELDU_TOOLBAR             	:Dual Gauge Railway Construction {LTBLUE}(electrified){WHITE}
+STR_ELDU_MENU            		:Dual Gauge Railway Construction {LTBLUE}(electrified){WHITE}
+STR_CITY_NAME                 	:Urban Dual Gauge Railway Construction {LTBLUE}(electrified){WHITE}
+STR_CITY_TOOLBAR             	:Urban Dual Gauge Railway Construction {LTBLUE}(electrified){WHITE}
+STR_CITY_MENU            		:Urban Dual Gauge Railway Construction {LTBLUE}(electrified){WHITE}
 
-STR_MTRO_NAME                 	:Construír liña de metro{GREEN} (terceiro riel) {WHITE}
-STR_MTRO_TOOLBAR             	:Construír liña de metro{GREEN} (terceiro riel) {WHITE}
-STR_MTRO_MENU            		:Construír liña de metro{GREEN} (terceiro riel) {WHITE}
-STR_MTRO_BUILD_CAPTION   		:Novo Metro{WHITE}
+STR_MTRO_NAME                 	:Metro Construction{GREEN} (3rd riel) {WHITE}
+STR_MTRO_TOOLBAR             	:Metro Construction{GREEN} (3rd riel) {WHITE}
+STR_MTRO_MENU            		:Metro Construction{GREEN} (3rd riel) {WHITE}
+STR_MTRO_BUILD_CAPTION   		:New Metro{WHITE}
 STR_MTRO_AUTOREPLACE        	:Metros{WHITE}
 STR_MTRO_NEW_ENGINE           	:Metro{WHITE}

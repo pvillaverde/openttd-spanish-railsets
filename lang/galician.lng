@@ -3,8 +3,8 @@
 # This is the Galician language file
 
 # GRF name and description
-STR_GRF_NAME        :Ferrocarrís de España {VERSION}
-STR_GRF_DESCRIPTION :{TITLE} - Inspirado por NG600mm,U&ReRMM2 e Spanish Trainset. Engade unha vía estreita e outra de Alta Velocidade.{} Compatible con NewGRFs de Pontes.{}{COPYRIGHT}2021 andythenorth, McZapkie (graphics), pvillaverde (NML)
+STR_GRF_NAME        :Ferrocarrís de Galicia {VERSION}
+STR_GRF_DESCRIPTION :{TITLE} - Inspirado por NG600mm,U&ReRMM2 e Spanish Trainset. Engade vías de alta veleocidade, FEVE e dual.{} Compatible con NewGRFs de Pontes.{}{COPYRIGHT}2021 andythenorth, McZapkie (graphics), pvillaverde (NML)
 
 STR_PARAM_GUI_NAME              :Estilo da interface
 STR_PARAM_GUI_DESC              :Selecciona o estilo dos botóns e cursores deste set
@@ -46,16 +46,19 @@ STR_ELFE_TOOLBAR             	:Construír ferrocarrís de vía estreita {LTBLUE}
 STR_ELFE_MENU            		:Construír ferrocarrís de vía estreita {LTBLUE}(electrificados){WHITE}
 
 STR_FEVE_BUILD_CAPTION   		:Novo tren de vía estreita{WHITE}
-STR_FEVE_AUTOREPLACE        	:Trens de vía Estreita{WHITE}
-STR_FEVE_NEW_ENGINE           	:Locomotora de vía Estreita{WHITE}
+STR_FEVE_AUTOREPLACE        	:Trens de vía estreita{WHITE}
+STR_FEVE_NEW_ENGINE           	:Locomotora de vía estreita{WHITE}
 
 
-STR_DUAL_NAME                 	:Construír ferrocarrís dobre anchura{WHITE}
-STR_DUAL_TOOLBAR             	:Construír ferrocarrís dobre anchura{WHITE}
-STR_DUAL_MENU            		:Construír ferrocarrís dobre anchura{WHITE}
-STR_ELDU_NAME                 	:Construír ferrocarrís dobre anchura {LTBLUE}(electrificados){WHITE}
-STR_ELDU_TOOLBAR             	:Construír ferrocarrís dobre anchura {LTBLUE}(electrificados){WHITE}
-STR_ELDU_MENU            		:Construír ferrocarrís dobre anchura {LTBLUE}(electrificados){WHITE}
+STR_DUAL_NAME                 	:Construír ferrocarrís de dobre anchura{WHITE}
+STR_DUAL_TOOLBAR             	:Construír ferrocarrís de dobre anchura{WHITE}
+STR_DUAL_MENU            		:Construír ferrocarrís de dobre anchura{WHITE}
+STR_ELDU_NAME                 	:Construír ferrocarrís de dobre anchura {LTBLUE}(electrificados){WHITE}
+STR_ELDU_TOOLBAR             	:Construír ferrocarrís de dobre anchura {LTBLUE}(electrificados){WHITE}
+STR_ELDU_MENU            		:Construír ferrocarrís de dobre anchura {LTBLUE}(electrificados){WHITE}
+STR_CITY_NAME                 	:Construír ferrocarrís urbáns de dobre anchura {LTBLUE}(electrificados){WHITE}
+STR_CITY_TOOLBAR             	:Construír ferrocarrís urbáns de dobre anchura {LTBLUE}(electrificados){WHITE}
+STR_CITY_MENU            		:Construír ferrocarrís urbáns de dobre anchura {LTBLUE}(electrificados){WHITE}
 
 STR_MTRO_NAME                 	:Construír liña de metro{GREEN} (terceiro riel) {WHITE}
 STR_MTRO_TOOLBAR             	:Construír liña de metro{GREEN} (terceiro riel) {WHITE}
