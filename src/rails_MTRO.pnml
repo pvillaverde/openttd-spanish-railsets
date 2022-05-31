@@ -142,8 +142,8 @@ item (FEAT_RAILTYPES, MTRO)
 		maintenance_cost: 				MTRO_BASE_COST ^ param_cost_multiplier;
 		speed_limit: 					120 km/h;      
 		acceleration_model: 			ACC_MODEL_RAIL;
-		sort_order: 					08;
-		map_colour: 					08;
+		sort_order: 					09;
+		map_colour: 					09;
 		compatible_railtype_list:   	["MTRO","RAIL", "ELRL",
 											"SAAN", "SBAN", "SCAN", "SDAN",	
 											"SABN", "SACN", "SADN", "SAEN",

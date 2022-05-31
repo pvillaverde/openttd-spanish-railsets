@@ -4,7 +4,7 @@
 #    This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
 #	 You should have received a copy of the GNU General Public License along with this program.  If not, see <https://github.com/pvillaverde/openttd-spanish-railsets/blob/main/LICENSE>.
 */
-// Spritesets para as liñas do RAVE (Red de Alta Velocidad Española)
+// Spritesets para as liñas do RAVE (Rede de Alta Velocidade)
 #define GUI_FILE			"src/gfx/RAVE/01_gui.gimp.png"
 #define OVERLAY_FILE		"src/gfx/RAVE/02_overlay.gimp.png"
 #define UNDERLAY_FILE		"src/gfx/RAVE/03_underlay.gimp.png"

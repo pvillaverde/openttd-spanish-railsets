@@ -1,17 +1,10 @@
-src/gfx/CITY/03_underlay_RAIL.gimp.png          src/xcf/03_underlay.xcf          Background CITY_RAIL
-src/gfx/CITY/04_bridges_RAIL.gimp.png          src/xcf/04_bridges.xcf          Background CITY_RAIL
-src/gfx/CITY/05_tunnels_RAIL.gimp.png          src/xcf/05_tunnels.xcf          Background CITY_RAIL
-src/gfx/CITY/06_depot_RAIL.gimp.png          src/xcf/06_depot.xcf          Background CITY_RAIL
-src/gfx/CITY/09_precombined_RAIL.gimp.png          src/xcf/09_precombined.xcf          Background CITY_RAIL
-
-src/gfx/CITY/03_underlay_FEVE.gimp.png          src/xcf/03_underlay.xcf          Background CITY_FEVE
-src/gfx/CITY/04_bridges_FEVE.gimp.png          src/xcf/04_bridges.xcf          Background CITY_FEVE
-src/gfx/CITY/05_tunnels_FEVE.gimp.png          src/xcf/05_tunnels.xcf          Background CITY_FEVE
-src/gfx/CITY/06_depot_FEVE.gimp.png          src/xcf/06_depot.xcf          Background CITY_FEVE
-src/gfx/CITY/09_precombined_FEVE.gimp.png          src/xcf/09_precombined.xcf          Background CITY_FEVE
-
-src/gfx/CITY/03_underlay_DUAL.gimp.png          src/xcf/03_underlay.xcf          Background CITY_DUAL
-src/gfx/CITY/04_bridges_DUAL.gimp.png          src/xcf/04_bridges.xcf          Background CITY_DUAL
-src/gfx/CITY/05_tunnels_DUAL.gimp.png          src/xcf/05_tunnels.xcf          Background CITY_DUAL
-src/gfx/CITY/06_depot_DUAL.gimp.png          src/xcf/06_depot.xcf          Background CITY_DUAL
-src/gfx/CITY/09_precombined_DUAL.gimp.png          src/xcf/09_precombined.xcf          Background CITY_DUAL
+src/gfx/CITY/01_gui.gimp.png                src/xcf/01_gui.xcf                Background CITY
+src/gfx/CITY/02_overlay.gimp.png            src/xcf/02_overlay.xcf            Background CITY
+src/gfx/CITY/03_underlay.gimp.png            src/xcf/03_underlay.xcf            Background CITY
+src/gfx/CITY/04_bridges.gimp.png            src/xcf/04_bridges.xcf            Background CITY
+src/gfx/CITY/05_tunnels.gimp.png            src/xcf/05_tunnels.xcf            Background CITY
+src/gfx/CITY/06_depot.gimp.png                src/xcf/06_depot.xcf            Background CITY
+src/gfx/CITY/07_fences.gimp.png                src/xcf/07_fences.xcf            Background CITY
+src/gfx/CITY/08_crossings.gimp.png            src/xcf/08_crossings.xcf        Background CITY
+src/gfx/CITY/09_precombined.gimp.png        src/xcf/09_precombined.xcf        Background CITY
+src/gfx/CITY/10_catenary.gimp.png            src/xcf/10_catenary.xcf            Background CITY

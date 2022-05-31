@@ -4,7 +4,7 @@
 #    This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
 #	 You should have received a copy of the GNU General Public License along with this program.  If not, see <https://github.com/pvillaverde/openttd-spanish-railsets/blob/main/LICENSE>.
 */
-// Spritesets para as liñas do ELDU (Ferrocarril de Vía Estreita)
+// Spritesets para as liñas do ELDU (Electrificadas dobre ancho)
 #define GUI_FILE			"src/gfx/ELDU/01_gui.gimp.png"
 #define OVERLAY_FILE		"src/gfx/ELDU/02_overlay.gimp.png"
 #define UNDERLAY_FILE		"src/gfx/ELDU/03_underlay.gimp.png"
@@ -141,14 +141,14 @@ item (FEAT_RAILTYPES, ELDU)
 		name: 							string(STR_ELDU_NAME);
 		toolbar_caption: 				string(STR_ELDU_TOOLBAR);
 		menu_text: 						string(STR_ELDU_MENU);
-		build_window_caption: 			string(STR_FEVE_BUILD_CAPTION);
-		autoreplace_text: 				string(STR_FEVE_AUTOREPLACE);
-		new_engine_text: 				string(STR_FEVE_NEW_ENGINE);
+		build_window_caption: 			string(STR_RAIL_BUILD_CAPTION);
+		autoreplace_text: 				string(STR_RAIL_AUTOREPLACE);
+		new_engine_text: 				string(STR_RAIL_NEW_ENGINE);
 		curve_speed_multiplier: 		100;
 		station_graphics: 				RAILTYPE_STATION_NORMAL;
 		construction_cost: 				ELDU_BASE_COST ^ param_cost_multiplier;
 		maintenance_cost: 				ELDU_BASE_COST ^ param_cost_multiplier;
-		speed_limit: 					180 km/h;      
+		speed_limit: 					250 km/h;      
 		sort_order: 					07;
 		map_colour: 					07;
 		acceleration_model: 			ACC_MODEL_RAIL;

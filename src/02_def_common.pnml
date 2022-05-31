@@ -15,6 +15,7 @@ railtypetable {
   ELFE, // Ferrocarril vía estreita electrificado
   DUAL, // Ferrocarril de dobre ancho de vía
   ELDU, // Ferrocarril de dobre ancho de vía (electrificado)
+  CITY, // Ferrocarril de dobre ancho de vía Urbano (electrificado)
   MTRO  // 3 Riel, METRO
 }
 #define RAIL_BASE_COST       4
@@ -26,4 +27,5 @@ railtypetable {
 #define DUAL_BASE_COST       6
 #define ELDU_BASE_COST       12
 
+#define CITY_BASE_COST       12
 #define MTRO_BASE_COST       12

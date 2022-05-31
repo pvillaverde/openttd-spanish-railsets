@@ -146,8 +146,8 @@ item (FEAT_RAILTYPES, FEVE)
 		sort_order: 					04;
 		map_colour: 					04;
 		acceleration_model: 			ACC_MODEL_RAIL;
-		compatible_railtype_list:   	["FEVE","ELFE","DUAL","ELDU","NGRL","NLOW","NAAN"];
-		powered_railtype_list:      	["FEVE","ELFE","DUAL","ELDU","NGRL","NLOW","NAAN"];
+		compatible_railtype_list:   	["FEVE","ELFE","DUAL","CITY","ELDU","NGRL","NLOW","NAAN"];
+		powered_railtype_list:      	["FEVE","ELFE","DUAL","CITY","ELDU","NGRL","NLOW","NAAN"];
 		alternative_railtype_list:		["FEVE","DUAL","NGRL","NLOW","NAAN"];
 		railtype_flags:					bitmask(RAILTYPE_FLAG_PRECOMBINED);
     }

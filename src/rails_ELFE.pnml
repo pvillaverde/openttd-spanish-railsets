@@ -4,7 +4,7 @@
 #    This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
 #	 You should have received a copy of the GNU General Public License along with this program.  If not, see <https://github.com/pvillaverde/openttd-spanish-railsets/blob/main/LICENSE>.
 */
-// Spritesets para as liñas do ELFE (Ferrocarril de Vía Estreita)
+// Spritesets para as liñas do ELFE (Electrificadas Ferrocarril de Vía Estreita)
 #define GUI_FILE			"src/gfx/ELFE/01_gui.gimp.png"
 #define OVERLAY_FILE		"src/gfx/ELFE/02_overlay.gimp.png"
 #define UNDERLAY_FILE		"src/gfx/ELFE/03_underlay.gimp.png"
@@ -156,9 +156,9 @@ item (FEAT_RAILTYPES, ELFE)
 		sort_order: 					05;
 		map_colour: 					05;
 		acceleration_model: 			ACC_MODEL_RAIL;
-		compatible_railtype_list:   	["ELFE","ELDU","NGRL","NLOW","NAAN","NAAd", "NAAE","ENLW","ELNG","ENHI"];
-		powered_railtype_list:      	["ELFE","ELDU","NGRL","NLOW","NAAN","NAAd", "NAAE","ENLW","ELNG","ENHI"];
-		alternative_railtype_list:		["ELFE","ELDU","NGRL","NLOW","NAAN","NAAd", "NAAE","ENLW","ELNG","ENHI"];
+		compatible_railtype_list:   	["ELFE","ELDU","CITY","NGRL","NLOW","NAAN","NAAd", "NAAE","ENLW","ELNG","ENHI"];
+		powered_railtype_list:      	["ELFE","ELDU","CITY","NGRL","NLOW","NAAN","NAAd", "NAAE","ENLW","ELNG","ENHI"];
+		alternative_railtype_list:		["ELFE","ELDU","CITY","NGRL","NLOW","NAAN","NAAd", "NAAE","ENLW","ELNG","ENHI"];
 		railtype_flags:					bitmask(RAILTYPE_FLAG_PRECOMBINED, RAILTYPE_FLAG_CATENARY);
     }
     graphics

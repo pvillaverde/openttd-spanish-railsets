@@ -145,9 +145,9 @@ item (FEAT_RAILTYPES, RAIL)
 		sort_order: 					01;
 		map_colour: 					01;
 		acceleration_model: 			ACC_MODEL_RAIL;
-		powered_railtype_list: 			["MGLV", "RAVE","DUAL","ELDU"];
-		compatible_railtype_list: 		["MGLV", "RAVE","DUAL","ELDU"];
-		alternative_railtype_list:		["MGLV", "RAVE","DUAL","ELDU"];
+		powered_railtype_list: 			["MGLV", "RAVE","DUAL","ELDU","CITY"];
+		compatible_railtype_list: 		["MGLV", "RAVE","DUAL","ELDU","CITY"];
+		alternative_railtype_list:		["MGLV", "RAVE","DUAL","ELDU","CITY"];
 		railtype_flags:					bitmask(RAILTYPE_FLAG_PRECOMBINED);
     }
     graphics

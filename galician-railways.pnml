@@ -24,6 +24,7 @@
 #include "src/rails_ELFE.pnml" 
 #include "src/rails_DUAL.pnml" 
 #include "src/rails_ELDU.pnml" 
+#include "src/rails_CITY.pnml" 
 #include "src/rails_MTRO.pnml" 
 
 
