@@ -4,7 +4,7 @@
 
 # GRF name and description
 STR_GRF_NAME        :Galician Railsets {VERSION}
-STR_GRF_DESCRIPTION :{TITLE} - Inspired by NG600mm,U&ReRMM2 and Spanish Trainset. Adds Narrow Gauge, High Speed, Dual & Urban tracks.{} Compatible with Bridges NewGRFs.{}{COPYRIGHT}2021 andythenorth, McZapkie (graphics), pvillaverde (NML)
+STR_GRF_DESCRIPTION :{TITLE} - Inspired by NG600mm,U&ReRMM2 and Spanish Trainset. Adds Narrow Gauge, High Speed, Dual & Urban tracks.{} Compatible with Bridges NewGRFs.{}{COPYRIGHT}2022 andythenorth, McZapkie (graphics), pvillaverde (NML)
 
 STR_PARAM_GUI_NAME              :Interface style
 STR_PARAM_GUI_DESC              :Select style of the buttons and cursors provided by this set.

@@ -12,14 +12,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 ### Fixed
 -->
-## [0.9.0 - Unreleased]
+## [2.0.0 - Unreleased]
 
 ### Added
 - Added global parameter to set build & running costs, instead of one for each track.
 - Added ELFE,ELDU,DUAL,CITY,MTRO rail tracks.
 ### Changed
 - Reworked FEVE's Narrow gauge to Ufiby's U&ReRMM 2 style.
-## [0.1.0 - 2022.05.16]
+## [1.0.0 - 2021.11.12]
 
 ### Added
 

@@ -4,7 +4,7 @@
 
 # GRF name and description
 STR_GRF_NAME        :Ferrocarrís de Galicia {VERSION}
-STR_GRF_DESCRIPTION :{TITLE} - Inspirado por NG600mm,U&ReRMM2 e Spanish Trainset. Engade vías de alta veleocidade, FEVE e dual.{} Compatible con NewGRFs de Pontes.{}{COPYRIGHT}2021 andythenorth, McZapkie (graphics), pvillaverde (NML)
+STR_GRF_DESCRIPTION :{TITLE} - Inspirado por NG600mm,U&ReRMM2 e Spanish Trainset. Engade vías de alta veleocidade, FEVE e dual.{} Compatible con NewGRFs de Pontes.{}{COPYRIGHT}2022 andythenorth, McZapkie (graphics), pvillaverde (NML)
 
 STR_PARAM_GUI_NAME              :Estilo da interface
 STR_PARAM_GUI_DESC              :Selecciona o estilo dos botóns e cursores deste set
