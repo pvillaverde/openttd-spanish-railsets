@@ -50,15 +50,15 @@ STR_FEVE_AUTOREPLACE        	:Trens de vía estreita{WHITE}
 STR_FEVE_NEW_ENGINE           	:Locomotora de vía estreita{WHITE}
 
 
-STR_DUAL_NAME                 	:Construír ferrocarrís de dobre anchura{WHITE}
-STR_DUAL_TOOLBAR             	:Construír ferrocarrís de dobre anchura{WHITE}
-STR_DUAL_MENU            		:Construír ferrocarrís de dobre anchura{WHITE}
-STR_ELDU_NAME                 	:Construír ferrocarrís de dobre anchura {LTBLUE}(electrificados){WHITE}
-STR_ELDU_TOOLBAR             	:Construír ferrocarrís de dobre anchura {LTBLUE}(electrificados){WHITE}
-STR_ELDU_MENU            		:Construír ferrocarrís de dobre anchura {LTBLUE}(electrificados){WHITE}
-STR_CITY_NAME                 	:Construír ferrocarrís urbáns de dobre anchura {LTBLUE}(electrificados){WHITE}
-STR_CITY_TOOLBAR             	:Construír ferrocarrís urbáns de dobre anchura {LTBLUE}(electrificados){WHITE}
-STR_CITY_MENU            		:Construír ferrocarrís urbáns de dobre anchura {LTBLUE}(electrificados){WHITE}
+STR_DUAL_NAME                 	:Construír ferrocarrís de ancho mixto{WHITE}
+STR_DUAL_TOOLBAR             	:Construír ferrocarrís de ancho mixto{WHITE}
+STR_DUAL_MENU            		:Construír ferrocarrís de ancho mixto{WHITE}
+STR_ELDU_NAME                 	:Construír ferrocarrís de ancho mixto {LTBLUE}(electrificados){WHITE}
+STR_ELDU_TOOLBAR             	:Construír ferrocarrís de ancho mixto {LTBLUE}(electrificados){WHITE}
+STR_ELDU_MENU            		:Construír ferrocarrís de ancho mixto {LTBLUE}(electrificados){WHITE}
+STR_CITY_NAME                 	:Construír ferrocarrís urbáns de ancho mixto {LTBLUE}(electrificados){WHITE}
+STR_CITY_TOOLBAR             	:Construír ferrocarrís urbáns de ancho mixto {LTBLUE}(electrificados){WHITE}
+STR_CITY_MENU            		:Construír ferrocarrís urbáns de ancho mixto {LTBLUE}(electrificados){WHITE}
 
 STR_MTRO_NAME                 	:Construír liña de metro{GREEN} (terceiro riel) {WHITE}
 STR_MTRO_TOOLBAR             	:Construír liña de metro{GREEN} (terceiro riel) {WHITE}

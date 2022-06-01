@@ -50,15 +50,15 @@ STR_FEVE_AUTOREPLACE        	:Trenes de vía estrecha{WHITE}
 STR_FEVE_NEW_ENGINE           	:Locomotora de vía estrecha{WHITE}
 
 
-STR_DUAL_NAME                 	:Construír ferrocarriles de doble anchura{WHITE}
-STR_DUAL_TOOLBAR             	:Construír ferrocarriles de doble anchura{WHITE}
-STR_DUAL_MENU            		:Construír ferrocarriles de doble anchura{WHITE}
-STR_ELDU_NAME                 	:Construír ferrocarriles de doble anchura {LTBLUE}(electrificados){WHITE}
-STR_ELDU_TOOLBAR             	:Construír ferrocarriles de doble anchura {LTBLUE}(electrificados){WHITE}
-STR_ELDU_MENU            		:Construír ferrocarriles de doble anchura {LTBLUE}(electrificados){WHITE}
-STR_CITY_NAME                 	:Construír ferrocarriles urbanos de doble anchura {LTBLUE}(electrificados){WHITE}
-STR_CITY_TOOLBAR             	:Construír ferrocarriles urbanos de doble anchura {LTBLUE}(electrificados){WHITE}
-STR_CITY_MENU            		:Construír ferrocarriles urbanos de doble anchura {LTBLUE}(electrificados){WHITE}
+STR_DUAL_NAME                 	:Construír ferrocarriles de ancho mixto{WHITE}
+STR_DUAL_TOOLBAR             	:Construír ferrocarriles de ancho mixto{WHITE}
+STR_DUAL_MENU            		:Construír ferrocarriles de ancho mixto{WHITE}
+STR_ELDU_NAME                 	:Construír ferrocarriles de ancho mixto {LTBLUE}(electrificados){WHITE}
+STR_ELDU_TOOLBAR             	:Construír ferrocarriles de ancho mixto {LTBLUE}(electrificados){WHITE}
+STR_ELDU_MENU            		:Construír ferrocarriles de ancho mixto {LTBLUE}(electrificados){WHITE}
+STR_CITY_NAME                 	:Construír ferrocarriles urbanos de ancho mixto {LTBLUE}(electrificados){WHITE}
+STR_CITY_TOOLBAR             	:Construír ferrocarriles urbanos de ancho mixto {LTBLUE}(electrificados){WHITE}
+STR_CITY_MENU            		:Construír ferrocarriles urbanos de ancho mixto {LTBLUE}(electrificados){WHITE}
 
 STR_MTRO_NAME                 	:Construír línea de metro{GREEN} (tercer riel) {WHITE}
 STR_MTRO_TOOLBAR             	:Construír línea de metro{GREEN} (tercer riel) {WHITE}
