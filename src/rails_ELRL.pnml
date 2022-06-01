@@ -147,7 +147,7 @@ item (FEAT_RAILTYPES, ELRL)
 		build_window_caption: 			string(STR_RAIL_BUILD_CAPTION);
 		autoreplace_text: 				string(STR_RAIL_AUTOREPLACE);
 		new_engine_text: 				string(STR_RAIL_NEW_ENGINE);
-		curve_speed_multiplier: 		100;
+	//	curve_speed_multiplier: 		100;
 		station_graphics: 				RAILTYPE_STATION_NORMAL;
 		construction_cost: 				ELRL_BASE_COST ^ param_cost_multiplier;
 		maintenance_cost: 				ELRL_BASE_COST ^ param_cost_multiplier;

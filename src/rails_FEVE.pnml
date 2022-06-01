@@ -138,7 +138,7 @@ item (FEAT_RAILTYPES, FEVE)
 		build_window_caption: 			string(STR_FEVE_BUILD_CAPTION);
 		autoreplace_text: 				string(STR_FEVE_AUTOREPLACE);
 		new_engine_text: 				string(STR_FEVE_NEW_ENGINE);
-		curve_speed_multiplier: 		100;
+	//	curve_speed_multiplier: 		100;
 		station_graphics: 				RAILTYPE_STATION_NORMAL;
 		construction_cost: 				FEVE_BASE_COST ^ param_cost_multiplier;
 		maintenance_cost: 				FEVE_BASE_COST ^ param_cost_multiplier;
