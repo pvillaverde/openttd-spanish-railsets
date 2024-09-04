@@ -30,7 +30,7 @@ grf {
             type: bool;
             name: string(STR_PARAM_NAME_REPLACE_MONORAIL);
             desc: string(STR_PARAM_DESC_REPLACE_MONORAIL);
-            def_value: 1;
+            def_value: 0;
 			bit: 1;
         }
         param_replace_maglev {
